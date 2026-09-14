@@ -1,0 +1,81 @@
+from django.contrib import admin
+
+from .models import (
+    AppointmentRequest,
+    ClinicInfo,
+    Doctor,
+    ServiceIcon,
+    Testimonial,
+    Treatment,
+)
+
+
+@admin.register(ClinicInfo)
+class ClinicInfoAdmin(admin.ModelAdmin):
+    list_display = ("clinic_name", "phone", "email", "years_experience")
+
+    fieldsets = (
+        ("Identity", {"fields": ("clinic_name", "tagline", "established_year", "logo", "smiles_wordmark")}),
+        ("Hero section", {"fields": ("hero_heading", "hero_paragraph", "hero_photo", "quick_services_row")}),
+        (
+            "Excellence in Dental Care",
+            {"fields": ("excellence_heading", "excellence_paragraph", "years_experience", "patients_count_label", "excellence_video")},
+        ),
+        ("Insurance", {"fields": ("insurance_strip",)}),
+        (
+            "Contact & location",
+            {
+                "fields": (
+                    "address_line",
+                    "address_city",
+                    "phone",
+                    "whatsapp",
+                    "email",
+                    "working_hours",
+                    "map_image",
+                )
+            },
+        ),
+    )
+
+    def has_add_permission(self, request):
+        # Keep this a singleton: only allow adding a row if none exists yet.
+        return not ClinicInfo.objects.exists()
+
+
+@admin.register(ServiceIcon)
+class ServiceIconAdmin(admin.ModelAdmin):
+    list_display = ("name", "order")
+    list_editable = ("order",)
+    ordering = ("order",)
+
+
+@admin.register(Treatment)
+class TreatmentAdmin(admin.ModelAdmin):
+    list_display = ("name", "slug", "order")
+    list_editable = ("order",)
+    prepopulated_fields = {"slug": ("name",)}
+    ordering = ("order",)
+
+
+@admin.register(Doctor)
+class DoctorAdmin(admin.ModelAdmin):
+    list_display = ("name", "specialty", "order", "is_active")
+    list_editable = ("order", "is_active")
+    ordering = ("order",)
+
+
+@admin.register(Testimonial)
+class TestimonialAdmin(admin.ModelAdmin):
+    list_display = ("patient_name", "role_label", "rating", "order")
+    list_editable = ("order",)
+    ordering = ("order",)
+
+
+@admin.register(AppointmentRequest)
+class AppointmentRequestAdmin(admin.ModelAdmin):
+    list_display = ("full_name", "phone", "email", "service_needed", "preferred_date", "created_at", "is_handled")
+    list_editable = ("is_handled",)
+    list_filter = ("is_handled", "service_needed")
+    search_fields = ("full_name", "phone", "email")
+    ordering = ("-created_at",)

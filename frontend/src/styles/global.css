@@ -1,0 +1,10653 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap');
+
+
+/* =========================================================
+   CUSTOM FONT
+   ========================================================= */
+
+@font-face {
+  font-family: 'Exotic Bold';
+  src: url('../assets/fonts/exotic-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+:root {
+  --purple: #522E8F;
+  --purple-dark: #3F2170;
+  --purple-deep: #2E1A52;
+
+  --lavender: #F1E7FB;
+  --card-lavender: #F1ECFA;
+
+  --orange: #EFBF50;
+  --blue: #0B5FC0;
+  --green: #25D366;
+
+  --ink: #241C38;
+  --grey: #6E6779;
+  --line: #E7E1F2;
+
+  --radius: 18px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+.wrap {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Exotic Bold', 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 14px 26px;
+
+  border-radius: 10px;
+  border: none;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: .92rem;
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-purple {
+  background: var(--purple);
+  color: #fff;
+}
+
+.btn-white {
+  background: #fff;
+  color: var(--purple);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, .55);
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.wa-dot {
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+  background: var(--green);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.wa-dot svg {
+  width: 13px;
+  height: 13px;
+  fill: #fff;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-head {
+  max-width: 640px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section-head h2 {
+  font-size: 2.15rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: var(--grey);
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   FORM NOTES
+   ========================================================= */
+
+.form-note {
+  margin-top: 10px;
+  font-size: .78rem;
+}
+
+.form-note-success {
+  color: #1a7a3e;
+}
+
+.form-note-error {
+  color: #b23b3b;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 32px;
+
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.nav .logo img {
+  height: 56px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: .92rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.nav-links a.active {
+  color: var(--purple);
+  font-weight: 600;
+
+  border-bottom: 2px solid var(--purple);
+  padding-bottom: 4px;
+}
+
+.menu-toggle {
+  display: none;
+
+  background: none;
+  border: none;
+
+  font-size: 1.6rem;
+  color: var(--purple);
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #eee1f8;
+  padding: 0;
+}
+
+.hero-main {
+  position: relative;
+  width: 100%;
+  height: 365px;
+  min-height: 365px;
+  overflow: hidden;
+}
+
+.hero-photo-bleed {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.hero-photo-bleed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(241, 231, 251, 0.98) 0%,
+      rgba(241, 231, 251, 0.94) 25%,
+      rgba(241, 231, 251, 0.78) 43%,
+      rgba(241, 231, 251, 0.45) 58%,
+      rgba(241, 231, 251, 0.12) 78%,
+      rgba(241, 231, 251, 0) 100%
+    );
+  z-index: 1;
+}
+
+.hero-copy {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 54%;
+  max-width: 650px;
+  padding: 103px 25px 30px 8%;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 5px 12px;
+  background: #fff;
+  border: 1px solid #d4ccdf;
+  border-radius: 30px;
+  color: #42206f;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 2px 6px rgba(50, 30, 80, 0.10);
+}
+
+.eyebrow-star {
+  color: var(--orange);
+  font-size: 10px;
+  line-height: 1;
+}
+
+.hero-copy h1 {
+  margin: 17px 0 12px;
+  padding: 0;
+  line-height: 1;
+}
+
+.hero-copy h1 img {
+  display: block;
+  width: 440px;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-copy > p {
+  max-width: 455px;
+  margin: 0;
+  color: #40384a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.appointment-card {
+  position: absolute;
+  z-index: 5;
+  top: 71px;
+  right: 7%;
+  width: 332px;
+  max-width: none;
+  padding: 17px 18px 16px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.90);
+  border-radius: 10px;
+  box-shadow:
+    0 15px 35px rgba(43, 36, 64, 0.18),
+    0 5px 12px rgba(43, 36, 64, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-card h3 {
+  color: var(--purple);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.field {
+  margin-bottom: 9px;
+}
+
+.appointment-card label {
+  display: block;
+  color: #403b48;
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  height: 28px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 8px;
+  border: 1px solid #ddd7e4;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.90);
+  color: var(--ink);
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  outline: none;
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.field input::placeholder {
+  color: #737887;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 2px rgba(82, 46, 143, 0.10);
+}
+
+.appointment-card .btn-purple {
+  width: 100%;
+  height: 29px;
+  margin-top: 0;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  background: var(--purple);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.appointment-card .btn-purple:hover {
+  background: var(--purple-dark);
+  transform: translateY(-1px);
+}
+
+.appointment-card .btn-purple:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-note {
+  margin-top: 7px;
+  font-size: 8px;
+}
+
+.form-note-success {
+  color: #1a7a3e;
+}
+
+.form-note-error {
+  color: #b23b3b;
+}
+
+
+/* =========================================================
+   OLD HERO DENTAL SERVICES
+   =========================================================
+   This is kept for compatibility.
+   Your current Hero.jsx has this section commented out.
+   ========================================================= */
+
+.hero-service-row {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+
+  min-height: 150px;
+
+  background: #fff;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  align-items: center;
+
+  padding:
+    25px
+    clamp(25px, 5vw, 80px)
+    28px;
+
+  border-top:
+    1px solid rgba(82, 46, 143, 0.08);
+}
+
+
+/* =========================================================
+   OLD SERVICE ITEM
+   ========================================================= */
+
+.hero-service-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  text-align: center;
+
+  color: var(--ink);
+}
+
+
+/* =========================================================
+   OLD SERVICE ICON
+   ========================================================= */
+
+.hero-service-icon {
+  width: 50px;
+
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--purple);
+}
+
+.hero-service-icon svg {
+  width: 43px;
+
+  height: 43px;
+
+  display: block;
+}
+
+
+/* =========================================================
+   OLD SERVICE TEXT
+   ========================================================= */
+
+.hero-service-item span {
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  color: #292331;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   QUICK SERVICES ROW
+   ========================================================= */
+
+.service-row {
+  width: 100%;
+  background: #fff;
+  padding: 42px 0 48px;
+  overflow: hidden;
+  border-top: 1px solid rgba(82, 46, 143, 0.06);
+  border-bottom: 1px solid rgba(82, 46, 143, 0.06);
+}
+
+.service-row-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 0 7%;
+  gap: 15px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+
+  /* Smooth when the user drags or JS changes scrollLeft */
+  scroll-behavior: smooth;
+}
+
+.service-row-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.service-item {
+  flex: 0 0 150px;
+  min-width: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  text-align: center;
+}
+
+.service-icon-box {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  transform: none;
+}
+
+.service-item span {
+  font-family: 'Poppins', sans-serif;
+  color: #292331;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .service-row {
+    padding: 30px 0 34px;
+  }
+
+  .service-row-inner {
+    padding: 0 20px;
+    gap: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    scroll-behavior: smooth;
+  }
+
+  .service-item {
+    flex: 0 0 125px;
+    min-width: 125px;
+    gap: 8px;
+  }
+
+  .service-icon-box {
+    width: 52px;
+    height: 52px;
+  }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    transform: none;
+  }
+
+  .service-item span {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .service-row {
+    padding: 26px 0 30px;
+  }
+
+  .service-row-inner {
+    padding: 0 14px;
+  }
+
+  .service-item {
+    flex: 0 0 115px;
+    min-width: 115px;
+  }
+
+  .service-icon-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    transform: none;
+  }
+
+  .service-item span {
+    font-size: 10.5px;
+  }
+}
+
+
+/* =========================================================
+   EXCELLENCE
+   ========================================================= */
+
+.excellence {
+  background: #FAF9FD;
+}
+
+.excellence-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.excellence-video {
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 24px 50px -20px rgba(43, 36, 64, .35);
+
+  aspect-ratio: 16/11.5;
+
+  position: relative;
+
+  background: var(--purple-deep);
+}
+
+.excellence-video video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.excellence-copy p {
+  color: var(--grey);
+
+  margin: 16px 0 30px;
+
+  max-width: 480px;
+}
+
+.stat-row {
+  display: flex;
+
+  gap: 52px;
+
+  border-top: 1px solid var(--line);
+
+  padding-top: 26px;
+}
+
+.stat .num {
+  font-family: 'Exotic Bold';
+
+  font-size: 2rem;
+
+  color: var(--orange);
+
+  display: block;
+}
+
+.stat .label {
+  font-size: .85rem;
+
+  color: var(--grey);
+}
+
+
+/* =========================================================
+   TREATMENTS
+   ========================================================= */
+
+.treatments-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.treatment-card {
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+
+  background: #fff;
+}
+
+.treatment-thumb {
+  aspect-ratio: 4/3;
+
+  overflow: hidden;
+}
+
+.treatment-thumb img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.treatment-card p {
+  padding: 18px 16px;
+
+  font-weight: 600;
+
+  font-size: .98rem;
+
+  text-align: center;
+
+  color: var(--ink);
+
+  background: var(--card-lavender);
+}
+
+
+/* =========================================================
+   SPECIALISTS
+   ========================================================= */
+
+.specialists {
+  background: #FAF9FD;
+}
+
+.specialists .section-head {
+  max-width: 650px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.specialists .section-head h2 {
+  color: var(--purple);
+  font-size: 2.15rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.specialists .section-head p {
+  color: var(--grey);
+  font-size: 1rem;
+}
+
+.specialists-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  overflow-x: auto;
+  padding: 0 4px 12px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.specialists-row::-webkit-scrollbar {
+  display: none;
+}
+
+.doc-card {
+  flex: 0 0 270px;
+  width: 270px;
+  text-align: left;
+}
+
+.doc-photo {
+  width: 270px;
+  height: 305px;
+  border-radius: 18px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doc-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.doc-card h4 {
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.doc-card span {
+  display: block;
+  color: var(--blue);
+  font-family: 'Poppins', sans-serif;
+  font-size: .84rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta-wrap {
+  padding: 0 32px;
+}
+
+.cta-banner {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5F3F97 0%,
+      var(--purple-dark) 100%
+    );
+
+  color: #fff;
+
+  text-align: center;
+
+  border-radius: 26px;
+
+  padding: 68px 40px;
+
+  max-width: 1156px;
+
+  margin: 0 auto;
+}
+
+.cta-hex {
+  position: absolute;
+
+  border: 1px solid rgba(255, 255, 255, .12);
+
+  border-radius: 16px;
+
+  transform: rotate(20deg);
+}
+
+.cta-banner h2 {
+  color: #fff;
+
+  font-size: 2.05rem;
+
+  max-width: 640px;
+
+  margin: 0 auto 14px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.cta-banner > p {
+  color: rgba(255, 255, 255, .8);
+
+  max-width: 520px;
+
+  margin: 0 auto 32px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.cta-actions {
+  display: flex;
+
+  gap: 16px;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.cta-actions .btn-outline {
+  padding: 14px 24px;
+}
+
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+
+.testimonials-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.t-card {
+  background: #fff;
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  padding: 30px;
+}
+
+.stars {
+  color: var(--orange);
+
+  font-size: .95rem;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 16px;
+}
+
+.t-card p {
+  font-size: .94rem;
+
+  font-style: italic;
+
+  color: var(--ink);
+
+  margin-bottom: 22px;
+}
+
+.t-name {
+  font-weight: 600;
+
+  font-size: .92rem;
+
+  color: var(--purple);
+}
+
+.t-role {
+  font-size: .78rem;
+
+  color: var(--grey);
+}
+
+
+/* =========================================================
+   INSURANCE
+   ========================================================= */
+
+.insurance {
+  text-align: left;
+
+  padding: 52px 0;
+}
+
+.insurance-badge {
+  display: inline-block;
+
+  background: var(--purple);
+
+  color: #fff;
+
+  font-size: .85rem;
+
+  font-weight: 600;
+
+  padding: 10px 20px;
+
+  border-radius: 8px;
+
+  margin-bottom: 26px;
+}
+
+.insurance-strip img {
+  max-width: 520px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   VISIT
+   ========================================================= */
+
+.visit-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 56px;
+
+  align-items: center;
+}
+
+.visit-item {
+  display: flex;
+
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+.visit-icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 12px;
+
+  background: var(--card-lavender);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--purple);
+}
+
+.visit-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.visit-item h4 {
+  font-size: .95rem;
+
+  margin-bottom: 3px;
+
+  font-family: 'Poppins';
+
+  font-weight: 600;
+}
+
+.visit-item p {
+  color: var(--grey);
+
+  font-size: .9rem;
+}
+
+.map-frame {
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 24px 50px -20px rgba(43, 36, 64, .3);
+}
+
+.map-frame img {
+  width: 100%;
+
+  display: block;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  background: var(--purple-dark);
+
+  color: rgba(255, 255, 255, .72);
+
+  padding: 64px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.3fr 1fr 1fr 1fr;
+
+  gap: 40px;
+
+  margin-bottom: 44px;
+}
+
+.footer-tooth {
+  width: 64px;
+  height: 64px;
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 16px;
+}
+
+.footer-tooth svg {
+  width: 34px;
+
+  color: var(--purple);
+}
+
+.footer-col h5 {
+  color: #fff;
+
+  font-size: .9rem;
+
+  margin-bottom: 18px;
+
+  font-weight: 600;
+}
+
+.footer-col li {
+  margin-bottom: 11px;
+
+  font-size: .86rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, .14);
+
+  padding-top: 22px;
+
+  text-align: center;
+
+  font-size: .82rem;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .nav {
+    padding:
+      12px
+      20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+.hero-service-row {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  /* HEADER */
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background: #fff;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    border-top: 1px solid var(--line);
+
+    box-shadow:
+      0 16px 30px -16px rgba(43, 36, 64, .25);
+  }
+
+  header.nav-open .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 15px 24px;
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+/* OLD SERVICES */
+
+  .hero-service-row {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap:
+      25px
+      15px;
+
+    padding:
+      28px
+      25px;
+  }
+
+
+  /* OTHER */
+
+  section {
+    padding: 52px 0;
+  }
+
+  .section-head {
+    margin-bottom: 36px;
+  }
+
+  .section-head h2 {
+    font-size: 1.7rem;
+  }
+
+  .excellence-grid,
+  .visit-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .treatments-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 28px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .wrap {
+    padding: 0 20px;
+  }
+
+
+  /* HEADER */
+
+  .nav {
+    padding:
+      10px
+      16px;
+  }
+
+  .nav .logo img {
+    height: 44px;
+  }
+  /* HERO */
+
+  .hero-main {
+    height: auto;
+    min-height: 600px;
+  }
+
+  .hero-photo-bleed {
+    min-height: 600px;
+    background-position: 70% center;
+  }
+
+  .hero-photo-bleed::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(241, 231, 251, .97) 0%,
+        rgba(241, 231, 251, .91) 30%,
+        rgba(241, 231, 251, .70) 58%,
+        rgba(241, 231, 251, .40) 100%
+      );
+  }
+
+  .hero-copy {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding: 38px 20px 18px;
+    text-align: center;
+  }
+
+  .hero-copy h1 img {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .hero-copy > p {
+    max-width: 455px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  /* APPOINTMENT */
+
+  .appointment-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: calc(100% - 32px);
+    min-width: 0;
+    max-width: none;
+    margin: 20px auto 32px;
+    padding: 23px 19px 20px;
+    border-radius: 16px;
+  }
+
+  .appointment-card h3 {
+    font-size: 21px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .field {
+    margin-bottom: 15px;
+  }
+
+  .appointment-card label {
+    font-size: 13px;
+  }
+
+  .field input,
+  .field select {
+    height: 43px;
+    font-size: 14px;
+  }
+
+  .appointment-card .btn-purple {
+    height: 43px;
+    font-size: 14px;
+  }
+
+
+  /* OLD SERVICES */
+
+  .hero-service-row {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap:
+      24px
+      10px;
+
+    padding:
+      26px
+      15px
+      30px;
+  }
+
+  .hero-service-icon {
+    width: 45px;
+
+    height: 45px;
+  }
+
+  .hero-service-icon svg {
+    width: 39px;
+
+    height: 39px;
+  }
+
+  .hero-service-item span {
+    font-size: 12px;
+
+    white-space: normal;
+  }
+  /* SERVICES - MOBILE HORIZONTAL SCROLL */
+
+  .service-row {
+    padding: 30px 0 34px;
+  }
+
+  .service-row-inner {
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+    padding: 0 20px;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .service-row-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-item {
+    flex: 0 0 125px;
+    min-width: 125px;
+    gap: 8px;
+  }
+
+  .service-icon-box {
+    width: 52px;
+    height: 52px;
+  }
+
+  /* All service icons use the same CSS size */
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    transform: none;
+  }
+
+  /* Surgeries artwork has extra transparent space in its PNG,
+     so enlarge only the visible artwork slightly. */
+.service-item span {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+
+/* OTHER SECTIONS */
+
+  .treatments-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .doc-card {
+    flex: 0 0 220px;
+    width: 220px;
+  }
+
+  .doc-photo {
+    width: 220px;
+    height: 260px;
+    border-radius: 16px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+  }
+
+  .insurance-strip img {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .appointment-card {
+    width:
+      calc(100% - 24px);
+
+    padding:
+      20px
+      17px;
+  }
+
+  .appointment-card h3 {
+    font-size: 20px;
+  }
+
+  .hero-service-row {
+    gap:
+      21px
+      8px;
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+  .hero-service-item span {
+    font-size: 11px;
+  }
+
+  .service-row {
+    padding: 26px 0 30px;
+  }
+
+  .service-row-inner {
+    min-width: 0;
+    padding: 0 14px;
+  }
+
+  .service-item {
+    flex: 0 0 115px;
+    min-width: 115px;
+  }
+
+  .service-icon-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    transform: none;
+  }
+
+  /* Keep Surgeries visually balanced despite transparent PNG padding. */
+.service-item span {
+    font-size: 10.5px;
+  }
+
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   TARGET DESKTOP LAYOUT — 1100px to 1200px
+   Matches the required reference screenshot
+   ========================================================= */
+
+@media (min-width: 901px) and (max-width: 1200px) {
+
+  /* ---------- HEADER ---------- */
+
+  .nav {
+    max-width: 100%;
+    padding: 8px 28px;
+    min-height: 70px;
+  }
+
+  .nav .logo img {
+    height: 48px;
+    width: auto;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav .btn {
+    font-size: 13px;
+    padding: 13px 22px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    padding: 0;
+  }
+
+  .hero-main {
+    height: 485px;
+    min-height: 485px;
+  }
+
+  .hero-copy {
+    left: 0;
+    top: 0;
+    width: 53%;
+    max-width: 600px;
+    padding: 135px 20px 25px 7%;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    padding: 6px 13px;
+  }
+
+  .hero-copy h1 {
+    margin: 18px 0 14px;
+  }
+
+  .hero-copy h1 img {
+    width: 520px;
+    max-width: 100%;
+  }
+
+  .hero-copy > p {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+
+  /* ---------- APPOINTMENT CARD ---------- */
+
+  .appointment-card {
+    top: 95px;
+    right: 7.5%;
+    width: 440px;
+    padding: 24px 25px 22px;
+    border-radius: 10px;
+  }
+
+  .appointment-card h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .appointment-card label {
+    font-size: 10px;
+  }
+
+  .appointment-card input,
+  .appointment-card select {
+    height: 35px;
+    font-size: 11px;
+    padding: 0 11px;
+  }
+
+  .appointment-card .field-row {
+    gap: 12px;
+  }
+
+  .appointment-card .btn {
+    height: 34px;
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+
+  /* ---------- SERVICE ICON ROW ---------- */
+
+  .service-row {
+    padding: 52px 0 58px;
+  }
+
+  .service-row-inner {
+    padding: 0 7%;
+    gap: 10px;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+
+  .service-item {
+    flex: 0 0 145px;
+    min-width: 145px;
+    gap: 12px;
+  }
+
+  /* KEEP ALL ICONS THE SAME SIZE */
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transform: none;
+  }
+
+  .service-item span {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+
+/* =========================================================
+   FINAL SERVICE ICON BALANCE
+   =========================================================
+   The Surgeries PNG contains more transparent canvas space than
+   the other icon files. Keep the CSS box equal, but enlarge only
+   its visible artwork slightly so it looks visually consistent.
+   ========================================================= */
+@media (max-width: 640px) {
+}
+
+@media (max-width: 420px) {
+}
+
+/* =========================================================
+   FINAL RESPONSIVE SYSTEM
+   =========================================================
+   Reference: Home Page PDF
+   - Desktop follows the supplied reference composition.
+   - Tablet scales the layout without squeezing content.
+   - Mobile stacks the hero and all content cleanly.
+   - Service icons remain horizontally scrollable/auto-scrolling.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HERO DOM LAYOUT
+   --------------------------------------------------------- */
+
+.hero-inner {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-grid {
+  position: relative;
+  width: 100%;
+  min-height: 470px;
+  overflow: hidden;
+}
+
+.hero-grid .hero-copy {
+  position: absolute;
+}
+
+.hero-grid .hero-photo-bleed {
+  position: absolute;
+}
+
+
+/* =========================================================
+   DESKTOP — 1201px AND ABOVE
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+  .nav {
+    max-width: 1220px;
+    padding: 12px 32px;
+  }
+
+  .nav .logo img {
+    height: 56px;
+  }
+
+  .nav-links {
+    gap: 30px;
+  }
+
+  .hero-grid {
+    min-height: 470px;
+  }
+
+  .hero-copy {
+    width: 54%;
+    max-width: 650px;
+    padding: 128px 25px 30px 8%;
+  }
+
+  .hero-copy h1 img {
+    width: 520px;
+  }
+
+  .hero-copy > p {
+    max-width: 500px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .appointment-card {
+    top: 75px;
+    right: 7%;
+    width: 440px;
+    padding: 24px 25px 22px;
+  }
+
+  .appointment-card h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .appointment-card label {
+    font-size: 10px;
+  }
+
+  .field input,
+  .field select {
+    height: 35px;
+    font-size: 11px;
+    padding: 0 11px;
+  }
+
+  .appointment-card .btn-purple {
+    height: 34px;
+    font-size: 11px;
+  }
+
+  .service-row {
+    padding: 48px 0 54px;
+  }
+
+  .service-row-inner {
+    padding: 0 7%;
+    gap: 10px;
+  }
+
+  .service-item {
+    flex: 0 0 150px;
+    min-width: 150px;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP — 901px TO 1200px
+   ========================================================= */
+
+@media (min-width: 901px) and (max-width: 1200px) {
+
+  .wrap {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* HEADER */
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 24px;
+    min-height: 70px;
+  }
+
+  .nav .logo img {
+    height: 48px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav .btn {
+    padding: 12px 18px;
+    font-size: 12px;
+  }
+
+  .wa-dot {
+    width: 20px;
+    height: 20px;
+  }
+
+  .wa-dot svg {
+    width: 12px;
+    height: 12px;
+  }
+
+
+  /* HERO */
+
+  .hero-grid {
+    min-height: 455px;
+  }
+
+  .hero-copy {
+    width: 53%;
+    max-width: 590px;
+    padding: 118px 20px 25px 7%;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    padding: 6px 13px;
+  }
+
+  .hero-copy h1 {
+    margin: 16px 0 14px;
+  }
+
+  .hero-copy h1 img {
+    width: 470px;
+    max-width: 100%;
+  }
+
+  .hero-copy > p {
+    max-width: 470px;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .appointment-card {
+    top: 55px;
+    right: 6%;
+    width: 405px;
+    padding: 22px 22px 20px;
+  }
+
+  .appointment-card h3 {
+    font-size: 19px;
+    margin-bottom: 16px;
+  }
+
+  .appointment-card label {
+    font-size: 9px;
+  }
+
+  .field input,
+  .field select {
+    height: 34px;
+    font-size: 10px;
+    padding: 0 10px;
+  }
+
+  .appointment-card .btn-purple {
+    height: 33px;
+    font-size: 10px;
+  }
+
+
+  /* SERVICE ROW */
+
+  .service-row {
+    padding: 44px 0 50px;
+  }
+
+  .service-row-inner {
+    padding: 0 5%;
+    gap: 8px;
+  }
+
+  .service-item {
+    flex: 0 0 145px;
+    min-width: 145px;
+    gap: 11px;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transform: none;
+  }
+.service-item span {
+    font-size: 12px;
+  }
+
+
+  /* CONTENT SECTIONS */
+
+  section {
+    padding: 64px 0;
+  }
+
+  .section-head {
+    margin-bottom: 40px;
+  }
+
+  .section-head h2,
+  .specialists .section-head h2 {
+    font-size: 2rem;
+  }
+
+  .excellence-grid {
+    gap: 40px;
+  }
+
+  .excellence-copy p {
+    max-width: 440px;
+  }
+
+  .treatments-grid {
+    gap: 18px;
+  }
+
+  .specialists-row {
+    gap: 20px;
+  }
+
+  .doc-card {
+    flex-basis: 250px;
+    width: 250px;
+  }
+
+  .doc-photo {
+    width: 250px;
+    height: 285px;
+  }
+
+  .testimonials-grid {
+    gap: 18px;
+  }
+
+  .t-card {
+    padding: 24px;
+  }
+
+  .visit-grid {
+    gap: 40px;
+  }
+
+  .footer-grid {
+    gap: 28px;
+  }
+}
+
+
+/* =========================================================
+   TABLET — 641px TO 900px
+   ========================================================= */
+
+@media (min-width: 641px) and (max-width: 900px) {
+
+  .wrap {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* HEADER */
+
+  .nav {
+    padding: 10px 24px;
+  }
+
+  .nav .logo img {
+    height: 48px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+  /* HERO */
+
+  .hero-grid {
+    min-height: 690px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-photo-bleed {
+    position: absolute;
+    min-height: 690px;
+    background-position: 70% center;
+  }
+
+  .hero-copy {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 55px 32px 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-copy h1 img {
+    width: min(520px, 100%);
+    margin: 0 auto;
+  }
+
+  .hero-copy > p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  .appointment-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(500px, calc(100% - 48px));
+    margin: 28px auto 35px;
+    padding: 23px 24px 21px;
+  }
+
+  .appointment-card h3 {
+    font-size: 20px;
+  }
+
+  .appointment-card label {
+    font-size: 10px;
+  }
+
+  .field input,
+  .field select {
+    height: 38px;
+    font-size: 11px;
+  }
+
+  .appointment-card .btn-purple {
+    height: 38px;
+    font-size: 11px;
+  }
+
+
+  /* SERVICES */
+
+  .service-row {
+    padding: 38px 0 44px;
+  }
+
+  .service-row-inner {
+    padding: 0 24px;
+    gap: 0;
+    overflow-x: auto;
+  }
+
+  .service-item {
+    flex: 0 0 145px;
+    min-width: 145px;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+  }
+/* SECTIONS */
+
+  section {
+    padding: 58px 0;
+  }
+
+  .section-head {
+    margin-bottom: 34px;
+  }
+
+  .section-head h2,
+  .specialists .section-head h2 {
+    font-size: 1.9rem;
+  }
+
+  .excellence-grid,
+  .visit-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .excellence-copy {
+    text-align: center;
+  }
+
+  .excellence-copy p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stat-row {
+    justify-content: center;
+  }
+
+  .treatments-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .specialists-row {
+    gap: 18px;
+  }
+
+  .doc-card {
+    flex: 0 0 240px;
+    width: 240px;
+  }
+
+  .doc-photo {
+    width: 240px;
+    height: 275px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .t-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — UP TO 640px
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  section {
+    padding: 46px 0;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+  .nav {
+    width: 100%;
+    min-height: 62px;
+    padding: 8px 14px;
+  }
+
+  .nav .logo img {
+    height: 42px;
+    width: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.45rem;
+    padding: 6px;
+  }
+
+  .nav-links {
+    max-height: calc(100vh - 62px);
+    overflow-y: auto;
+  }
+
+  .nav-links a {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-inner {
+    padding: 0;
+  }
+
+  .hero-grid {
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .hero-photo-bleed {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    background-size: cover;
+    background-position: 68% center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-photo-bleed::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(241, 231, 251, 0.96) 0%,
+        rgba(241, 231, 251, 0.88) 35%,
+        rgba(241, 231, 251, 0.70) 65%,
+        rgba(241, 231, 251, 0.48) 100%
+      );
+  }
+
+  .hero-copy {
+    position: relative;
+    left: auto;
+    top: auto;
+    z-index: 3;
+    width: 100%;
+    max-width: 100%;
+    padding: 34px 20px 16px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    padding: 6px 11px;
+    gap: 6px;
+  }
+
+  .eyebrow-star {
+    font-size: 9px;
+  }
+
+  .hero-copy h1 {
+    margin: 15px 0 13px;
+  }
+
+  .hero-copy h1 img {
+    width: min(420px, 100%);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-copy > p {
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+
+  /* ---------- APPOINTMENT FORM ---------- */
+
+  .appointment-card {
+    position: relative;
+    z-index: 5;
+    top: auto;
+    right: auto;
+    left: auto;
+
+    width: calc(100% - 32px);
+    min-width: 0;
+    max-width: 480px;
+
+    margin: 18px auto 28px;
+    padding: 21px 17px 18px;
+
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.82);
+  }
+
+  .appointment-card h3 {
+    font-size: 20px;
+    margin-bottom: 17px;
+    text-align: left;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .field {
+    margin-bottom: 13px;
+  }
+
+  .appointment-card label {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .field input,
+  .field select {
+    height: 41px;
+    padding: 0 11px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+
+  .appointment-card .btn-purple {
+    width: 100%;
+    height: 41px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+
+  .form-note {
+    font-size: 10px;
+  }
+
+
+  /* ---------- SERVICE ICONS ---------- */
+
+  .service-row {
+    padding: 30px 0 34px;
+    overflow: hidden;
+  }
+
+  .service-row-inner {
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+
+    padding: 0 16px;
+    gap: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+
+    scroll-behavior: auto;
+  }
+
+  .service-row-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-item {
+    flex: 0 0 125px;
+    min-width: 125px;
+    gap: 8px;
+  }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    transform: none;
+  }
+.service-item span {
+    font-size: 11px;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+
+  /* ---------- SECTION HEADINGS ---------- */
+
+  .section-head {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 30px;
+    padding: 0 16px;
+  }
+
+  .section-head h2,
+  .specialists .section-head h2 {
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+
+  .section-head p,
+  .specialists .section-head p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+
+  /* ---------- EXCELLENCE ---------- */
+
+  .excellence-grid,
+  .visit-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .excellence-video {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .excellence-copy {
+    text-align: center;
+  }
+
+  .excellence-copy h2 {
+    font-size: 1.7rem;
+  }
+
+  .excellence-copy p {
+    max-width: 500px;
+    margin: 14px auto 24px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .stat-row {
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+
+  .stat .num {
+    font-size: 1.7rem;
+  }
+
+  .stat .label {
+    font-size: 0.78rem;
+  }
+
+
+  /* ---------- TREATMENTS ---------- */
+
+  .treatments-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .treatment-card {
+    width: 100%;
+  }
+
+  .treatment-thumb {
+    aspect-ratio: 16 / 9;
+  }
+
+  .treatment-card p {
+    padding: 13px 12px;
+    font-size: 0.9rem;
+  }
+
+
+  /* ---------- SPECIALISTS ---------- */
+
+  .specialists-row {
+    width: 100%;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 0 16px 12px;
+    scroll-snap-type: x proximity;
+  }
+
+  .doc-card {
+    flex: 0 0 230px;
+    width: 230px;
+    scroll-snap-align: start;
+  }
+
+  .doc-photo {
+    width: 230px;
+    height: 270px;
+    border-radius: 16px;
+  }
+
+  .doc-card h4 {
+    font-size: 0.92rem;
+  }
+
+  .doc-card span {
+    font-size: 0.78rem;
+  }
+
+
+  /* ---------- CTA ---------- */
+
+  .cta-wrap {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .cta-banner {
+    width: 100%;
+    padding: 46px 20px;
+    border-radius: 20px;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .cta-banner > p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .cta-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+  }
+
+
+  /* ---------- TESTIMONIALS ---------- */
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .t-card {
+    padding: 22px 18px;
+  }
+
+  .t-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- INSURANCE ---------- */
+
+  .insurance {
+    padding: 42px 0;
+    text-align: center;
+  }
+
+  .insurance-strip img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+
+  /* ---------- VISIT ---------- */
+
+  .visit-grid {
+    gap: 26px;
+  }
+
+  .visit-item {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .visit-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .visit-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .visit-item p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .map-frame {
+    border-radius: 16px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    padding: 48px 0 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 32px;
+  }
+
+  .footer-col h5 {
+    margin-bottom: 14px;
+  }
+
+  .footer-col li {
+    font-size: 0.82rem;
+    margin-bottom: 9px;
+  }
+
+  .footer-bottom {
+    padding-top: 18px;
+    font-size: 0.72rem;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES — UP TO 420px
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .nav {
+    min-height: 58px;
+    padding: 7px 12px;
+  }
+
+  .nav .logo img {
+    height: 38px;
+  }
+
+  .menu-toggle {
+    font-size: 1.35rem;
+  }
+
+
+  /* HERO */
+
+  .hero-copy {
+    padding: 28px 14px 12px;
+  }
+
+  .eyebrow {
+    font-size: 8px;
+    padding: 5px 10px;
+  }
+
+  .hero-copy h1 {
+    margin: 13px 0 11px;
+  }
+
+  .hero-copy h1 img {
+    width: min(360px, 100%);
+  }
+
+  .hero-copy > p {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  .appointment-card {
+    width: calc(100% - 20px);
+    margin: 16px auto 24px;
+    padding: 19px 15px 16px;
+    border-radius: 13px;
+  }
+
+  .appointment-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .appointment-card label {
+    font-size: 10px;
+  }
+
+  .field input,
+  .field select {
+    height: 39px;
+    font-size: 12px;
+  }
+
+  .appointment-card .btn-purple {
+    height: 39px;
+    font-size: 12px;
+  }
+
+
+  /* SERVICES */
+
+  .service-row {
+    padding: 26px 0 30px;
+  }
+
+  .service-row-inner {
+    padding: 0 12px;
+  }
+
+  .service-item {
+    flex: 0 0 115px;
+    min-width: 115px;
+  }
+
+  .service-icon {
+    width: 42px;
+    height: 42px;
+  }
+.service-item span {
+    font-size: 10.5px;
+  }
+
+
+  /* SECTIONS */
+
+  section {
+    padding: 40px 0;
+  }
+
+  .section-head {
+    padding: 0 12px;
+    margin-bottom: 26px;
+  }
+
+  .section-head h2,
+  .specialists .section-head h2 {
+    font-size: 1.45rem;
+  }
+
+  .section-head p,
+  .specialists .section-head p {
+    font-size: 0.82rem;
+  }
+
+  .excellence-copy h2 {
+    font-size: 1.5rem;
+  }
+
+  .stat-row {
+    gap: 22px;
+  }
+
+  .stat .num {
+    font-size: 1.5rem;
+  }
+
+  .stat .label {
+    font-size: 0.72rem;
+  }
+
+
+  /* SPECIALISTS */
+
+  .specialists-row {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .doc-card {
+    flex-basis: 210px;
+    width: 210px;
+  }
+
+  .doc-photo {
+    width: 210px;
+    height: 250px;
+  }
+
+
+  /* CTA */
+
+  .cta-wrap {
+    padding: 0 12px;
+  }
+
+  .cta-banner {
+    padding: 38px 16px;
+    border-radius: 17px;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta-banner > p {
+    font-size: 0.82rem;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    padding-top: 42px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .service-row-inner {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL SERVICE ICON BALANCE
+   =========================================================
+   The Surgeries PNG has additional transparent canvas space.
+   The CSS box remains equal to the other icons; only its visible
+   artwork receives a small visual enlargement.
+   ========================================================= */
+@media (max-width: 640px) {
+}
+
+@media (max-width: 420px) {
+}
+
+/* =========================================================
+   FINAL APPOINTMENT CARD POSITION
+   =========================================================
+   Desktop: move the appointment card slightly upward.
+   Mobile: keep the card in normal document flow.
+   ========================================================= */
+
+@media (min-width: 1201px) {
+  .appointment-card {
+    top: 75px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .appointment-card {
+    top: 55px;
+  }
+}
+
+@media (max-width: 900px) {
+  .appointment-card {
+    top: auto;
+  }
+}
+
+/* =========================================================
+   PDF TYPOGRAPHY + RESPONSIVE INSURANCE
+   =========================================================
+   The supplied PDF uses the custom display face for the main
+   section headings, while Poppins remains the body/UI font.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   TYPOGRAPHY — SECTION HEADINGS
+   --------------------------------------------------------- */
+
+.section-head h2,
+.specialists .section-head h2,
+.excellence-copy h2,
+.cta-banner h2 {
+  font-family: 'Exotic Bold', 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.section-head h2,
+.specialists .section-head h2 {
+  line-height: 1.15;
+}
+
+.excellence-copy h2 {
+  line-height: 1.18;
+}
+
+.cta-banner h2 {
+  line-height: 1.18;
+}
+
+/* Keep form/navigation/body typography in Poppins */
+body,
+button,
+input,
+select,
+textarea,
+.nav,
+.nav-links,
+.appointment-card,
+.service-item span,
+.footer-col,
+.visit-item,
+.treatment-card p,
+.doc-card,
+.t-card {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   INSURANCE — DESKTOP
+   --------------------------------------------------------- */
+
+.insurance {
+  overflow: hidden;
+}
+
+.insurance-strip {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+
+  padding-bottom: 4px;
+}
+
+.insurance-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.insurance-strip img {
+  display: block;
+
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* ---------------------------------------------------------
+   INSURANCE — TABLET
+   --------------------------------------------------------- */
+
+@media (min-width: 641px) and (max-width: 900px) {
+
+  .insurance-strip {
+    overflow-x: auto;
+  }
+
+  .insurance-strip img {
+    width: 760px;
+    max-width: none;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   INSURANCE — MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 640px) {
+
+  .insurance {
+    padding: 42px 0;
+    overflow: hidden;
+  }
+
+  .insurance .wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .insurance-badge {
+    margin-left: 16px;
+    margin-right: 16px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+  .insurance-strip {
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 0 16px 6px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .insurance-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  /*
+     Keep the complete insurance-logo strip wider than the phone.
+     The user can swipe horizontally to see all logos.
+  */
+  .insurance-strip img {
+    width: 760px;
+    max-width: none;
+    height: auto;
+
+    flex: 0 0 auto;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   INSURANCE — VERY SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 420px) {
+
+  .insurance {
+    padding: 38px 0;
+  }
+
+  .insurance-strip {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .insurance-strip img {
+    width: 700px;
+    max-width: none;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE HEADING SIZES — KEEP THE PDF DISPLAY FACE
+   --------------------------------------------------------- */
+
+@media (max-width: 640px) {
+
+  .section-head h2,
+  .specialists .section-head h2 {
+    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-size: 1.65rem;
+    line-height: 1.15;
+  }
+
+  .excellence-copy h2 {
+    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.18;
+  }
+
+  .cta-banner h2 {
+    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.18;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .section-head h2,
+  .specialists .section-head h2 {
+    font-size: 1.45rem;
+  }
+
+  .excellence-copy h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================================================
+   FINAL TYPOGRAPHY + INSURANCE RESPONSIVE
+   ========================================================= */
+
+/* Major headings — PDF-style custom display font */
+h1,
+h2,
+h3,
+.section-head h2,
+.specialists .section-head h2,
+.excellence-copy h2,
+.cta-banner h2 {
+  font-family: 'Exotic Bold', 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* Keep body/UI typography in Poppins */
+body,
+button,
+input,
+select,
+textarea,
+.nav,
+.nav-links,
+.appointment-card,
+.service-item span,
+.treatment-card p,
+.doc-card,
+.t-card,
+.visit-item,
+.footer-col {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================================
+   OUR INSURANCE — HORIZONTAL SCROLL
+   ========================================================= */
+
+.insurance {
+  overflow: hidden;
+}
+
+.insurance-strip {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  padding: 0 0 6px;
+}
+
+.insurance-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.insurance-strip img {
+  display: block;
+  width: 900px;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* TABLET */
+@media (min-width: 641px) and (max-width: 900px) {
+  .insurance-strip {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .insurance-strip img {
+    width: 820px;
+    max-width: none;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .insurance {
+    padding: 42px 0;
+    overflow: hidden;
+  }
+
+  .insurance .wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .insurance-badge {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .insurance-strip {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 16px 6px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .insurance-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .insurance-strip img {
+    width: 760px;
+    max-width: none;
+    height: auto;
+    flex: 0 0 auto;
+  }
+
+  /* Keep the PDF heading face on mobile */
+  .section-head h2,
+  .specialists .section-head h2 {
+    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-size: 1.65rem;
+    line-height: 1.15;
+  }
+
+  .excellence-copy h2 {
+    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.18;
+  }
+
+  .cta-banner h2 {
+    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.18;
+  }
+}
+
+
+/* VERY SMALL MOBILE */
+@media (max-width: 420px) {
+  .insurance {
+    padding: 38px 0;
+  }
+
+  .insurance-strip {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .insurance-strip img {
+    width: 700px;
+    max-width: none;
+  }
+
+  .section-head h2,
+  .specialists .section-head h2 {
+    font-size: 1.45rem;
+  }
+
+  .excellence-copy h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* =========================================================
+   SERVICE ICONS — SAME CSS SIZE
+   ========================================================= */
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    transform: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .service-icon {
+    width: 42px;
+    height: 42px;
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   FINAL FOOTER FIX
+   ========================================================= */
+
+.site-footer {
+  background: var(--purple-dark);
+  color: rgba(255, 255, 255, 0.72);
+  padding: 58px 0 22px;
+}
+
+.site-footer .wrap {
+  width: 100%;
+}
+
+
+/* FOOTER GRID */
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 1.15fr 1fr;
+  gap: 45px;
+  margin-bottom: 42px;
+  align-items: start;
+}
+
+
+/* BRAND */
+
+.footer-brand {
+  min-width: 0;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer-logo img {
+  display: block;
+  width: 245px;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-description {
+  max-width: 285px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
+
+/* SOCIAL ICONS */
+
+.site-footer .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.site-footer .footer-social a {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.10);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.site-footer .footer-social a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.site-footer .footer-social svg {
+  width: 16px;
+  height: 16px;
+
+  stroke: #fff;
+  stroke-width: 1.8;
+}
+
+
+/* FOOTER HEADINGS */
+
+.site-footer .footer-col h5 {
+  margin: 3px 0 18px;
+
+  color: #fff;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+
+/* LIST */
+
+.site-footer .footer-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer .footer-col li {
+  margin: 0 0 11px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+
+/* LINKS */
+
+.site-footer .footer-col a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.site-footer .footer-col a:hover {
+  color: #fff;
+  padding-left: 3px;
+}
+
+
+/* ADDRESS */
+
+.site-footer .footer-address {
+  line-height: 1.65;
+}
+
+
+/* COPYRIGHT */
+
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+  padding-top: 20px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  text-align: center;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FOOTER — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+    padding: 48px 0 20px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 28px;
+  }
+
+  .footer-logo img {
+    width: 220px;
+  }
+
+}
+
+
+/* =========================================================
+   FOOTER — MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .site-footer {
+    padding: 42px 0 18px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 30px;
+  }
+
+  .footer-logo img {
+    width: 215px;
+  }
+
+  .footer-description {
+    max-width: 310px;
+    font-size: 0.82rem;
+  }
+
+  .site-footer .footer-col h5 {
+    margin-bottom: 13px;
+  }
+
+  .site-footer .footer-col li {
+    font-size: 0.82rem;
+    margin-bottom: 8px;
+  }
+
+  .site-footer .footer-bottom {
+    padding-top: 17px;
+    font-size: 0.7rem;
+  }
+
+}
+
+
+/* =========================================================
+   FOOTER — VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .site-footer {
+    padding: 38px 0 16px;
+  }
+
+  .site-footer .footer-grid {
+    gap: 25px;
+  }
+
+  .footer-logo img {
+    width: 195px;
+  }
+
+  .footer-description {
+    font-size: 0.8rem;
+  }
+
+}
+/* =========================================================
+   FINAL INSURANCE AUTO-SCROLL FIX
+   ========================================================= */
+
+.insurance {
+  width: 100%;
+  overflow: hidden;
+}
+
+.insurance-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 8px 0 12px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+
+  cursor: grab;
+}
+
+.insurance-row:active {
+  cursor: grabbing;
+}
+
+.insurance-row::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* EACH INSURANCE LOGO */
+
+.insurance-item {
+  flex: 0 0 auto;
+
+  width: 150px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  padding: 10px 16px;
+}
+
+.insurance-item img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 120px;
+  max-height: 52px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   INSURANCE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .insurance-row {
+    gap: 18px;
+  }
+
+  .insurance-item {
+    width: 135px;
+    height: 68px;
+  }
+
+}
+
+
+/* =========================================================
+   INSURANCE — MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .insurance {
+    padding: 42px 0;
+  }
+
+  .insurance .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .insurance-row {
+    gap: 14px;
+
+    padding-top: 6px;
+    padding-bottom: 10px;
+  }
+
+  .insurance-item {
+    width: 125px;
+    height: 64px;
+
+    padding: 9px 13px;
+  }
+
+  .insurance-item img {
+    max-width: 105px;
+    max-height: 45px;
+  }
+
+}
+
+
+/* =========================================================
+   INSURANCE — VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .insurance .wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .insurance-row {
+    gap: 12px;
+  }
+
+  .insurance-item {
+    width: 115px;
+    height: 60px;
+  }
+
+}
+
+/* =========================================================
+   GENET DENTAL - FOOTER FINAL PDF STYLE
+   ========================================================= */
+
+.site-footer {
+  width: 100%;
+  background: var(--purple-dark);
+  color: rgba(255, 255, 255, 0.72);
+  padding: 42px 0 16px;
+  overflow: hidden;
+}
+
+.site-footer .wrap {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+
+/* FOOTER GRID */
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 1.15fr 1fr;
+  gap: 45px;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+
+/* LOGO */
+
+.site-footer .footer-logo {
+  display: block;
+  margin: 0 0 12px;
+}
+
+.site-footer .footer-logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* DESCRIPTION */
+
+.site-footer .footer-description {
+  max-width: 285px;
+  margin: 0;
+
+  color: rgba(255,255,255,.72);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* SOCIAL */
+
+.site-footer .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.site-footer .footer-social a {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255,255,255,.10);
+
+  overflow: hidden;
+}
+
+.site-footer .footer-social img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+
+/* HEADINGS */
+
+.site-footer .footer-col h5 {
+  margin: 0 0 14px;
+
+  color: #fff;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+
+/* LIST */
+
+.site-footer .footer-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer .footer-col li {
+  margin: 0 0 7px;
+
+  color: rgba(255,255,255,.72);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.site-footer .footer-col a {
+  color: rgba(255,255,255,.72);
+  text-decoration: none;
+}
+
+.site-footer .footer-col a:hover {
+  color: #fff;
+}
+
+.site-footer .footer-address {
+  max-width: 260px;
+}
+
+
+/* COPYRIGHT */
+
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.14);
+
+  padding-top: 12px;
+
+  color: rgba(255,255,255,.55);
+
+  text-align: center;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+    padding: 38px 0 16px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .site-footer {
+    padding: 35px 0 15px;
+  }
+
+  .site-footer .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  .site-footer .footer-logo img {
+    width: 145px;
+  }
+
+  .site-footer .footer-description {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .site-footer .wrap {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .site-footer .footer-logo img {
+    width: 135px;
+  }
+
+}
+
+/* =========================================================
+   FINAL FOOTER - MATCH PDF
+   ========================================================= */
+
+.site-footer {
+  width: 100%;
+  background: var(--purple-dark);
+  color: rgba(255, 255, 255, 0.72);
+  padding: 28px 0 12px;
+  overflow: hidden;
+}
+
+.site-footer .wrap {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   MAIN FOOTER
+   ========================= */
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1.15fr 1fr;
+  gap: 38px;
+
+  align-items: start;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.site-footer .footer-logo {
+  display: block;
+  margin: 0 0 10px;
+}
+
+.site-footer .footer-logo img {
+  display: block;
+
+  width: 155px;
+  height: auto;
+
+  max-width: 100%;
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.site-footer .footer-description {
+  max-width: 275px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   SOCIAL ICONS
+   ========================= */
+
+.site-footer .footer-social {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 12px;
+}
+
+.site-footer .footer-social a {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  overflow: hidden;
+}
+
+.site-footer .footer-social img {
+  width: 15px;
+  height: 15px;
+
+  object-fit: contain;
+}
+
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+.site-footer .footer-col h5 {
+  margin: 1px 0 12px;
+
+  color: #fff;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+/* =========================
+   LIST
+   ========================= */
+
+.site-footer .footer-col ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-footer .footer-col li {
+  margin: 0 0 6px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+
+  line-height: 1.45;
+}
+
+.site-footer .footer-col a {
+  color: rgba(255, 255, 255, 0.72);
+
+  text-decoration: none;
+}
+
+.site-footer .footer-col a:hover {
+  color: #fff;
+}
+
+
+/* ADDRESS */
+
+.site-footer .footer-address {
+  max-width: 250px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   COPYRIGHT
+   ========================= */
+
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+  padding-top: 10px;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  text-align: center;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+    padding: 25px 0 12px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .site-footer {
+    padding: 28px 0 12px;
+  }
+
+  .site-footer .wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+
+    margin-bottom: 22px;
+  }
+
+  .site-footer .footer-logo img {
+    width: 145px;
+  }
+
+  .site-footer .footer-description {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .site-footer .wrap {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .site-footer .footer-logo img {
+    width: 135px;
+  }
+
+}
+
+
+/* =========================================================
+   FOOTER - MATCH REFERENCE
+   ========================================================= */
+
+.site-footer {
+  width: 100%;
+  background: var(--purple-dark);
+  color: rgba(255, 255, 255, 0.72);
+  padding: 34px 0 14px;
+  overflow: hidden;
+}
+
+.site-footer .wrap {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+
+/* MAIN FOOTER GRID */
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1.25fr 1fr;
+  gap: 42px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   LEFT BRAND
+   ========================================================= */
+
+.site-footer .footer-brand {
+  min-width: 0;
+}
+
+.site-footer .footer-logo {
+  display: block;
+  width: 88px;
+  height: 82px;
+  margin-bottom: 12px;
+}
+
+.site-footer .footer-logo img {
+  display: block;
+  width: 88px;
+  height: 82px;
+  object-fit: contain;
+}
+
+
+/* DESCRIPTION */
+
+.site-footer .footer-description {
+  max-width: 260px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+
+/* SOCIAL ICONS */
+
+.site-footer .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.site-footer .footer-social a {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.10);
+
+  overflow: hidden;
+}
+
+.site-footer .footer-social img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   COLUMN HEADINGS
+   ========================================================= */
+
+.site-footer .footer-col h5 {
+  margin: 2px 0 13px;
+
+  color: #fff;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   LINKS / CONTACT
+   ========================================================= */
+
+.site-footer .footer-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer .footer-col li {
+  margin: 0 0 7px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.site-footer .footer-col a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+}
+
+.site-footer .footer-col a:hover {
+  color: #fff;
+}
+
+.site-footer .footer-address {
+  max-width: 250px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+  padding-top: 10px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  text-align: center;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+    padding: 30px 0 14px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .site-footer {
+    padding: 30px 0 14px;
+  }
+
+  .site-footer .wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .site-footer .footer-logo {
+    width: 76px;
+    height: 72px;
+  }
+
+  .site-footer .footer-logo img {
+    width: 76px;
+    height: 72px;
+  }
+
+  .site-footer .footer-description {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .site-footer .wrap {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .site-footer .footer-grid {
+    gap: 20px;
+  }
+
+  .site-footer .footer-logo {
+    width: 70px;
+    height: 66px;
+  }
+
+  .site-footer .footer-logo img {
+    width: 70px;
+    height: 66px;
+  }
+
+}
+
+
+/* =========================================================
+   GENET DENTAL FOOTER
+   FINAL VERSION - MATCH REFERENCE
+   ========================================================= */
+
+
+/* =========================================================
+   FOOTER CONTAINER
+   ========================================================= */
+
+.site-footer {
+  width: 100%;
+  background: var(--purple-dark);
+  color: rgba(255, 255, 255, 0.72);
+
+  padding: 34px 0 14px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FOOTER WRAPPER
+   ========================================================= */
+
+.site-footer .wrap {
+  width: 100%;
+  max-width: 1220px;
+
+  margin: 0 auto;
+
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+
+/* =========================================================
+   FOUR COLUMN LAYOUT
+   ========================================================= */
+
+.site-footer .footer-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    1.25fr
+    1fr
+    1.25fr
+    1fr;
+
+  gap: 42px;
+
+  align-items: start;
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   BRAND COLUMN
+   ========================================================= */
+
+.site-footer .footer-brand {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   TOOTH LOGO
+   ========================================================= */
+
+.site-footer .footer-logo {
+
+  width: 88px;
+  height: 82px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  margin-bottom: 12px;
+}
+
+
+.site-footer .footer-logo img {
+
+  width: 82px;
+  height: 76px;
+
+  max-width: none;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.site-footer .footer-description {
+
+  width: 100%;
+  max-width: 275px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
+
+.site-footer .footer-social {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 13px;
+}
+
+
+/* SOCIAL CIRCLE */
+
+.site-footer .footer-social-link {
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  overflow: hidden;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+
+.site-footer .footer-social-link:hover {
+
+  background: rgba(255, 255, 255, 0.18);
+
+  transform: translateY(-2px);
+}
+
+
+/* SOCIAL IMAGE */
+
+.site-footer .footer-social-link img {
+
+  width: 16px;
+  height: 16px;
+
+  max-width: none;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================================
+   FOOTER COLUMN
+   ========================================================= */
+
+.site-footer .footer-col {
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   COLUMN HEADINGS
+   ========================================================= */
+
+.site-footer .footer-col h5 {
+
+  margin: 2px 0 13px;
+
+  padding: 0;
+
+  color: #ffffff;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+.site-footer .footer-col ul {
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* =========================================================
+   LIST ITEMS
+   ========================================================= */
+
+.site-footer .footer-col li {
+
+  margin: 0 0 7px;
+
+  padding: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.site-footer .footer-col a {
+
+  color: rgba(255, 255, 255, 0.72);
+
+  text-decoration: none;
+
+  transition: color .2s ease;
+}
+
+
+.site-footer .footer-col a:hover {
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ADDRESS
+   ========================================================= */
+
+.site-footer .footer-address {
+
+  max-width: 260px;
+
+  line-height: 1.5 !important;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM / COPYRIGHT
+   ========================================================= */
+
+.site-footer .footer-bottom {
+
+  width: 100%;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+
+  padding-top: 10px;
+
+  text-align: center;
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 400;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+
+    padding:
+      30px 0 14px;
+
+  }
+
+
+  .site-footer .wrap {
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+  }
+
+
+  .site-footer .footer-grid {
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 28px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .site-footer {
+
+    padding:
+      30px 0 14px;
+
+  }
+
+
+  .site-footer .wrap {
+
+    padding-left: 18px;
+    padding-right: 18px;
+
+  }
+
+
+  .site-footer .footer-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    margin-bottom: 22px;
+
+  }
+
+
+  .site-footer .footer-logo {
+
+    width: 78px;
+    height: 74px;
+
+    border-radius: 13px;
+
+  }
+
+
+  .site-footer .footer-logo img {
+
+    width: 73px;
+    height: 70px;
+
+  }
+
+
+  .site-footer .footer-description {
+
+    max-width: 290px;
+
+    font-size: 10px;
+
+  }
+
+
+  .site-footer .footer-col h5 {
+
+    font-size: 12px;
+
+  }
+
+
+  .site-footer .footer-col li {
+
+    font-size: 10px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .site-footer {
+
+    padding:
+      28px 0 12px;
+
+  }
+
+
+  .site-footer .wrap {
+
+    padding-left: 14px;
+    padding-right: 14px;
+
+  }
+
+
+  .site-footer .footer-grid {
+
+    gap: 20px;
+
+  }
+
+
+  .site-footer .footer-logo {
+
+    width: 72px;
+    height: 68px;
+
+  }
+
+
+  .site-footer .footer-logo img {
+
+    width: 68px;
+    height: 65px;
+
+  }
+
+
+  .site-footer .footer-social-link {
+
+    width: 27px;
+    height: 27px;
+
+  }
+
+}
+/* ===== DOCTOR PHOTOS - FIX ZOOM/CROPPING ===== */
+
+.specialists .doc-photo {
+  width: 100%;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #f4f4f4;
+}
+
+.specialists .doc-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* Desktop */
+@media (min-width: 901px) {
+  .specialists .doc-photo {
+    height: 460px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .specialists .doc-photo {
+    height: 400px;
+  }
+
+  .specialists .doc-photo img {
+    object-fit: contain;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .specialists .doc-photo {
+    height: 380px;
+  }
+
+  .specialists .doc-photo img {
+    object-fit: contain;
+  }
+}
+
+/* =========================================
+   INSURANCE LOGOS - LEFT TO RIGHT SCROLL
+   ========================================= */
+
+.insurance {
+  width: 100%;
+  overflow: hidden;
+}
+
+.insurance-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+
+.insurance-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+
+  /* Start slightly to the left and move RIGHT */
+  transform: translateX(-50%);
+
+  animation: insuranceMoveRight 22s linear infinite;
+}
+
+.insurance-track img {
+  flex: 0 0 auto;
+  width: 800px;
+  height: auto;
+  max-width: none;
+  display: block;
+  object-fit: contain;
+}
+
+/* LEFT → RIGHT */
+@keyframes insuranceMoveRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Pause when mouse is over it */
+.insurance-marquee:hover .insurance-track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+  .insurance-track img {
+    width: 720px;
+  }
+
+  .insurance-track {
+    animation-duration: 20s;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 640px) {
+  .insurance-marquee {
+    margin-top: 24px;
+  }
+
+  .insurance-track img {
+    width: 600px;
+  }
+
+  .insurance-track {
+    animation-duration: 18s;
+  }
+}
+
+
+/* =========================================
+   DOCTORS - HORIZONTAL SCROLL
+   ========================================= */
+
+.specialists {
+  width: 100%;
+  overflow: hidden;
+}
+
+.specialists-row {
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 0 25px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  cursor: grab;
+}
+
+.specialists-row::-webkit-scrollbar {
+  display: none;
+}
+
+.specialists-row:active {
+  cursor: grabbing;
+}
+
+
+/* Each doctor card stays fixed width */
+.specialists-row .doc-card {
+  flex: 0 0 360px;
+  width: 360px;
+  min-width: 360px;
+}
+
+
+/* Doctor image */
+.specialists-row .doc-photo {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #f4f4f4;
+}
+
+.specialists-row .doc-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+
+/* Doctor name */
+.specialists-row .doc-card h4 {
+  margin: 20px 0 5px;
+}
+
+
+/* Specialty */
+.specialists-row .doc-card span {
+  display: block;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .specialists-row {
+    gap: 24px;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 320px;
+    width: 310px;
+    min-width: 320px;
+  }
+
+  .specialists-row .doc-photo {
+    height: 390px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 640px) {
+
+  .specialists-row {
+    gap: 18px;
+    padding-bottom: 20px;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 285px;
+    width: 285px;
+    min-width: 285px;
+  }
+
+  .specialists-row .doc-photo {
+    height: 290px;
+    border-radius: 18px;
+  }
+}
+/* =========================================
+   VISIT SECTION - CLICKABLE LINKS
+   ========================================= */
+
+.visit-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.visit-link p {
+  transition: color 0.2s ease;
+}
+
+.visit-link:hover p {
+  color: var(--purple);
+}
+
+
+/* =========================================
+   CLICKABLE MAP
+   ========================================= */
+
+.map-clickable {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.map-clickable img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.35s ease;
+}
+
+.map-clickable:hover img {
+  transform: scale(1.03);
+}
+
+.map-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+
+  background: var(--purple-dark);
+  color: #fff;
+
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+
+  white-space: nowrap;
+}
+
+.map-clickable:hover .map-overlay {
+  opacity: 1;
+}
+
+/* =========================================
+   DOCTORS - MOBILE HORIZONTAL SCROLL
+   ========================================= */
+
+.specialists {
+  width: 100%;
+  overflow: hidden;
+}
+
+.specialists-row {
+  width: 100%;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  overflow-x: auto !important;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  -webkit-overflow-scrolling: touch;
+
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+
+  padding: 10px 0 25px;
+
+  cursor: grab;
+}
+
+.specialists-row::-webkit-scrollbar {
+  display: none;
+}
+
+.specialists-row:active {
+  cursor: grabbing;
+}
+
+
+/* Doctor cards must NOT shrink */
+.specialists-row .doc-card {
+  flex: 0 0 285px !important;
+  width: 285px !important;
+  min-width: 285px !important;
+  max-width: 285px !important;
+}
+
+
+/* Doctor image */
+.specialists-row .doc-photo {
+  width: 100%;
+  height: 290px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 18px;
+
+  background: #f4f4f4;
+}
+
+.specialists-row .doc-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain !important;
+  object-position: center;
+
+  display: block;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 640px) {
+
+  .specialists {
+    overflow: hidden;
+  }
+
+  .specialists-row {
+    width: 100vw !important;
+
+    margin-left: calc(50% - 50vw);
+    padding-left: 18px;
+    padding-right: 18px;
+
+    gap: 18px;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    touch-action: pan-x;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 285px !important;
+    width: 285px !important;
+    min-width: 285px !important;
+  }
+
+  .specialists-row .doc-photo {
+    height: 290px !important;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  .specialists-row {
+    padding-left: 14px;
+    padding-right: 14px;
+    gap: 15px;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 270px !important;
+    width: 270px !important;
+    min-width: 270px !important;
+  }
+
+  .specialists-row .doc-photo {
+    height: 280px !important;
+  }
+}
+
+/* =========================================
+   SPECIALISTS - HORIZONTAL AUTO SCROLL
+   ========================================= */
+
+.specialists {
+  width: 100%;
+  overflow: hidden;
+}
+
+.specialists .wrap {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.specialists-row {
+  width: 100%;
+
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start;
+
+  gap: 24px;
+
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  -webkit-overflow-scrolling: touch;
+
+  touch-action: pan-x;
+
+  padding: 5px 0 25px;
+
+  cursor: grab;
+}
+
+.specialists-row::-webkit-scrollbar {
+  display: none;
+}
+
+.specialists-row:active {
+  cursor: grabbing;
+}
+
+
+/* =========================================
+   DOCTOR CARD
+   ========================================= */
+
+.specialists-row .doc-card {
+  flex: 0 0 330px !important;
+  width: 330px !important;
+  min-width: 330px !important;
+  max-width: 330px !important;
+}
+
+
+/* =========================================
+   DOCTOR IMAGE
+   ========================================= */
+
+.specialists-row .doc-photo {
+  width: 100%;
+  height: 330px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #f4f4f4;
+}
+
+.specialists-row .doc-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain !important;
+  object-position: center;
+
+  display: block;
+}
+
+
+/* =========================================
+   DOCTOR TEXT
+   ========================================= */
+
+.specialists-row .doc-card h4 {
+  margin: 16px 0 5px;
+}
+
+.specialists-row .doc-card span {
+  display: block;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .specialists-row {
+    gap: 20px;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  .specialists-row .doc-photo {
+    height: 310px !important;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 640px) {
+
+  .specialists {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .specialists .wrap {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .specialists .section-head {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .specialists-row {
+    width: 100% !important;
+
+    padding-left: 18px;
+    padding-right: 18px;
+
+    gap: 16px;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    touch-action: pan-x;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 275px !important;
+    width: 275px !important;
+    min-width: 275px !important;
+    max-width: 275px !important;
+  }
+
+  .specialists-row .doc-photo {
+    width: 275px;
+    height: 280px !important;
+
+    border-radius: 18px;
+  }
+
+  .specialists-row .doc-card h4 {
+    font-size: 16px;
+    margin-top: 14px;
+  }
+
+  .specialists-row .doc-card span {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  .specialists-row {
+    padding-left: 14px;
+    padding-right: 14px;
+    gap: 14px;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 260px !important;
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+  }
+
+  .specialists-row .doc-photo {
+    width: 260px;
+    height: 270px !important;
+  }
+}
+
+/* =========================================
+   SPECIALISTS CAROUSEL
+   ========================================= */
+
+.specialists {
+  width: 100%;
+  overflow: hidden;
+}
+
+.specialists-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.specialists-row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start;
+
+  width: max-content;
+
+  gap: 24px;
+
+  animation: doctorsScroll 35s linear infinite;
+
+  will-change: transform;
+}
+
+
+/* Pause when mouse is over the doctors */
+.specialists-carousel:hover .specialists-row {
+  animation-play-state: paused;
+}
+
+
+/* =========================================
+   DOCTOR CARD
+   ========================================= */
+
+.specialists-row .doc-card {
+  flex: 0 0 330px !important;
+
+  width: 330px !important;
+  min-width: 330px !important;
+  max-width: 330px !important;
+}
+
+
+/* =========================================
+   DOCTOR PHOTO
+   ========================================= */
+
+.specialists-row .doc-photo {
+  width: 330px;
+  height: 330px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #f4f4f4;
+}
+
+.specialists-row .doc-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain !important;
+  object-position: center;
+
+  display: block;
+}
+
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+.specialists-row .doc-card h4 {
+  margin: 16px 0 5px;
+}
+
+.specialists-row .doc-card span {
+  display: block;
+}
+
+
+/* =========================================
+   CONTINUOUS ANIMATION
+   ========================================= */
+
+@keyframes doctorsScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .specialists-row {
+    gap: 20px;
+    animation-duration: 32s;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  .specialists-row .doc-photo {
+    width: 300px;
+    height: 310px !important;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 640px) {
+
+  .specialists {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .specialists .wrap {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .specialists .section-head {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .specialists-carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .specialists-row {
+    gap: 16px;
+
+    animation-duration: 28s;
+
+    width: max-content;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 275px !important;
+
+    width: 275px !important;
+    min-width: 275px !important;
+    max-width: 275px !important;
+  }
+
+  .specialists-row .doc-photo {
+    width: 275px;
+    height: 280px !important;
+
+    border-radius: 18px;
+  }
+
+  .specialists-row .doc-card h4 {
+    font-size: 16px;
+    margin-top: 14px;
+  }
+
+  .specialists-row .doc-card span {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  .specialists-row {
+    gap: 14px;
+    animation-duration: 26s;
+  }
+
+  .specialists-row .doc-card {
+    flex: 0 0 260px !important;
+
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+  }
+
+  .specialists-row .doc-photo {
+    width: 260px;
+    height: 270px !important;
+  }
+}
+/* =========================================
+   MOBILE HEADER
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    width: 100%;
+  }
+
+  .site-header .header-inner {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 16px;
+  }
+
+  /* Hide Book Appointment button on mobile */
+  .site-header .header-cta {
+    display: none !important;
+  }
+
+  /* Keep logo properly visible */
+  .site-header .header-logo {
+    display: flex;
+    align-items: center;
+
+    width: auto;
+    max-width: 190px;
+  }
+
+  .site-header .header-logo img {
+    display: block;
+
+    width: auto;
+    height: 48px;
+
+    max-width: 190px;
+    object-fit: contain;
+  }
+
+  /* Mobile menu button */
+  .site-header .menu-toggle {
+    display: flex;
+
+    width: 40px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-cta,
+  .book-appointment,
+  .btn-book-appointment {
+    display: none !important;
+  }
+}
+
+/* =========================================
+   MOBILE HEADER - HIDE BOOK APPOINTMENT
+   ========================================= */
+
+@media (max-width: 640px) {
+  .header-book-btn {
+    display: none !important;
+  }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* =========================================================
+   DOCTORS - CONTINUOUS AUTO SCROLL
+   ========================================================= */
+
+.specialists {
+  width: 100%;
+  overflow: hidden;
+  background: #FAF9FD;
+}
+
+.specialists-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.specialists-row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 4px 14px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+}
+
+.specialists-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Important for continuous scrolling */
+.doc-card {
+  flex: 0 0 270px;
+  width: 270px;
+  min-width: 270px;
+  text-align: left;
+}
+
+/* Doctor image */
+.doc-photo {
+  width: 270px;
+  height: 305px;
+  border-radius: 18px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+ * contain prevents the doctor photos from being
+ * excessively zoomed/cropped.
+ */
+.doc-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  display: block;
+}
+
+/* Doctor name */
+.doc-card h4 {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Doctor specialty */
+.doc-card span {
+  display: block;
+  color: var(--grey);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .specialists-row {
+    gap: 22px;
+  }
+
+  .doc-card {
+    flex: 0 0 245px;
+    width: 245px;
+    min-width: 245px;
+  }
+
+  .doc-photo {
+    width: 245px;
+    height: 290px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .specialists {
+    overflow: hidden;
+  }
+
+  .specialists-carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .specialists-row {
+    gap: 18px;
+    padding: 0 4px 12px;
+  }
+
+  .doc-card {
+    flex: 0 0 220px;
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .doc-photo {
+    width: 220px;
+    height: 260px;
+    border-radius: 16px;
+  }
+
+  .doc-card h4 {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .doc-card span {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .specialists-row {
+    gap: 15px;
+  }
+
+  .doc-card {
+    flex: 0 0 205px;
+    width: 205px;
+    min-width: 205px;
+  }
+
+  .doc-photo {
+    width: 205px;
+    height: 245px;
+  }
+
+  .doc-card h4 {
+    font-size: 12px;
+  }
+
+  .doc-card span {
+    font-size: 10px;
+  }
+
+}
+
+/* =========================================================
+   OUR SPECIALISTS - CONTINUOUS CAROUSEL
+   ========================================================= */
+
+.specialists {
+  width: 100%;
+  background: #FAF9FD;
+  overflow: hidden;
+}
+
+.specialists-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.specialists-track {
+  display: flex;
+  align-items: flex-start;
+
+  width: max-content;
+
+  gap: 28px;
+
+  /*
+   * Continuous movement.
+   * Lower seconds = faster.
+   */
+  /* animation: doctors-scroll 28s linear infinite; */
+   animation: doctors-scroll 48s linear infinite reverse;
+
+  will-change: transform;
+}
+
+
+/*
+ * Because the second half is an exact duplicate
+ * of the first half, moving -50% creates a
+ * seamless loop.
+ */
+/* @keyframes doctors-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+ */
+@keyframes doctors-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+/* =========================================================
+   DOCTOR CARD
+   ========================================================= */
+
+.doc-card {
+  flex: 0 0 270px;
+
+  width: 270px;
+  min-width: 270px;
+
+  margin: 0;
+  padding: 0;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   DOCTOR PHOTO
+   ========================================================= */
+
+.doc-photo {
+  width: 270px;
+  height: 305px;
+
+  margin: 0 0 15px;
+  padding: 0;
+
+  border-radius: 18px;
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doc-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  /*
+   * Fill the card without leaving large empty areas.
+   */
+  object-fit: cover;
+  object-position: center top;
+}
+
+
+/* =========================================================
+   DOCTOR DETAILS
+   ========================================================= */
+
+.doc-info {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.doc-info h4 {
+  margin: 0 0 6px;
+  padding: 0;
+
+  color: var(--ink);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  line-height: 1.35;
+}
+
+.doc-info span {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  color: var(--grey);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .specialists-track {
+    gap: 22px;
+
+    animation-duration: 26s;
+  }
+
+  .doc-card {
+    flex: 0 0 245px;
+    width: 245px;
+    min-width: 245px;
+  }
+
+  .doc-photo {
+    width: 245px;
+    height: 290px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .specialists {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .specialists-carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .specialists-track {
+    gap: 18px;
+
+    /*
+     * Faster mobile movement.
+     */
+    animation-duration: 22s;
+
+    /*
+     * Prevent accidental wrapping.
+     */
+    flex-wrap: nowrap;
+  }
+
+  .doc-card {
+    flex: 0 0 220px;
+
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .doc-photo {
+    width: 220px;
+    height: 260px;
+
+    border-radius: 16px;
+  }
+
+  .doc-info h4 {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .doc-info span {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .specialists-track {
+    gap: 15px;
+
+    animation-duration: 20s;
+  }
+
+  .doc-card {
+    flex: 0 0 205px;
+
+    width: 205px;
+    min-width: 205px;
+  }
+
+  .doc-photo {
+    width: 205px;
+    height: 245px;
+  }
+
+  .doc-info h4 {
+    font-size: 12px;
+  }
+
+  .doc-info span {
+    font-size: 10px;
+  }
+
+}
+/* =========================================================
+   MOBILE FIXED NAVBAR
+   ========================================================= */
+
+@media (max-width: 640px) {
+  header#siteHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+
+  header#siteHeader .nav {
+    width: 100%;
+    min-height: 62px;
+    padding: 8px 14px;
+  }
+
+  /* Keep the logo stable */
+  header#siteHeader .nav .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  header#siteHeader .nav .logo img {
+    height: 42px;
+    width: auto;
+    display: block;
+  }
+
+  /* Menu button */
+  header#siteHeader .menu-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  /*
+   * Since header is fixed, push the page content
+   * down so the hero doesn't hide underneath it.
+   */
+  body {
+    padding-top: 62px;
+  }
+}
+
+/* =========================================================
+   FINAL MOBILE HERO
+   Background image must remain visible after removing form
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .hero {
+    width: 100%;
+    overflow: hidden;
+    background: #F1E7FB;
+  }
+
+  .hero-main {
+    position: relative;
+
+    width: 100%;
+
+    /*
+     * Give the hero a proper mobile height.
+     */
+    height: 585px;
+    min-height: 585px;
+
+    overflow: hidden;
+  }
+
+  /*
+   * IMPORTANT:
+   * Keep the lady image as the actual full background.
+   */
+  .hero-photo-bleed {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+
+    background-size: cover;
+
+    /*
+     * Show more of the lady on mobile.
+     */
+    background-position: 72% center;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+
+    display: block;
+  }
+
+  /*
+   * Lavender overlay.
+   *
+   * Top is lighter so the text is readable.
+   * Bottom becomes more transparent so the
+   * lady/background is clearly visible.
+   */
+  .hero-photo-bleed::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(241, 231, 251, 0.96) 0%,
+        rgba(241, 231, 251, 0.90) 25%,
+        rgba(241, 231, 251, 0.70) 48%,
+        rgba(241, 231, 251, 0.35) 70%,
+        rgba(241, 231, 251, 0.08) 100%
+      );
+
+    z-index: 1;
+  }
+
+  /*
+   * Put the content on top of the image.
+   */
+  .hero-copy {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 34px 20px 20px;
+
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+
+    font-size: 9px;
+
+    padding: 6px 11px;
+
+    gap: 6px;
+  }
+
+  .eyebrow-star {
+    font-size: 9px;
+  }
+
+  .hero-copy h1 {
+    margin: 15px 0 13px;
+    padding: 0;
+  }
+
+  .hero-copy h1 img {
+    display: block;
+
+    width: min(390px, 100%);
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+  .hero-copy > p {
+    width: 100%;
+    max-width: 340px;
+
+    margin: 0 auto;
+
+    color: #40384a;
+
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  /*
+   * There is NO appointment form anymore.
+   */
+  .appointment-card {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-main {
+    height: 560px;
+    min-height: 560px;
+  }
+
+  .hero-photo-bleed {
+    background-position: 73% center;
+  }
+
+  .hero-copy {
+    padding: 30px 16px 20px;
+  }
+
+  .hero-copy h1 img {
+    width: 360px;
+    max-width: 100%;
+  }
+
+  .hero-copy > p {
+    max-width: 315px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}
+/* =========================================================
+   MOBILE HERO + BOOK APPOINTMENT BUTTON
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .hero {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-main {
+    position: relative;
+    width: 100%;
+    height: 585px;
+    min-height: 585px;
+    overflow: hidden;
+  }
+
+  /* Background lady image */
+  .hero-photo-bleed {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+
+    background-size: cover;
+    background-position: 72% center;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+  }
+
+  /* Lavender overlay */
+  .hero-photo-bleed::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      180deg,
+      rgba(241, 231, 251, 0.96) 0%,
+      rgba(241, 231, 251, 0.88) 25%,
+      rgba(241, 231, 251, 0.62) 45%,
+      rgba(241, 231, 251, 0.28) 68%,
+      rgba(241, 231, 251, 0.08) 100%
+    );
+
+    z-index: 1;
+  }
+
+  /* Hero text */
+  .hero-copy {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 34px 20px 0;
+
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+
+    font-size: 9px;
+    padding: 6px 11px;
+    gap: 6px;
+  }
+
+  .eyebrow-star {
+    font-size: 9px;
+  }
+
+  .hero-copy h1 {
+    margin: 15px 0 13px;
+  }
+
+  .hero-copy h1 img {
+    display: block;
+
+    width: min(390px, 100%);
+    max-width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+  .hero-copy > p {
+    width: 100%;
+    max-width: 340px;
+
+    margin: 0 auto;
+
+    color: #40384a;
+
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  /* Hide old form */
+  .appointment-card {
+    display: none !important;
+  }
+
+  /*
+   * MOBILE BOOK APPOINTMENT BUTTON
+   *
+   * Positioned in the open lower part of the hero.
+   */
+  .hero::after {
+    content: "Book Appointment";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 72px;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    width: 190px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--purple);
+    color: #fff;
+
+    border-radius: 10px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    box-shadow: 0 6px 18px rgba(63, 33, 112, 0.22);
+  }
+
+  /*
+   * Make the pseudo button clickable.
+   * The actual button is added below instead.
+   */
+}
+
+
+/* =========================================================
+   REAL MOBILE BOOK APPOINTMENT BUTTON
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .mobile-book-appointment {
+    display: flex;
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 72px;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    width: 190px;
+    height: 46px;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: var(--purple);
+    color: #fff;
+
+    border-radius: 10px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-shadow: 0 6px 18px rgba(63, 33, 112, 0.22);
+
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .mobile-book-appointment:hover {
+    background: var(--purple-dark);
+  }
+
+  .mobile-book-appointment:active {
+    transform: translateX(-50%) scale(0.97);
+  }
+
+  .mobile-book-appointment .mobile-wa-icon {
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-book-appointment .mobile-wa-icon svg {
+    width: 18px;
+    height: 18px;
+
+    fill: #25D366;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-main {
+    height: 560px;
+    min-height: 560px;
+  }
+
+  .hero-photo-bleed {
+    background-position: 73% center;
+  }
+
+  .hero-copy {
+    padding: 30px 16px 0;
+  }
+
+  .hero-copy h1 img {
+    width: 360px;
+  }
+
+  .hero-copy > p {
+    max-width: 315px;
+    font-size: 13px;
+  }
+
+  .mobile-book-appointment {
+    width: 180px;
+    height: 44px;
+
+    bottom: 65px;
+
+    font-size: 12px;
+  }
+}
+@media (max-width: 640px) {
+
+  .hero-main {
+    position: relative;
+    width: 100%;
+    height: 585px;
+    min-height: 585px;
+    overflow: hidden;
+  }
+
+  .hero-photo-bleed {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: 72% center;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+  }
+
+  .hero-photo-bleed::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      180deg,
+      rgba(241, 231, 251, 0.96) 0%,
+      rgba(241, 231, 251, 0.88) 25%,
+      rgba(241, 231, 251, 0.62) 48%,
+      rgba(241, 231, 251, 0.28) 70%,
+      rgba(241, 231, 251, 0.08) 100%
+    );
+
+    z-index: 1;
+  }
+
+  /* CENTER THE TEXT */
+  .hero-copy {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 35px 18px 0;
+
+    text-align: center;
+
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    font-size: 9px;
+    padding: 6px 11px;
+    gap: 6px;
+  }
+
+  .hero-copy h1 {
+    margin: 15px auto 13px;
+    padding: 0;
+  }
+
+  .hero-copy h1 img {
+    display: block;
+
+    width: 360px;
+    max-width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+  .hero-copy > p {
+    width: 100%;
+    max-width: 330px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  /* MOBILE BOOK APPOINTMENT */
+  .mobile-book-appointment {
+    display: flex;
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 75px;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    width: 185px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--purple);
+    color: #fff;
+
+    border-radius: 10px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-shadow: 0 6px 18px rgba(63, 33, 112, 0.25);
+  }
+
+  .mobile-book-appointment .mobile-wa-icon {
+    display: none;
+  }
+
+  /* Make sure old form stays hidden */
+  .appointment-card {
+    display: none !important;
+  }
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 420px) {
+
+  .hero-main {
+    height: 560px;
+    min-height: 560px;
+  }
+
+  .hero-photo-bleed {
+    background-position: 73% center;
+  }
+
+  .hero-copy {
+    padding: 30px 16px 0;
+  }
+
+  .hero-copy h1 img {
+    width: 350px;
+  }
+
+  .hero-copy > p {
+    max-width: 315px;
+    font-size: 13px;
+  }
+
+  .mobile-book-appointment {
+    width: 180px;
+    height: 44px;
+    bottom: 65px;
+  }
+}
+
+/* =========================================================
+   MOBILE HERO - FINAL VERSION
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* HERO */
+  .hero {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-main {
+    position: relative;
+
+    width: 100%;
+
+    /*
+     * Shorter hero so service icons
+     * can appear in the same mobile screen.
+     */
+    height: 505px;
+    min-height: 505px;
+
+    overflow: hidden;
+
+    background: #f1e7fb;
+  }
+
+
+  /* =======================================================
+     LADY BACKGROUND
+     ======================================================= */
+
+  .hero-photo-bleed {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+
+    /*
+     * Keep the lady visible on the right.
+     */
+    background-position: 72% center;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+  }
+
+
+  /* =======================================================
+     LIGHT LAVENDER OVERLAY
+     ======================================================= */
+
+  .hero-photo-bleed::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+      180deg,
+      rgba(241, 231, 251, 0.96) 0%,
+      rgba(241, 231, 251, 0.90) 22%,
+      rgba(241, 231, 251, 0.65) 43%,
+      rgba(241, 231, 251, 0.30) 65%,
+      rgba(241, 231, 251, 0.08) 100%
+    );
+
+    z-index: 1;
+  }
+
+
+  /* =======================================================
+     HERO TEXT
+     ======================================================= */
+
+  .hero-copy {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    padding: 30px 16px 0;
+
+    text-align: center;
+  }
+
+
+  /* PREMIUM DENTAL CARE */
+  .eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 6px 11px;
+
+    font-size: 9px;
+    line-height: 1;
+  }
+
+  .eyebrow-star {
+    font-size: 9px;
+  }
+
+
+  /* SMILES ALWAYS */
+  .hero-copy h1 {
+    margin: 13px 0 10px;
+
+    padding: 0;
+  }
+
+  .hero-copy h1 img {
+    display: block;
+
+    width: 350px;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+
+  /* DESCRIPTION */
+  .hero-copy > p {
+    width: 100%;
+    max-width: 320px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #40384a;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+
+  /* =======================================================
+     MOBILE BOOK APPOINTMENT
+     ======================================================= */
+
+  .mobile-book-appointment {
+    position: absolute;
+
+    /*
+     * Moved upward toward the writing.
+     */
+    left: 50%;
+
+    bottom: 92px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    width: 185px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    background: var(--purple);
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12.5px;
+    font-weight: 600;
+
+    box-shadow:
+      0 6px 18px rgba(63, 33, 112, 0.25);
+
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .mobile-book-appointment:hover {
+    background: var(--purple-dark);
+  }
+
+  .mobile-book-appointment:active {
+    transform: translateX(-50%) scale(0.97);
+  }
+
+  .appointment-arrow {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+
+  /* OLD FORM */
+  .appointment-card {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 360px
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-main {
+    height: 505px;
+    min-height: 505px;
+  }
+
+  .hero-photo-bleed {
+    /*
+     * Slightly more of the lady visible.
+     */
+    background-position: 73% center;
+  }
+
+  .hero-copy {
+    padding: 28px 14px 0;
+  }
+
+  .hero-copy h1 {
+    margin: 12px 0 9px;
+  }
+
+  .hero-copy h1 img {
+    width: 340px;
+  }
+
+  .hero-copy > p {
+    max-width: 310px;
+
+    font-size: 12.5px;
+    line-height: 1.48;
+  }
+
+  .mobile-book-appointment {
+    width: 180px;
+    height: 43px;
+
+    bottom: 82px;
+
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   GENET DENTAL - FINAL MOBILE HERO
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* -----------------------------------------
+     HERO
+     ----------------------------------------- */
+
+  .hero {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-main {
+    position: relative;
+
+    width: 100%;
+
+    /*
+     * Shorter height so the service icons
+     * appear in the same screen.
+     */
+    height: 500px;
+    min-height: 500px;
+
+    overflow: hidden;
+
+    background: #f1e7fb;
+  }
+
+
+  /* -----------------------------------------
+     LADY IMAGE
+     ----------------------------------------- */
+
+  .hero-photo-bleed {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+
+    /*
+     * Lady stays mainly on the right.
+     */
+    background-position: 72% center;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+  }
+
+
+  /* -----------------------------------------
+     LAVENDER OVERLAY
+     ----------------------------------------- */
+
+  .hero-photo-bleed::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      180deg,
+      rgba(241, 231, 251, 0.97) 0%,
+      rgba(241, 231, 251, 0.91) 22%,
+      rgba(241, 231, 251, 0.72) 43%,
+      rgba(241, 231, 251, 0.38) 63%,
+      rgba(241, 231, 251, 0.12) 100%
+    );
+
+    z-index: 1;
+  }
+
+
+  /* -----------------------------------------
+     HERO CONTENT
+     ----------------------------------------- */
+
+  .hero-copy {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    padding: 32px 14px 0;
+
+    text-align: center;
+  }
+
+
+  /* Premium badge */
+
+  .eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 6px 12px;
+
+    font-size: 9px;
+    line-height: 1;
+  }
+
+  .eyebrow-star {
+    font-size: 9px;
+  }
+
+
+  /* Smiles Always */
+
+  .hero-copy h1 {
+    margin: 14px auto 10px;
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .hero-copy h1 img {
+    display: block;
+
+    width: 350px;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+
+  /* Description */
+
+  .hero-copy > p {
+    width: 100%;
+    max-width: 325px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #40384a;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+
+  /* -----------------------------------------
+     BOOK APPOINTMENT
+     ----------------------------------------- */
+
+  .mobile-book-appointment {
+    position: absolute;
+
+    /*
+     * Moved upward toward the writing,
+     * like the reference design.
+     */
+    left: 50%;
+    bottom: 86px;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    width: 185px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background: var(--purple);
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12.5px;
+    font-weight: 600;
+
+    box-shadow:
+      0 6px 18px rgba(63, 33, 112, 0.25);
+
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .mobile-book-appointment:hover {
+    background: var(--purple-dark);
+  }
+
+  .mobile-book-appointment:active {
+    transform: translateX(-50%) scale(0.97);
+  }
+
+  .appointment-arrow {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+
+  /* Hide old form */
+
+  .appointment-card {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   360px / SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-main {
+    /*
+     * This is the key value.
+     *
+     * It shortens the lady image area enough
+     * for the service icons to appear below it.
+     */
+    height: 475px;
+    min-height: 475px;
+  }
+
+  .hero-photo-bleed {
+    /*
+     * Slightly crop the bottom while keeping
+     * the lady's face clearly visible.
+     */
+    background-position: 73% center;
+  }
+
+  .hero-copy {
+    padding: 28px 12px 0;
+  }
+
+  .hero-copy h1 {
+    margin: 12px auto 9px;
+  }
+
+  .hero-copy h1 img {
+    width: 340px;
+  }
+
+  .hero-copy > p {
+    max-width: 310px;
+
+    font-size: 12.5px;
+    line-height: 1.48;
+  }
+
+  .mobile-book-appointment {
+    width: 180px;
+    height: 43px;
+
+    /*
+     * Higher than before.
+     */
+    bottom: 78px;
+
+    font-size: 12px;
+  }
+}
+/* =========================================================
+   MOBILE SERVICE ICONS
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .service-row {
+    width: 100%;
+    height: 135px;
+
+    padding: 12px 0 8px;
+
+    overflow: hidden;
+
+    background: #fff;
+  }
+
+  .service-row-inner {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    gap: 8px;
+
+    overflow: hidden;
+  }
+
+  .service-item {
+    flex: 0 0 30%;
+
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+
+    gap: 5px;
+  }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+
+    object-fit: contain;
+
+    transform: none;
+  }
+
+  .service-item span {
+    display: block;
+
+    font-size: 9px;
+    line-height: 1.25;
+
+    text-align: center;
+  }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 420px) {
+
+  .service-row {
+    height: 125px;
+    padding: 10px 0 6px;
+  }
+
+  .service-item {
+    flex: 0 0 31%;
+    width: 31%;
+  }
+
+  .service-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .service-item span {
+    font-size: 8.5px;
+    line-height: 1.2;
+  }
+}
+
+/* =========================================================
+   FINAL MOBILE HERO - GENET DENTAL
+   Target: 360px - 640px
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* -----------------------------------------
+     HERO CONTAINER
+     ----------------------------------------- */
+
+  .hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #f1e7fb;
+  }
+
+  .hero-main {
+    position: relative;
+
+    width: 100%;
+    height: 505px;
+    min-height: 505px;
+
+    overflow: hidden;
+
+    background: #f1e7fb;
+  }
+
+
+  /* -----------------------------------------
+     GIRL IMAGE
+     ----------------------------------------- */
+
+  .hero-photo-bleed {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+
+    /*
+     * Keep the girl's face clearly visible
+     * on the right side.
+     */
+    background-position: 72% center;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+  }
+
+
+  /* -----------------------------------------
+     LIGHT OVERLAY
+     IMPORTANT:
+     Keep image visible.
+     ----------------------------------------- */
+
+  .hero-photo-bleed::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      180deg,
+
+      rgba(241, 231, 251, 0.94) 0%,
+
+      rgba(241, 231, 251, 0.78) 20%,
+
+      rgba(241, 231, 251, 0.48) 38%,
+
+      rgba(241, 231, 251, 0.20) 58%,
+
+      rgba(241, 231, 251, 0.04) 100%
+    );
+
+    z-index: 1;
+  }
+
+
+  /* -----------------------------------------
+     TEXT AREA
+     ----------------------------------------- */
+
+  .hero-copy {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    padding: 30px 14px 0;
+
+    text-align: center;
+  }
+
+
+  /* PREMIUM DENTAL CARE */
+
+  .eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 6px 12px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+  }
+
+  .eyebrow-star {
+    font-size: 9px;
+  }
+
+
+  /* -----------------------------------------
+     SMILES ALWAYS
+     ----------------------------------------- */
+
+  .hero-copy h1 {
+    margin: 13px auto 9px;
+
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .hero-copy h1 img {
+    display: block;
+
+    width: 345px;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+
+  /* -----------------------------------------
+     DESCRIPTION
+     ----------------------------------------- */
+
+  .hero-copy > p {
+    width: 100%;
+
+    max-width: 315px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #40384a;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12.5px;
+    font-weight: 400;
+
+    line-height: 1.48;
+  }
+
+
+  /* -----------------------------------------
+     HIDE FORM
+     ----------------------------------------- */
+
+  .appointment-card {
+    display: none !important;
+  }
+
+
+  /* -----------------------------------------
+     BOOK APPOINTMENT
+     ----------------------------------------- */
+
+  .mobile-book-appointment {
+    position: absolute;
+
+    left: 50%;
+
+    /*
+     * Higher than the previous version.
+     * This puts the button below the text
+     * instead of at the bottom of the girl's body.
+     */
+    bottom: 78px;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    width: 185px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0;
+
+    background: var(--purple);
+
+    color: #fff;
+
+    border: none;
+    border-radius: 10px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12.5px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    box-shadow:
+      0 6px 18px rgba(63, 33, 112, 0.25);
+
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .mobile-book-appointment:hover {
+    background: var(--purple-dark);
+  }
+
+  .mobile-book-appointment:active {
+    transform: translateX(-50%) scale(0.97);
+  }
+
+  .appointment-arrow {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 360px TO 420px
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-main {
+    /*
+     * Short enough for the first
+     * three services to appear.
+     */
+    height: 475px;
+    min-height: 475px;
+  }
+
+
+  .hero-photo-bleed {
+    /*
+     * Slightly more of the girl's
+     * face/body remains visible.
+     */
+    background-position: 73% center;
+  }
+
+
+  .hero-copy {
+    padding: 27px 10px 0;
+  }
+
+
+  /* Premium badge */
+
+  .eyebrow {
+    padding: 6px 11px;
+
+    font-size: 8.5px;
+  }
+
+
+  /* Smiles Always */
+
+  .hero-copy h1 {
+    margin: 12px auto 8px;
+  }
+
+  .hero-copy h1 img {
+    width: 335px;
+    max-width: 100%;
+  }
+
+
+  /* Description */
+
+  .hero-copy > p {
+    max-width: 305px;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+  }
+
+
+  /* Button */
+
+  .mobile-book-appointment {
+    width: 180px;
+    height: 43px;
+
+    /*
+     * Move it upward.
+     */
+    bottom: 68px;
+
+    font-size: 12px;
+
+    border-radius: 10px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES - 360px
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-main {
+    height: 465px;
+    min-height: 465px;
+  }
+
+
+  .hero-copy {
+    padding-top: 25px;
+  }
+
+
+  .hero-copy h1 {
+    margin-top: 11px;
+    margin-bottom: 7px;
+  }
+
+
+  .hero-copy h1 img {
+    width: 320px;
+  }
+
+
+  .hero-copy > p {
+    max-width: 295px;
+
+    font-size: 11.5px;
+
+    line-height: 1.43;
+  }
+
+
+  .mobile-book-appointment {
+    width: 175px;
+    height: 41px;
+
+    bottom: 64px;
+
+    font-size: 11.5px;
+  }
+}
+/* =========================================================
+   MOBILE SERVICE ROW
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .service-row {
+    width: 100%;
+
+    height: 125px;
+
+    padding: 12px 0 8px;
+
+    background: #fff;
+
+    overflow: hidden;
+  }
+
+  .service-row-inner {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: 0;
+
+    gap: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+
+    touch-action: pan-x;
+  }
+
+  .service-row-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-item {
+    flex: 0 0 33.3333%;
+    width: 33.3333%;
+    min-width: 33.3333%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 5px;
+
+    text-align: center;
+  }
+
+  .service-icon {
+    width: 43px;
+    height: 43px;
+
+    object-fit: contain;
+
+    transform: none;
+  }
+
+  .service-item span {
+    width: 100%;
+
+    padding: 0 2px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    white-space: normal;
+  }
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 420px) {
+
+  .service-row {
+    height: 118px;
+
+    padding: 10px 0 6px;
+  }
+
+  .service-item {
+    flex: 0 0 33.3333%;
+    width: 33.3333%;
+    min-width: 33.3333%;
+  }
+
+  .service-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .service-item span {
+    font-size: 8.5px;
+  }
+}
+/* =========================================================
+   FINAL MOBILE HERO
+   GIRL IMAGE MUST REMAIN CLEAR AND VISIBLE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* HERO */
+  .hero {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #f1e7fb;
+  }
+
+  .hero-main {
+    position: relative;
+
+    width: 100%;
+    height: 475px;
+    min-height: 475px;
+
+    overflow: hidden;
+  }
+
+
+  /* =====================================================
+     GIRL IMAGE
+     ===================================================== */
+
+  .hero-photo-bleed {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+
+    /*
+     * Move the image slightly toward the right.
+     * This keeps the girl's face visible on mobile.
+     */
+    background-position: 73% center;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+  }
+
+
+  /* =====================================================
+     NO FADE
+     ===================================================== */
+
+  .hero-photo-bleed::before {
+    content: none !important;
+    display: none !important;
+  }
+
+
+  /* =====================================================
+     HERO WRITING
+     ===================================================== */
+
+  .hero-copy {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    padding: 28px 12px 0;
+
+    text-align: center;
+  }
+
+
+  /* PREMIUM DENTAL CARE */
+
+  .eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 6px 12px;
+
+    background: #fff;
+
+    border: 1px solid #d8d0e2;
+
+    border-radius: 30px;
+
+    color: #42206f;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 8.5px;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    box-shadow:
+      0 3px 8px rgba(50, 30, 80, 0.12);
+  }
+
+  .eyebrow-star {
+    color: var(--orange);
+    font-size: 9px;
+  }
+
+
+  /* =====================================================
+     SMILES ALWAYS
+     ===================================================== */
+
+  .hero-copy h1 {
+    margin: 13px auto 9px;
+
+    padding: 0;
+
+    line-height: 1;
+
+    text-align: center;
+  }
+
+  .hero-copy h1 img {
+    display: block;
+
+    width: 330px;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+
+  /* =====================================================
+     DESCRIPTION
+     ===================================================== */
+
+  .hero-copy > p {
+    width: 100%;
+
+    max-width: 305px;
+
+    margin: 0 auto;
+
+    color: #40384a;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11.5px;
+    font-weight: 500;
+
+    line-height: 1.45;
+
+    text-align: center;
+
+    /*
+     * Slight shadow helps readability WITHOUT
+     * fading the girl's image.
+     */
+    text-shadow:
+      0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+
+
+  /* =====================================================
+     FORM COMPLETELY HIDDEN ON MOBILE
+     ===================================================== */
+
+  .appointment-card {
+    display: none !important;
+  }
+
+
+  /* =====================================================
+     MOBILE BOOK APPOINTMENT
+     ===================================================== */
+
+  .mobile-book-appointment {
+    position: absolute;
+
+    left: 50%;
+
+    /*
+     * Button sits below the writing,
+     * but above the lower part of the image.
+     */
+    bottom: 65px;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    width: 180px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--purple);
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    box-shadow:
+      0 6px 16px rgba(63, 33, 112, 0.28);
+  }
+
+  .mobile-book-appointment .appointment-arrow {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-main {
+    height: 465px;
+    min-height: 465px;
+  }
+
+  .hero-photo-bleed {
+    /*
+     * Keep the girl's face toward the right side.
+     */
+    background-position: 74% center;
+  }
+
+  .hero-copy {
+    padding: 26px 10px 0;
+  }
+
+  .eyebrow {
+    font-size: 8px;
+    padding: 6px 11px;
+  }
+
+  .hero-copy h1 {
+    margin: 12px auto 8px;
+  }
+
+  .hero-copy h1 img {
+    width: 320px;
+  }
+
+  .hero-copy > p {
+    max-width: 295px;
+
+    font-size: 11px;
+    line-height: 1.42;
+  }
+
+  .mobile-book-appointment {
+    width: 175px;
+    height: 41px;
+
+    bottom: 62px;
+
+    font-size: 11.5px;
+  }
+}
+
+
+/* =========================================================
+   360px PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-main {
+    height: 455px;
+    min-height: 455px;
+  }
+
+  .hero-photo-bleed {
+    background-position: 75% center;
+  }
+
+  .hero-copy {
+    padding-top: 24px;
+  }
+
+  .hero-copy h1 {
+    margin-top: 11px;
+    margin-bottom: 7px;
+  }
+
+  .hero-copy h1 img {
+    width: 310px;
+  }
+
+  .hero-copy > p {
+    max-width: 285px;
+
+    font-size: 10.5px;
+    line-height: 1.4;
+  }
+
+  .mobile-book-appointment {
+    width: 170px;
+    height: 40px;
+
+    bottom: 60px;
+
+    font-size: 11px;
+  }
+}
+/* =========================================================
+   FINAL MOBILE HERO FIX
+   - Move writing down
+   - Keep girl's face clear
+   - No image fading
+   - Move button upward
+   - Remove button background overlap
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* =======================================================
+     HERO
+     ======================================================= */
+
+  .hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-main {
+    position: relative;
+
+    width: 100%;
+    height: 475px;
+    min-height: 475px;
+
+    overflow: hidden;
+  }
+
+
+  /* =======================================================
+     GIRL IMAGE
+     ======================================================= */
+
+  .hero-photo-bleed {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+
+    /*
+     * Keep the girl's face on the RIGHT.
+     */
+    background-position: 76% center;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+  }
+
+
+  /* REMOVE ALL PURPLE IMAGE FADING */
+
+  .hero-photo-bleed::before {
+    display: none !important;
+    content: none !important;
+  }
+
+
+  /* =======================================================
+     HERO WRITING
+     ======================================================= */
+
+  .hero-copy {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    /*
+     * Move the complete writing area
+     * slightly DOWN.
+     */
+    padding: 45px 12px 0;
+
+    text-align: center;
+  }
+
+
+  /* PREMIUM DENTAL CARE */
+
+  .eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 6px 12px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 8.5px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(80, 50, 110, 0.12);
+
+    border-radius: 30px;
+
+    box-shadow:
+      0 3px 10px rgba(50, 30, 80, 0.12);
+  }
+
+  .eyebrow-star {
+    font-size: 9px;
+    color: var(--orange);
+  }
+
+
+  /* =======================================================
+     SMILES ALWAYS
+     ======================================================= */
+
+  .hero-copy h1 {
+    margin: 14px auto 10px;
+
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .hero-copy h1 img {
+    display: block;
+
+    width: 320px;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+
+  /* =======================================================
+     DESCRIPTION
+     ======================================================= */
+
+  .hero-copy > p {
+    width: 100%;
+
+    max-width: 295px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #30283b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11.5px;
+    font-weight: 500;
+
+    line-height: 1.45;
+
+    /*
+     * Very small shadow only for readability.
+     * It does NOT fade the background.
+     */
+    text-shadow:
+      0 1px 2px rgba(255, 255, 255, 0.85);
+  }
+
+
+  /* =======================================================
+     HIDE FORM
+     ======================================================= */
+
+  .appointment-card {
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     BOOK APPOINTMENT
+     ======================================================= */
+
+  .mobile-book-appointment {
+    position: absolute !important;
+
+    left: 50% !important;
+
+    /*
+     * Put the button ABOVE the bottom,
+     * closer to the text.
+     */
+    bottom: 78px !important;
+
+    transform: translateX(-50%) !important;
+
+    z-index: 20 !important;
+
+    width: 180px !important;
+    height: 43px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    /*
+     * ONLY ONE purple background.
+     */
+    background: var(--purple) !important;
+
+    color: #fff !important;
+
+    border: 0 !important;
+    border-radius: 10px !important;
+
+    outline: none !important;
+
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 12px !important;
+    font-weight: 600 !important;
+
+    line-height: 1 !important;
+
+    text-decoration: none !important;
+
+    /*
+     * No second purple layer.
+     */
+    box-shadow:
+      0 5px 14px rgba(63, 33, 112, 0.25) !important;
+  }
+
+
+  /*
+   * Remove any pseudo-element that may be
+   * creating the second purple shape.
+   */
+
+  .mobile-book-appointment::before,
+  .mobile-book-appointment::after {
+    content: none !important;
+
+    display: none !important;
+  }
+
+
+  .mobile-book-appointment .appointment-arrow {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   420px AND BELOW
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-main {
+    height: 460px;
+    min-height: 460px;
+  }
+
+
+  /* Keep girl's face to the RIGHT */
+
+  .hero-photo-bleed {
+    background-position: 77% center;
+  }
+
+
+  /* Move text DOWN */
+
+  .hero-copy {
+    padding-top: 42px;
+  }
+
+
+  .hero-copy h1 {
+    margin-top: 13px;
+    margin-bottom: 8px;
+  }
+
+
+  .hero-copy h1 img {
+    width: 315px;
+  }
+
+
+  .hero-copy > p {
+    max-width: 290px;
+
+    font-size: 11px;
+    line-height: 1.42;
+  }
+
+
+  /* Button */
+
+  .mobile-book-appointment {
+    width: 175px !important;
+    height: 41px !important;
+
+    /*
+     * Higher position.
+     */
+    bottom: 65px !important;
+
+    font-size: 11.5px !important;
+  }
+}
+
+
+/* =========================================================
+   360px SPECIFIC
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-main {
+    height: 450px;
+    min-height: 450px;
+  }
+
+
+  .hero-photo-bleed {
+    background-position: 78% center;
+  }
+
+
+  .hero-copy {
+    padding-top: 40px;
+  }
+
+
+  .hero-copy h1 img {
+    width: 305px;
+  }
+
+
+  .hero-copy > p {
+    max-width: 280px;
+
+    font-size: 10.5px;
+    line-height: 1.4;
+  }
+
+
+  .mobile-book-appointment {
+    width: 170px !important;
+    height: 40px !important;
+
+    bottom: 61px !important;
+
+    font-size: 11px !important;
+  }
+}
+@media (max-width: 640px) {
+
+  .hero-copy {
+    padding: 70px 12px 0;
+  }
+
+  .hero-copy h1 {
+    margin: 12px auto 6px;
+  }
+
+  .hero-copy > p {
+    max-width: 295px;
+    margin: 0 auto;
+
+    font-size: 11.5px;
+    line-height: 1.4;
+  }
+
+  .mobile-book-appointment {
+    bottom: 68px !important;
+  }
+}
+@media (max-width: 380px) {
+
+  .hero-copy {
+    padding-top: 70px;
+  }
+
+  .hero-copy h1 {
+    margin-bottom: 5px;
+  }
+
+  .hero-copy > p {
+    max-width: 285px;
+    font-size: 10.5px;
+    line-height: 1.38;
+  }
+
+  .mobile-book-appointment {
+    bottom: 62px !important;
+  }
+}
+/* =========================================================
+   FINAL 360px MOBILE HERO ADJUSTMENT
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* HERO */
+  .hero-main {
+    position: relative;
+    height: 460px;
+    min-height: 460px;
+    overflow: hidden;
+  }
+
+  /* GIRL IMAGE */
+  .hero-photo-bleed {
+    background-size: cover;
+    background-position: 78% center;
+    background-repeat: no-repeat;
+  }
+
+  /* NO PURPLE FADE */
+  .hero-photo-bleed::before {
+    content: none !important;
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     WRITING
+     ======================================================= */
+
+  .hero-copy {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    /*
+     * Move writing DOWN slightly.
+     */
+    padding: 58px 10px 0;
+
+    text-align: center;
+  }
+
+
+  /* PREMIUM BADGE */
+
+  .eyebrow {
+    font-size: 8px !important;
+
+    padding: 6px 11px !important;
+
+    white-space: nowrap;
+  }
+
+
+  /* SMILES ALWAYS */
+
+  .hero-copy h1 {
+    margin: 14px auto 8px !important;
+
+    padding: 0 !important;
+
+    text-align: center;
+  }
+
+  .hero-copy h1 img {
+    display: block;
+
+    width: 285px !important;
+    max-width: 90% !important;
+
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+
+  /* DESCRIPTION */
+
+  .hero-copy > p {
+    width: 100%;
+
+    max-width: 270px !important;
+
+    margin: 0 auto !important;
+
+    font-size: 10.5px !important;
+
+    line-height: 1.42 !important;
+
+    text-align: center;
+
+    color: #30283b;
+  }
+
+
+  /* =======================================================
+     BOOK APPOINTMENT
+     ======================================================= */
+
+  .mobile-book-appointment {
+    position: absolute !important;
+
+    left: 50% !important;
+
+    /*
+     * Bring button closer to writing.
+     */
+    bottom: 60px !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 170px !important;
+    height: 40px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: var(--purple) !important;
+
+    color: #fff !important;
+
+    border: none !important;
+    outline: none !important;
+
+    border-radius: 9px !important;
+
+    /*
+     * REMOVE THE EXTRA PURPLE SHAPE.
+     */
+    box-shadow: none !important;
+
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+
+    line-height: 1 !important;
+
+    text-decoration: none !important;
+
+    z-index: 20 !important;
+
+    overflow: hidden !important;
+  }
+
+
+  /* Absolutely remove any old pseudo element */
+
+  .mobile-book-appointment::before,
+  .mobile-book-appointment::after {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+
+  .mobile-book-appointment .appointment-arrow {
+    display: none !important;
+  }
+
+
+  /* FORM HIDDEN */
+
+  .appointment-card {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   360px EXACT
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-main {
+    height: 455px;
+    min-height: 455px;
+  }
+
+  .hero-photo-bleed {
+    background-position: 79% center;
+  }
+
+  .hero-copy {
+    padding-top: 58px;
+  }
+
+  .hero-copy h1 img {
+    width: 280px !important;
+  }
+
+  .hero-copy > p {
+    max-width: 265px !important;
+
+    font-size: 10.5px !important;
+
+    line-height: 1.4 !important;
+  }
+
+  .mobile-book-appointment {
+    width: 168px !important;
+    height: 40px !important;
+
+    bottom: 58px !important;
+
+    font-size: 11px !important;
+  }
+}
+
+/* =========================================================
+   FINAL MOBILE HERO FIX
+   360px - 640px
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* HERO AREA */
+  .hero-main {
+    position: relative !important;
+    width: 100% !important;
+    height: 455px !important;
+    min-height: 455px !important;
+    overflow: hidden !important;
+  }
+
+
+  /* -------------------------------------------------------
+     GIRL IMAGE
+     ------------------------------------------------------- */
+
+  .hero-photo-bleed {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background-size: cover !important;
+
+    /*
+     * Move the girl's face slightly to the RIGHT.
+     * This gives the writing more clean space.
+     */
+    background-position: 88% center !important;
+
+    background-repeat: no-repeat !important;
+
+    z-index: 0 !important;
+  }
+
+
+  /* NO PURPLE FADE */
+  .hero-photo-bleed::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO WRITING
+     ------------------------------------------------------- */
+
+  .hero-copy {
+    position: relative !important;
+
+    z-index: 5 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    /*
+     * Writing starts a little lower.
+     */
+    padding: 58px 10px 0 !important;
+
+    text-align: center !important;
+  }
+
+
+  /* PREMIUM DENTAL CARE */
+
+  .hero-copy .eyebrow {
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 5px 10px !important;
+
+    font-size: 8px !important;
+
+    line-height: 1.2 !important;
+
+    white-space: nowrap !important;
+
+    border-radius: 20px !important;
+  }
+
+  .hero-copy .eyebrow-star {
+    font-size: 8px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     SMILES ALWAYS
+     ------------------------------------------------------- */
+
+  .hero-copy h1 {
+    width: 100% !important;
+
+    margin: 16px auto 7px !important;
+
+    padding: 0 !important;
+
+    text-align: center !important;
+
+    line-height: 1 !important;
+  }
+
+  .hero-copy h1 img {
+    display: block !important;
+
+    width: 255px !important;
+
+    max-width: 82% !important;
+
+    height: auto !important;
+
+    margin: 0 auto !important;
+  }
+
+
+  /* -------------------------------------------------------
+     DESCRIPTION
+     ------------------------------------------------------- */
+
+  .hero-copy > p {
+    width: 100% !important;
+
+    max-width: 235px !important;
+
+    margin: 0 auto !important;
+
+    padding: 0 !important;
+
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 10.5px !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1.42 !important;
+
+    text-align: center !important;
+
+    color: #30283b !important;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE BOOK APPOINTMENT
+     ------------------------------------------------------- */
+
+  .mobile-book-appointment {
+    position: absolute !important;
+
+    left: 50% !important;
+
+    /*
+     * Keep it close to the paragraph.
+     */
+    bottom: 58px !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 175px !important;
+
+    height: 42px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: var(--purple) !important;
+
+    background-image: none !important;
+
+    color: #fff !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+
+    border-radius: 9px !important;
+
+    box-shadow: none !important;
+
+    filter: none !important;
+
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 11.5px !important;
+
+    font-weight: 600 !important;
+
+    line-height: 1 !important;
+
+    text-decoration: none !important;
+
+    z-index: 20 !important;
+
+    overflow: hidden !important;
+
+    appearance: none !important;
+    -webkit-appearance: none !important;
+  }
+
+
+  /* REMOVE ANY OLD EXTRA PURPLE SHAPE */
+
+  .mobile-book-appointment::before,
+  .mobile-book-appointment::after {
+    content: none !important;
+
+    display: none !important;
+
+    position: static !important;
+
+    width: 0 !important;
+    height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: none !important;
+    background-image: none !important;
+
+    border: 0 !important;
+
+    box-shadow: none !important;
+
+    filter: none !important;
+  }
+
+
+  /* Hide arrow on mobile */
+
+  .mobile-book-appointment .appointment-arrow {
+    display: none !important;
+  }
+
+
+  /* Old desktop appointment form must remain hidden */
+
+  .appointment-card {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES — 360px to 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-main {
+    height: 455px !important;
+    min-height: 455px !important;
+  }
+
+
+  .hero-photo-bleed {
+    /*
+     * Keep girl's face on the RIGHT side.
+     */
+    background-position: 89% center !important;
+  }
+
+
+  .hero-copy {
+    padding-top: 58px !important;
+  }
+
+
+  .hero-copy h1 {
+    margin-top: 15px !important;
+    margin-bottom: 7px !important;
+  }
+
+
+  .hero-copy h1 img {
+    width: 250px !important;
+    max-width: 80% !important;
+  }
+
+
+  .hero-copy > p {
+    max-width: 225px !important;
+
+    font-size: 10px !important;
+
+    line-height: 1.42 !important;
+  }
+
+
+  .mobile-book-appointment {
+    width: 172px !important;
+
+    height: 41px !important;
+
+    bottom: 57px !important;
+
+    font-size: 11px !important;
+  }
+}
+/* =========================================================
+   FINAL MOBILE HERO
+   REMOVE APPOINTMENT BUTTONS + MOVE TEXT AWAY FROM FACE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* -----------------------------------------
+     HERO
+     ----------------------------------------- */
+
+  .hero-main {
+    position: relative !important;
+    width: 100% !important;
+    height: 455px !important;
+    min-height: 455px !important;
+    overflow: hidden !important;
+  }
+
+
+  /* -----------------------------------------
+     HERO IMAGE
+     ----------------------------------------- */
+
+  .hero-photo-bleed {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background-size: cover !important;
+
+    /*
+     * Keep the lady on the RIGHT.
+     */
+    background-position: 88% center !important;
+
+    background-repeat: no-repeat !important;
+
+    z-index: 0 !important;
+  }
+
+
+  /* No purple fade */
+
+  .hero-photo-bleed::before {
+    content: none !important;
+    display: none !important;
+  }
+
+
+  /* -----------------------------------------
+     HERO TEXT
+     MOVE EVERYTHING TO LEFT SIDE
+     ----------------------------------------- */
+
+  .hero-copy {
+    position: relative !important;
+
+    z-index: 5 !important;
+
+    width: 57% !important;
+    max-width: 57% !important;
+
+    margin: 0 !important;
+
+    padding: 60px 0 0 12px !important;
+
+    text-align: left !important;
+  }
+
+
+  /* -----------------------------------------
+     PREMIUM DENTAL CARE
+     ----------------------------------------- */
+
+  .hero-copy .eyebrow {
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    padding: 5px 8px !important;
+
+    font-size: 7px !important;
+
+    line-height: 1.2 !important;
+
+    white-space: nowrap !important;
+
+    border-radius: 20px !important;
+  }
+
+  .hero-copy .eyebrow-star {
+    font-size: 7px !important;
+  }
+
+
+  /* -----------------------------------------
+     SMILES ALWAYS
+     ----------------------------------------- */
+
+  .hero-copy h1 {
+    width: 100% !important;
+
+    margin: 15px 0 8px !important;
+
+    padding: 0 !important;
+
+    text-align: left !important;
+
+    line-height: 1 !important;
+  }
+
+  .hero-copy h1 img {
+    display: block !important;
+
+    width: 190px !important;
+
+    max-width: 100% !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+  }
+
+
+  /* -----------------------------------------
+     DESCRIPTION
+     ----------------------------------------- */
+
+  .hero-copy > p {
+    width: 100% !important;
+
+    max-width: 185px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 9px !important;
+
+    line-height: 1.42 !important;
+
+    text-align: left !important;
+
+    color: #30283b !important;
+  }
+
+
+  /* =====================================================
+     REMOVE ALL BOOK APPOINTMENT BUTTONS ON MOBILE
+     ===================================================== */
+
+  .mobile-book-appointment {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+
+  /*
+   * Remove any header Book Appointment button.
+   * Keep the hamburger menu.
+   */
+
+  .nav-cta > .btn-purple,
+  .header-book-btn {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+
+  /*
+   * Make absolutely sure old appointment form
+   * doesn't appear on mobile.
+   */
+
+  .appointment-card {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES — 360px
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-main {
+    height: 455px !important;
+    min-height: 455px !important;
+  }
+
+  .hero-photo-bleed {
+    background-position: 89% center !important;
+  }
+
+  .hero-copy {
+    width: 58% !important;
+    max-width: 58% !important;
+
+    padding-top: 58px !important;
+    padding-left: 11px !important;
+  }
+
+  .hero-copy .eyebrow {
+    font-size: 6.8px !important;
+    padding: 5px 7px !important;
+  }
+
+  .hero-copy h1 {
+    margin-top: 14px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .hero-copy h1 img {
+    width: 185px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-copy > p {
+    max-width: 180px !important;
+    font-size: 8.8px !important;
+    line-height: 1.42 !important;
+  }
+}
+
+/* =========================================================
+   FINAL MOBILE HERO LAYOUT
+   GIRL RIGHT + TEXT LEFT
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* HERO CONTAINER */
+  .hero-main {
+    position: relative !important;
+    width: 100% !important;
+    height: 455px !important;
+    min-height: 455px !important;
+    overflow: hidden !important;
+  }
+
+
+  /* =====================================================
+     GIRL IMAGE
+     ===================================================== */
+
+  .hero-photo-bleed {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background-size: cover !important;
+
+    /*
+     * Push the girl towards the RIGHT.
+     * This leaves the LEFT side available for text.
+     */
+    background-position: 100% center !important;
+
+    background-repeat: no-repeat !important;
+
+    z-index: 0 !important;
+  }
+
+
+  /* REMOVE PURPLE FADE / OVERLAY */
+
+  .hero-photo-bleed::before,
+  .hero-photo-bleed::after {
+    display: none !important;
+    content: none !important;
+  }
+
+
+  /* =====================================================
+     TEXT AREA
+     ===================================================== */
+
+  .hero-copy {
+    position: relative !important;
+
+    z-index: 5 !important;
+
+    width: 48% !important;
+    max-width: 48% !important;
+
+    margin: 0 !important;
+
+    padding: 58px 0 0 12px !important;
+
+    text-align: left !important;
+  }
+
+
+  /* =====================================================
+     PREMIUM DENTAL CARE
+     ===================================================== */
+
+  .hero-copy .eyebrow {
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    padding: 5px 7px !important;
+
+    font-size: 6.5px !important;
+
+    line-height: 1.2 !important;
+
+    white-space: nowrap !important;
+
+    border-radius: 20px !important;
+  }
+
+  .hero-copy .eyebrow-star {
+    font-size: 7px !important;
+  }
+
+
+  /* =====================================================
+     SMILES ALWAYS
+     ===================================================== */
+
+  .hero-copy h1 {
+    width: 100% !important;
+
+    margin: 15px 0 10px !important;
+
+    padding: 0 !important;
+
+    text-align: left !important;
+
+    line-height: 1 !important;
+  }
+
+  .hero-copy h1 img {
+    display: block !important;
+
+    width: 165px !important;
+
+    max-width: 100% !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+  }
+
+
+  /* =====================================================
+     DESCRIPTION
+     ===================================================== */
+
+  .hero-copy > p {
+    width: 100% !important;
+
+    max-width: 160px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 8.5px !important;
+
+    line-height: 1.45 !important;
+
+    text-align: left !important;
+
+    color: #30283b !important;
+  }
+
+
+  /* =====================================================
+     REMOVE ALL MOBILE BOOK APPOINTMENT BUTTONS
+     ===================================================== */
+
+  .mobile-book-appointment {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .header-book-btn {
+    display: none !important;
+  }
+
+  .nav-cta > .btn-purple {
+    display: none !important;
+  }
+
+  .appointment-card {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   360px SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-main {
+    height: 455px !important;
+    min-height: 455px !important;
+  }
+
+  .hero-photo-bleed {
+    /*
+     * Even further right on very small screens.
+     */
+    background-position: 100% center !important;
+  }
+
+  .hero-copy {
+    width: 49% !important;
+    max-width: 49% !important;
+
+    padding-top: 58px !important;
+    padding-left: 11px !important;
+  }
+
+  .hero-copy .eyebrow {
+    font-size: 6.2px !important;
+    padding: 5px 6px !important;
+  }
+
+  .hero-copy h1 {
+    margin-top: 14px !important;
+    margin-bottom: 9px !important;
+  }
+
+  .hero-copy h1 img {
+    width: 158px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-copy > p {
+    max-width: 155px !important;
+
+    font-size: 8.2px !important;
+
+    line-height: 1.43 !important;
+  }
+}
+
+/* =========================================================
+   MOBILE HERO - FINAL IMAGE POSITION
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .hero-photo-bleed {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background-size: cover !important;
+
+    /* GIRL ON THE RIGHT, LEFT SIDE FOR TEXT */
+    background-position: 58% center !important;
+
+    background-repeat: no-repeat !important;
+
+    z-index: 0 !important;
+  }
+
+  .hero-photo-bleed::before,
+  .hero-photo-bleed::after {
+    display: none !important;
+    content: none !important;
+  }
+}
+
+
+/* 360px PHONE */
+
+@media (max-width: 380px) {
+
+  .hero-photo-bleed {
+    background-position: 78% center !important;
+  }
+
+}
+/* =========================================================
+   FIX FOR INTERMEDIATE MOBILE SCREENS
+   Example: 390px, 393px, 412px, 414px, 430px
+   Keeps the girl's face fully visible on the RIGHT
+   ========================================================= */
+
+@media (min-width: 381px) and (max-width: 640px) {
+
+  .hero-main {
+    position: relative !important;
+    height: 455px !important;
+    min-height: 455px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-photo-bleed {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background-repeat: no-repeat !important;
+
+    /*
+     * IMPORTANT:
+     * Move the image further toward the LEFT.
+     * This brings the girl's face completely
+     * inside the mobile screen.
+     */
+    background-size: cover !important;
+    background-position: 72% center !important;
+
+    z-index: 0 !important;
+  }
+
+  /* Keep the text in the free LEFT area */
+  .hero-copy {
+    position: relative !important;
+    z-index: 5 !important;
+
+    width: 47% !important;
+    max-width: 47% !important;
+
+    margin: 0 !important;
+    padding: 58px 0 0 12px !important;
+
+    text-align: left !important;
+  }
+
+  .hero-copy .eyebrow {
+    display: inline-flex !important;
+
+    font-size: 7px !important;
+    padding: 5px 8px !important;
+
+    white-space: nowrap !important;
+  }
+
+  .hero-copy h1 {
+    width: 100% !important;
+    margin: 14px 0 8px !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .hero-copy h1 img {
+    display: block !important;
+
+    width: 175px !important;
+    max-width: 100% !important;
+    height: auto !important;
+
+    margin: 0 !important;
+  }
+
+  .hero-copy > p {
+    width: 100% !important;
+    max-width: 175px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family: "Poppins", sans-serif !important;
+
+    font-size: 8.5px !important;
+    line-height: 1.42 !important;
+
+    text-align: left !important;
+
+    color: #30283b !important;
+  }
+
+  /* =====================================================
+     MOBILE BOOK APPOINTMENT
+     ===================================================== */
+
+  .mobile-book-appointment {
+    position: absolute !important;
+
+    left: 50% !important;
+    bottom: 58px !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 170px !important;
+    height: 42px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: var(--purple) !important;
+    background-image: none !important;
+
+    color: #fff !important;
+
+    border: none !important;
+    border-radius: 9px !important;
+
+    box-shadow: none !important;
+
+    z-index: 20 !important;
+  }
+
+  .mobile-book-appointment::before,
+  .mobile-book-appointment::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .mobile-book-appointment span {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+  }
+
+  .appointment-arrow {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   412px SPECIFIC FINE TUNING
+   ========================================================= */
+
+@media (min-width: 400px) and (max-width: 430px) {
+
+  .hero-photo-bleed {
+    /*
+     * A little further right than the general
+     * mobile setting so the complete face appears.
+     */
+    background-position: 76% center !important;
+  }
+
+  .hero-copy {
+    width: 45% !important;
+    max-width: 45% !important;
+
+    padding-left: 12px !important;
+    padding-top: 58px !important;
+  }
+
+  .hero-copy h1 img {
+    width: 165px !important;
+  }
+
+  .hero-copy > p {
+    max-width: 165px !important;
+    font-size: 8.3px !important;
+    line-height: 1.4 !important;
+  }
+}
+/* =========================================================
+   EXCELLENCE VIDEO - INCREASE HEIGHT
+   ========================================================= */
+
+.excellence-video {
+  width: 100%;
+  height: 600px !important;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.excellence-video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 641px) and (max-width: 900px) {
+
+  .excellence-video {
+    height: 600px !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .excellence-video {
+    height: 530px !important;
+    border-radius: 16px;
+  }
+
+  .excellence-video video {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .excellence-video {
+    height: 510px !important;
+  }
+
+}
+
+/* =========================================================
+   CENTER FOOTER CONTENT
+   ========================================================= */
+
+.site-footer {
+  width: 100%;
+  text-align: center;
+}
+
+.site-footer .wrap {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Footer columns */
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: start;
+  justify-items: center;
+  text-align: center;
+}
+
+/* Brand section */
+.site-footer .footer-brand {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.site-footer .footer-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-footer .footer-description {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.site-footer .footer-social {
+  justify-content: center;
+}
+
+/* Other columns */
+.site-footer .footer-col {
+  width: 100%;
+  text-align: center;
+}
+
+.site-footer .footer-col h5 {
+  text-align: center;
+}
+
+.site-footer .footer-col ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.site-footer .footer-col li {
+  text-align: center;
+}
+
+.site-footer .footer-address {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Copyright */
+.site-footer .footer-bottom {
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-footer .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .site-footer {
+    padding: 30px 0 14px;
+  }
+
+  .site-footer .wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .site-footer .footer-brand,
+  .site-footer .footer-col {
+    text-align: center;
+    align-items: center;
+  }
+
+  .site-footer .footer-logo {
+    margin: 0 auto 12px;
+  }
+
+  .site-footer .footer-description {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .site-footer .footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .site-footer .footer-col h5 {
+    text-align: center;
+  }
+
+  .site-footer .footer-col ul,
+  .site-footer .footer-col li {
+    text-align: center;
+  }
+
+  .site-footer .footer-bottom {
+    text-align: center;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .site-footer .wrap {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .site-footer .footer-grid {
+    gap: 22px;
+  }
+
+  .site-footer .footer-description {
+    max-width: 280px;
+  }
+
+}
+
+/* =========================================================
+   FOOTER ADDRESS - PERFECTLY CENTERED
+   ========================================================= */
+
+.site-footer .footer-address {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  text-align: center !important;
+  display: block !important;
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .site-footer .footer-address {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    text-align: center !important;
+  }
+
+}
