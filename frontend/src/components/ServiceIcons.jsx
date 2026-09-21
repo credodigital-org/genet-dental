@@ -1,20 +1,21 @@
+import "../styles/ServiceIcons.css";
 import { useEffect, useRef } from "react";
 
-import dentalCheckup from "../assets/images/icons/icon-dental-checkup.png";
-import teethCleaning from "../assets/images/icons/icon-teeth-cleaning.png";
+import checkup from "../assets/images/icons/icon-dental-checkup.png";
+import cleaning from "../assets/images/icons/icon-teeth-cleaning.png";
 import rootCanals from "../assets/images/icons/icon-root-canals.png";
-import dentalImplants from "../assets/images/icons/icon-dental-implants.png";
+import implants from "../assets/images/icons/icon-dental-implants.png";
 import braces from "../assets/images/icons/icon-braces.png";
-import surgeries from "../assets/images/icons/icon-surgeries.png";
+import surgeries from "../assets/images/icons/icon-surgeries3.png";
 
 const SERVICES = [
   {
     name: "Dental Check-up",
-    icon: dentalCheckup,
+    icon: checkup,
   },
   {
     name: "Teeth Cleaning",
-    icon: teethCleaning,
+    icon: cleaning,
   },
   {
     name: "Root Canals",
@@ -22,7 +23,7 @@ const SERVICES = [
   },
   {
     name: "Dental Implants",
-    icon: dentalImplants,
+    icon: implants,
   },
   {
     name: "Braces",
@@ -39,40 +40,53 @@ export default function ServiceIcons() {
   const animationRef = useRef(null);
   const pausedRef = useRef(false);
 
-  const allServices = [...SERVICES, ...SERVICES];
-
   useEffect(() => {
     const row = rowRef.current;
 
     if (!row) return;
 
-    const speed = 0.35;
+    let lastTime = 0;
 
-    // Start from the middle so we can move visually LEFT → RIGHT
-    row.scrollLeft = row.scrollWidth / 2;
+    const scroll = (time) => {
+      if (!lastTime) {
+        lastTime = time;
+      }
 
-    const scroll = () => {
+      const delta = time - lastTime;
+      lastTime = time;
+
       if (!pausedRef.current) {
-        row.scrollLeft -= speed;
+        row.scrollLeft += delta * 0.035;
 
-        // When we reach the beginning, jump back to the middle
-        if (row.scrollLeft <= 0) {
-          row.scrollLeft = row.scrollWidth / 2;
+        if (
+          row.scrollLeft >=
+          row.scrollWidth / 2
+        ) {
+          row.scrollLeft = 0;
         }
       }
 
-      animationRef.current = requestAnimationFrame(scroll);
+      animationRef.current =
+        requestAnimationFrame(scroll);
     };
 
-    animationRef.current = requestAnimationFrame(scroll);
+    animationRef.current =
+      requestAnimationFrame(scroll);
 
     return () => {
-      cancelAnimationFrame(animationRef.current);
+      cancelAnimationFrame(
+        animationRef.current
+      );
     };
   }, []);
 
+  const items = [
+    ...SERVICES,
+    ...SERVICES,
+  ];
+
   return (
-    <section className="service-row">
+    <div className="service-row">
       <div
         className="service-row-inner"
         ref={rowRef}
@@ -91,7 +105,7 @@ export default function ServiceIcons() {
           }, 1200);
         }}
       >
-        {allServices.map((service, index) => (
+        {items.map((service, index) => (
           <div
             className="service-item"
             key={`${service.name}-${index}`}
@@ -106,6 +120,6 @@ export default function ServiceIcons() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

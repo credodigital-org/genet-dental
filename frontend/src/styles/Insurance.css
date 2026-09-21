@@ -1,0 +1,195 @@
+/* =========================================================
+   GENET DENTAL - INSURANCE
+   ========================================================= */
+
+.insurance {
+  width: 100%;
+  padding: 46px 0;
+
+  text-align: left;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.insurance-badge {
+  display: inline-block;
+
+  background: var(--purple);
+  color: #ffffff;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  padding: 9px 18px;
+
+  border-radius: 7px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   VISIBLE VIEWPORT
+
+   THIS is the scrolling area.
+   The whole website will NOT scroll horizontally.
+   ========================================================= */
+
+.insurance-image-wrap {
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+
+  touch-action: pan-x;
+
+  box-sizing: border-box;
+
+  cursor: grab;
+}
+
+.insurance-image-wrap:active {
+  cursor: grabbing;
+}
+
+.insurance-image-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   MOVING TRACK
+   ========================================================= */
+
+.insurance-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+
+  gap: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   EACH INSURANCE STRIP
+
+   Two copies are placed side-by-side so that
+   the animation can loop continuously.
+   ========================================================= */
+
+.insurance-strip-item {
+  display: block;
+
+  width: 900px;
+  max-width: none;
+
+  height: auto;
+
+  flex: 0 0 900px;
+
+  object-fit: contain;
+  object-position: left center;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 641px) and (max-width: 980px) {
+
+  .insurance {
+    padding: 38px 0;
+  }
+
+  .insurance-badge {
+    font-size: 0.76rem;
+
+    padding: 8px 15px;
+
+    margin-bottom: 16px;
+  }
+
+  .insurance-strip-item {
+    width: 820px;
+    flex-basis: 820px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .insurance {
+    padding: 32px 0;
+  }
+
+  .insurance-badge {
+    font-size: 0.72rem;
+
+    padding: 8px 14px;
+
+    margin-bottom: 15px;
+  }
+
+  .insurance-image-wrap {
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    touch-action: pan-x;
+  }
+
+  .insurance-strip-item {
+    width: 720px;
+    flex-basis: 720px;
+
+    height: auto;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .insurance {
+    padding: 28px 0;
+  }
+
+  .insurance-badge {
+    font-size: 0.68rem;
+
+    padding: 7px 12px;
+  }
+
+  .insurance-strip-item {
+    width: 680px;
+    flex-basis: 680px;
+  }
+}

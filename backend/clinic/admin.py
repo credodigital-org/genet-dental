@@ -1,10 +1,16 @@
 from django.contrib import admin
 
 from .models import (
+    AboutContent,
     AppointmentRequest,
     ClinicInfo,
+    ContactMessage,
+    CoreValue,
     Doctor,
+    Facility,
+    GalleryImage,
     ServiceIcon,
+    Service,
     Testimonial,
     Treatment,
 )
@@ -39,7 +45,6 @@ class ClinicInfoAdmin(admin.ModelAdmin):
     )
 
     def has_add_permission(self, request):
-        # Keep this a singleton: only allow adding a row if none exists yet.
         return not ClinicInfo.objects.exists()
 
 
@@ -58,11 +63,53 @@ class TreatmentAdmin(admin.ModelAdmin):
     ordering = ("order",)
 
 
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ("name", "slug", "order")
+    list_editable = ("order",)
+    prepopulated_fields = {"slug": ("name",)}
+    ordering = ("order",)
+
+
+@admin.register(Facility)
+class FacilityAdmin(admin.ModelAdmin):
+    list_display = ("name", "order")
+    list_editable = ("order",)
+    ordering = ("order",)
+
+
 @admin.register(Doctor)
 class DoctorAdmin(admin.ModelAdmin):
-    list_display = ("name", "specialty", "order", "is_active")
+    list_display = ("name", "specialty", "category", "order", "is_active")
     list_editable = ("order", "is_active")
+    list_filter = ("category", "is_active")
     ordering = ("order",)
+    fieldsets = (
+        (None, {"fields": ("name", "specialty", "qualification", "category", "photo", "order", "is_active")}),
+        ("Our Doctors page", {"fields": ("bio", "specialties")}),
+    )
+
+
+@admin.register(CoreValue)
+class CoreValueAdmin(admin.ModelAdmin):
+    list_display = ("title", "icon_name", "order")
+    list_editable = ("order",)
+    ordering = ("order",)
+
+
+@admin.register(GalleryImage)
+class GalleryImageAdmin(admin.ModelAdmin):
+    list_display = ("caption", "order")
+    list_editable = ("order",)
+    ordering = ("order",)
+
+
+@admin.register(AboutContent)
+class AboutContentAdmin(admin.ModelAdmin):
+    list_display = ("hero_heading",)
+
+    def has_add_permission(self, request):
+        return not AboutContent.objects.exists()
 
 
 @admin.register(Testimonial)
@@ -78,4 +125,13 @@ class AppointmentRequestAdmin(admin.ModelAdmin):
     list_editable = ("is_handled",)
     list_filter = ("is_handled", "service_needed")
     search_fields = ("full_name", "phone", "email")
+    ordering = ("-created_at",)
+
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ("full_name", "email", "subject", "phone", "created_at", "is_handled")
+    list_editable = ("is_handled",)
+    list_filter = ("is_handled",)
+    search_fields = ("full_name", "email", "subject")
     ordering = ("-created_at",)

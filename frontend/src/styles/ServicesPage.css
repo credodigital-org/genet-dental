@@ -1,0 +1,30 @@
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px 22px; }
+.service-card { text-align: center; }
+.service-card-thumb {
+  position: relative; aspect-ratio: 4/3.2; border-radius: 16px; margin-bottom: 30px;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.service-card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.service-card-icon { width: 40%; }
+.service-card-icon img { width: 100%; height: auto; }
+.service-card-badge {
+  position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%);
+  width: 40px; height: 40px; border-radius: 50%; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 18px -6px rgba(43,36,64,.3);
+}
+.service-card-badge svg { width: 18px; height: 18px; }
+.service-card h4 { font-size: 1rem; font-weight: 700; color: var(--purple); margin-bottom: 8px; font-family: 'Poppins'; }
+.service-card p { font-size: .87rem; color: var(--grey); }
+
+.tone-0 { background: linear-gradient(150deg, #F1ECFA, #DCCBF2); }
+.tone-1 { background: linear-gradient(150deg, #FBEFE0, #F0C48A); }
+.tone-2 { background: linear-gradient(150deg, #EAF3F0, #B9DFCF); }
+.tone-3 { background: linear-gradient(150deg, #F1ECFA, #E4D9F7); }
+
+@media (max-width: 980px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .services-grid { grid-template-columns: 1fr; }
+}

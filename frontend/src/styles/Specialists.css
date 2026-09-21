@@ -1,0 +1,259 @@
+/* =========================================================
+   GENET DENTAL - SPECIALISTS SECTION
+   ========================================================= */
+
+.specialists {
+  width: 100%;
+  background: var(--purple, #4b2382);
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.specialists-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px 75px;
+  box-sizing: border-box;
+}
+
+.specialists-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.specialists-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* =========================================================
+   DESKTOP VIEW (>= 641px): 3-COLUMN STAGGERED CLOUD
+   ========================================================= */
+
+@media (min-width: 641px) {
+  .specialists-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    column-gap: 50px;
+    row-gap: 20px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  /* Desktop Stagger Positions (Center 3, Left 2, Right 2) */
+  .specialists-grid .doc-yadnit {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .specialists-grid .doc-lorrain {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+  }
+  .specialists-grid .doc-anitab {
+    grid-column: 3;
+    grid-row: 2 / span 2;
+  }
+  .specialists-grid .doc-mathew {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+  }
+  .specialists-grid .doc-alaa {
+    grid-column: 1;
+    grid-row: 4 / span 2;
+  }
+  .specialists-grid .doc-shajee {
+    grid-column: 3;
+    grid-row: 4 / span 2;
+  }
+  .specialists-grid .doc-kumar {
+    grid-column: 2;
+    grid-row: 5 / span 2;
+  }
+
+  .doctor-card {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .doctor-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #ffffff;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .doctor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .doctor-card h4 {
+    margin: 0 0 4px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .doctor-card span {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.72rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .specialists-container {
+    padding: 45px 20px 55px;
+  }
+
+  .specialists-grid {
+    column-gap: 24px;
+    row-gap: 15px;
+  }
+
+  .doctor-photo {
+    width: 95px;
+    height: 95px;
+  }
+
+  .doctor-card h4 {
+    font-size: 0.82rem;
+  }
+
+  .doctor-card span {
+    font-size: 0.64rem;
+  }
+}
+
+/* =========================================================
+   MOBILE VIEW (<= 640px)
+   Matches reference: Top doctor horizontal badge,
+   followed by 2-column grid of circular portraits
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .specialists-container {
+    padding: 38px 20px 50px;
+  }
+
+  .specialists-header {
+    display: none; /* Reference image shows no header title on mobile */
+  }
+
+  .specialists-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+    row-gap: 34px;
+    width: 100%;
+  }
+
+  /* Default Card on Mobile (Vertical Stack) */
+  .doctor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .doctor-photo {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: #ffffff;
+    overflow: hidden;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  }
+
+  .doctor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .doctor-card h4 {
+    margin: 0 0 3px;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .doctor-card span {
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.58rem;
+    line-height: 1.2;
+  }
+
+  /* -------------------------------------------------------
+     TOP DOCTOR (Dr. Shajee Mohammed)
+     Horizontal badge spanning full width
+     ------------------------------------------------------- */
+  .specialists-grid .doc-shajee {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 16px;
+    padding-left: 6px;
+    margin-bottom: 6px;
+  }
+
+  .specialists-grid .doc-shajee .doctor-photo {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0;
+  }
+
+  .specialists-grid .doc-shajee .doctor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .specialists-grid .doc-shajee h4 {
+    font-size: 0.88rem;
+    margin-bottom: 2px;
+  }
+
+  .specialists-grid .doc-shajee span {
+    font-size: 0.62rem;
+  }
+}
+
+/* Very Small Mobile (< 360px) */
+@media (max-width: 360px) {
+  .doctor-photo {
+    width: 82px;
+    height: 82px;
+  }
+
+  .specialists-grid .doc-shajee .doctor-photo {
+    width: 78px;
+    height: 78px;
+  }
+}

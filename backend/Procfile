@@ -1,0 +1,2 @@
+web: gunicorn genet_backend.wsgi:application
+release: python manage.py migrate --noinput

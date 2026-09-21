@@ -1,27 +1,17 @@
-# Python
+# Python / Django
 backend/venv/
 backend/__pycache__/
 backend/**/__pycache__/
-*.pyc
-
-# Django
+backend/*.pyc
 backend/db.sqlite3
-backend/media/
 backend/staticfiles/
+backend/media/
 
-# Node
+# Node / React
 frontend/node_modules/
 frontend/dist/
+frontend/.env
 
-# Environment files
-.env
-.env.*
-!.env.example
-
-# IDE
-.vscode/
-.idea/
-
-# OS
+# OS / editor
 .DS_Store
-Thumbs.db
+*.log

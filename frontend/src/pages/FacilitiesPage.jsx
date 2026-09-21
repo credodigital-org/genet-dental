@@ -1,0 +1,7 @@
+import { useEffect, useState } from "react";
+import PageHero from "../components/PageHero";
+import Insurance from "../components/Insurance";
+import { apiGet, mediaUrl } from "../api";
+import "../styles/FacilitiesPage.css";
+function ScannerIcon(){return <svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" strokeWidth="1.4"><path d="M6 3v4M18 3v4M4 9h16l-2 5H6L4 9Z"/><circle cx="12" cy="16.5" r="3.2"/><path d="M12 14.5v4M10 16.5h4"/></svg>}
+export default function FacilitiesPage(){const [facilities,setFacilities]=useState([]);const [loading,setLoading]=useState(true);const [error,setError]=useState("");useEffect(()=>{apiGet("facilities").then(d=>setFacilities(Array.isArray(d)?d:[])).catch(e=>setError(e.message)).finally(()=>setLoading(false));},[]);return <><PageHero eyebrow="Our Facilities" title="State-of-the-Art Technology" description="We use advanced technology and modern equipment to deliver precise, comfortable and effective dental care."/><section><div className="wrap">{loading?<div className="api-loading">Loading facilities…</div>:error?<div className="api-error">Unable to load facilities from the server.</div>:<div className="facilities-grid">{facilities.map(f=><div className="facility-card" key={f.id}><div className="facility-thumb">{f.photo?<img src={mediaUrl(f.photo)} alt={f.name}/>:<ScannerIcon/>}</div><h4>{f.name}</h4><p>{f.description}</p></div>)}</div>}</div></section><Insurance/></>}

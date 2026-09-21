@@ -1,4 +1,5 @@
-import logo from "../assets/images/logo1.png";
+import "../styles/Footer.css";
+import logo from "../assets/images/footer logo.png";
 
 import facebookIcon from "../assets/images/logos_facebook.png";
 import instagramIcon from "../assets/images/skill-icons_instagram.png";
