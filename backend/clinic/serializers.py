@@ -28,6 +28,7 @@ class ServiceIconSerializer(serializers.ModelSerializer):
         fields = ["id", "name", "icon", "order"]
 
 
+
 # class TreatmentSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = Treatment
@@ -39,10 +40,27 @@ class TreatmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Treatment
         fields = ["id", "name", "slug", "description", "image", "order"]
+# class ServiceSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Service
+#         fields = ["id", "name", "slug", "description", "icon", "photo", "order"]
+
+# class ServiceSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Service
+#         fields = ["id", "name", "image", "order"]
+
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Service
-        fields = ["id", "name", "slug", "description", "icon", "photo", "order"]
+        fields = [
+            "id",
+            "name",
+            "description",
+            "image",
+            "icon",
+            "order",
+        ]
 
 
 class FacilitySerializer(serializers.ModelSerializer):

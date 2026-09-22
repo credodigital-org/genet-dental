@@ -257,3 +257,405 @@
     height: 78px;
   }
 }
+
+
+
+/* =========================================================
+   GENET DENTAL - SPECIALISTS / FLOWER SECTION
+========================================================= */
+
+.specialists {
+  width: 100%;
+  background: var(--purple, #4b2382);
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.specialists-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 55px 24px 70px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.specialists-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.specialists-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* =========================================================
+   MEDICAL DIRECTOR
+========================================================= */
+
+.director-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.doctor-card {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Medical Director slightly larger */
+.doctor-director {
+  width: 210px;
+}
+
+/* =========================================================
+   DOCTOR PHOTO
+========================================================= */
+
+.doctor-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #ffffff;
+  overflow: hidden;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-director .doctor-photo {
+  width: 125px;
+  height: 125px;
+}
+
+.doctor-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* =========================================================
+   DOCTOR TEXT
+========================================================= */
+
+.doctor-info {
+  width: 100%;
+}
+
+.doctor-card h4 {
+  margin: 0 0 4px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.doctor-director h4 {
+  font-size: 0.78rem;
+}
+
+.doctor-card span {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.57rem;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   FLOWER ROW
+========================================================= */
+
+.flower-doctors {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 38px;
+}
+
+/*
+   Each row contains maximum 3 doctors.
+
+   The middle doctor is slightly lower, producing
+   a V-shaped arrangement.
+*/
+
+.flower-row {
+  width: 100%;
+  max-width: 700px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  column-gap: 35px;
+
+  justify-items: center;
+  align-items: start;
+
+  position: relative;
+}
+
+/* =========================================================
+   V SHAPE
+
+   Left and right doctors stay higher.
+   Center doctor moves down.
+========================================================= */
+
+.flower-row .doctor-card:nth-child(1),
+.flower-row .doctor-card:nth-child(3) {
+  transform: translateY(0);
+}
+
+.flower-row .doctor-card:nth-child(2) {
+  transform: translateY(30px);
+}
+
+/* =========================================================
+   1 DOCTOR
+========================================================= */
+
+.flower-row-1 {
+  grid-template-columns: 1fr;
+  max-width: 220px;
+}
+
+.flower-row-1 .doctor-card:nth-child(1) {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   2 DOCTORS
+
+   Creates the two upper petals of the flower.
+========================================================= */
+
+.flower-row-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 470px;
+}
+
+.flower-row-2 .doctor-card:nth-child(1),
+.flower-row-2 .doctor-card:nth-child(2) {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   3 DOCTORS
+
+   Full V shape.
+========================================================= */
+
+.flower-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 700px;
+}
+
+.flower-row-3 .doctor-card:nth-child(2) {
+  transform: translateY(30px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  .specialists-container {
+    padding: 48px 20px 60px;
+  }
+
+  .specialists-header {
+    margin-bottom: 28px;
+  }
+
+  .specialists-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .flower-doctors {
+    gap: 30px;
+  }
+
+  .flower-row {
+    max-width: 600px;
+    column-gap: 20px;
+  }
+
+  .doctor-card {
+    width: 170px;
+  }
+
+  .doctor-photo {
+    width: 95px;
+    height: 95px;
+  }
+
+  .doctor-director .doctor-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .doctor-card h4 {
+    font-size: 0.68rem;
+  }
+
+  .doctor-card span {
+    font-size: 0.54rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .specialists-container {
+    padding: 38px 18px 50px;
+  }
+
+  .specialists-header {
+    margin-bottom: 25px;
+  }
+
+  .specialists-header h2 {
+    font-size: 1.45rem;
+  }
+
+  /* Director */
+  .director-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .doctor-card {
+    width: 140px;
+  }
+
+  .doctor-director {
+    width: 170px;
+  }
+
+  .doctor-photo {
+    width: 82px;
+    height: 82px;
+    margin-bottom: 8px;
+  }
+
+  .doctor-director .doctor-photo {
+    width: 98px;
+    height: 98px;
+  }
+
+  .doctor-card h4 {
+    font-size: 0.65rem;
+    line-height: 1.25;
+  }
+
+  .doctor-director h4 {
+    font-size: 0.72rem;
+  }
+
+  .doctor-card span {
+    font-size: 0.52rem;
+    line-height: 1.3;
+  }
+
+  /* Flower rows */
+  .flower-doctors {
+    gap: 28px;
+  }
+
+  .flower-row {
+    max-width: 100%;
+    column-gap: 4px;
+  }
+
+  .flower-row-2 {
+    max-width: 340px;
+  }
+
+  .flower-row-3 {
+    max-width: 100%;
+  }
+
+  /* Smaller V on mobile */
+  .flower-row .doctor-card:nth-child(2) {
+    transform: translateY(22px);
+  }
+
+  .flower-row-1 .doctor-card:nth-child(1) {
+    transform: translateY(0);
+  }
+
+  .flower-row-2 .doctor-card:nth-child(1),
+  .flower-row-2 .doctor-card:nth-child(2) {
+    transform: translateY(0);
+  }
+
+  .flower-row-3 .doctor-card:nth-child(2) {
+    transform: translateY(22px);
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .specialists-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .doctor-card {
+    width: 125px;
+  }
+
+  .doctor-director {
+    width: 155px;
+  }
+
+  .doctor-photo {
+    width: 74px;
+    height: 74px;
+  }
+
+  .doctor-director .doctor-photo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .doctor-card h4 {
+    font-size: 0.6rem;
+  }
+
+  .doctor-card span {
+    font-size: 0.48rem;
+  }
+
+  .flower-row .doctor-card:nth-child(2) {
+    transform: translateY(18px);
+  }
+}

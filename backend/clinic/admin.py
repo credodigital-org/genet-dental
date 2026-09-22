@@ -63,12 +63,17 @@ class TreatmentAdmin(admin.ModelAdmin):
     ordering = ("order",)
 
 
+# @admin.register(Service)
+# class ServiceAdmin(admin.ModelAdmin):
+#     list_display = ("name", "slug", "order")
+#     list_editable = ("order",)
+#     prepopulated_fields = {"slug": ("name",)}
+#     ordering = ("order",)
+
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ("name", "slug", "order")
-    list_editable = ("order",)
-    prepopulated_fields = {"slug": ("name",)}
-    ordering = ("order",)
+    list_display = ["name", "order"]
+    ordering = ["order", "id"]
 
 
 @admin.register(Facility)

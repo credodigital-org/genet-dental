@@ -183,15 +183,63 @@ class AppointmentRequest(models.Model):
         return f"{self.full_name} ({self.created_at:%Y-%m-%d})"
 
 
+# class Service(models.Model):
+#     """One card on the standalone 'Our Services' page (more granular than
+#     the homepage Treatment grid — e.g. Teeth Cleaning, Invisalign, Dentures)."""
+
+#     name = models.CharField(max_length=150)
+#     slug = models.SlugField(max_length=160, unique=True)
+#     description = models.TextField(blank=True)
+#     icon = models.ImageField(upload_to="services/", blank=True, null=True)
+#     photo = models.ImageField(upload_to="services/", blank=True, null=True)
+#     order = models.PositiveIntegerField(default=0)
+
+#     class Meta:
+#         ordering = ["order", "id"]
+
+#     def __str__(self):
+#         return self.name
+
+# class Service(models.Model):
+#     """One card on the standalone Our Services page."""
+
+#     name = models.CharField(max_length=150)
+
+#     image = models.ImageField(
+#         upload_to="services/",
+#         blank=True,
+#         null=True,
+#     )
+
+#     order = models.PositiveIntegerField(default=0)
+
+#     class Meta:
+#         ordering = ["order", "id"]
+
+#     def __str__(self):
+#         return self.name
+
 class Service(models.Model):
-    """One card on the standalone 'Our Services' page (more granular than
-    the homepage Treatment grid — e.g. Teeth Cleaning, Invisalign, Dentures)."""
+    """One card on the standalone Our Services page."""
 
     name = models.CharField(max_length=150)
-    slug = models.SlugField(max_length=160, unique=True)
-    description = models.TextField(blank=True)
-    icon = models.ImageField(upload_to="services/", blank=True, null=True)
-    photo = models.ImageField(upload_to="services/", blank=True, null=True)
+    description = models.TextField(
+        blank=True,
+        null=True
+    )
+
+    image = models.ImageField(
+        upload_to="services/",
+        blank=True,
+        null=True,
+    )
+
+    icon = models.ImageField(
+        upload_to="services/icons/",
+        blank=True,
+        null=True,
+    )
+
     order = models.PositiveIntegerField(default=0)
 
     class Meta:

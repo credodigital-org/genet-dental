@@ -1,37 +1,1099 @@
-.doc-section-title { font-size: 1.5rem; margin-bottom: 26px; }
-.doc-badge {
-  display: inline-block; background: var(--card-lavender); color: var(--purple);
-  font-size: .72rem; font-weight: 700; letter-spacing: .03em;
-  padding: 5px 12px; border-radius: 999px; margin: 6px 0 12px;
+/* =========================================================
+   DOCTORS PAGE
+========================================================= */
+
+.doctors-page {
+  width: 100%;
+  background: #ffffff;
 }
-.doc-book-btn { font-size: .82rem; padding: 11px 20px; margin-top: 8px; }
+
+
+/* =========================================================
+   DOCTORS HERO
+========================================================= */
+
+.doctors-page-hero {
+  /* height: 205px !important;
+  min-height: 205px !important; */
+   height: 235px !important;
+  min-height: 235px !important;
+
+  background: #ffffff;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.doctors-page-hero .page-hero-content {
+  width: 100% !important;
+  max-width: 700px !important;
+
+  margin: 0 auto !important;
+  padding: 10px 20px !important;
+
+  text-align: center !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctors-page-hero .eyebrow {
+  width: 100%;
+
+  margin: 0 0 5px !important;
+
+  text-align: center !important;
+
+  font-family: "Exotic Bold", "Poppins", sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.1;
+}
+
+.doctors-page-hero h1 {
+  width: 100%;
+
+  margin: 0 0 7px !important;
+
+  color: var(--purple);
+
+  font-family: "Exotic Bold", "Poppins", sans-serif;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  text-align: center !important;
+}
+
+.doctors-page-hero p {
+  width: 100%;
+  max-width: 560px;
+
+  margin: 0 auto !important;
+
+  color: #5f5b68;
+
+  font-size: 0.68rem;
+  line-height: 1.35;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   COMMON SECTION TITLE
+========================================================= */
+
+.doc-section-title {
+  margin: 0 0 20px;
+
+  color: var(--purple);
+
+  font-family: "Exotic Bold", "Poppins", sans-serif;
+
+  font-size: 1.18rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   MEDICAL DIRECTOR SECTION
+========================================================= */
 
 .director-card {
-  display: flex; gap: 36px; align-items: center; background: #fff;
-  border: 1px solid var(--line); border-radius: 20px; padding: 28px;
-  box-shadow: 0 20px 40px -28px rgba(43,36,64,.3);
-}
-.director-photo { flex: 0 0 220px; aspect-ratio: 1/1; border-radius: 16px; overflow: hidden; background: var(--card-lavender); }
-.director-photo img { width: 100%; height: 100%; object-fit: cover; }
-.director-body h3 { font-size: 1.25rem; color: var(--ink); font-family: 'Poppins'; font-weight: 700; }
-.director-body p { color: var(--grey); font-size: .92rem; max-width: 560px; margin-bottom: 6px; }
+  display: flex;
 
-.doctors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.doctor-page-card {
-  background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px; text-align: left;
+  width: 100%;
+
+  min-height: 155px;
+
+  gap: 20px;
+
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid var(--line);
+
+  border-radius: 17px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 22px -18px rgba(43, 36, 64, 0.35);
 }
-.doctor-page-photo { aspect-ratio: 4/3.4; border-radius: 12px; overflow: hidden; margin-bottom: 14px; background: var(--card-lavender); }
-.doctor-page-photo img { width: 100%; height: 100%; object-fit: cover; }
-.doctor-page-card h4 { font-size: 1.02rem; color: var(--ink); font-family: 'Poppins'; font-weight: 700; }
-.doc-specialties { margin: 4px 0 8px; padding-left: 18px; }
-.doc-specialties li { font-size: .85rem; color: var(--grey); list-style: disc; margin-bottom: 3px; }
-.doc-bio { font-size: .85rem; color: var(--grey); margin-bottom: 8px; }
+
+
+/* Director image */
+
+.director-photo {
+  flex: 0 0 180px;
+
+  width: 180px;
+  height: 155px;
+
+  overflow: hidden;
+
+  background: var(--card-lavender);
+}
+
+.director-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* Director content */
+
+.director-body {
+  flex: 1;
+
+  padding: 15px 20px 15px 0;
+}
+
+.director-body h3 {
+  margin: 0;
+
+  color: var(--ink);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.director-body p {
+  max-width: 650px;
+
+  margin: 2px 0 5px;
+
+  color: var(--grey);
+
+  font-size: 0.65rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   DOCTOR BADGE
+========================================================= */
+
+.doc-badge {
+  display: inline-block;
+
+  margin: 5px 0 8px;
+
+  padding: 4px 10px;
+
+  background: var(--card-lavender);
+
+  color: var(--purple);
+
+  border-radius: 999px;
+
+  font-size: 0.55rem;
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   BOOK CONSULTATION BUTTON
+========================================================= */
+
+.doc-book-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  width: auto;
+
+  margin-top: 6px;
+
+  padding: 8px 18px;
+
+  border-radius: 6px;
+
+  font-size: 0.62rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.doc-book-btn svg {
+  width: 11px;
+  height: 11px;
+}
+
+
+/* =========================================================
+   DOCTOR GRID
+========================================================= */
+
+.doctors-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  width: 100%;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   DOCTOR CARD
+========================================================= */
+
+.doctor-page-card {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+  padding: 0 0 13px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 18px -15px rgba(43, 36, 64, 0.45);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.doctor-page-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px -15px rgba(43, 36, 64, 0.35);
+}
+
+
+/* =========================================================
+   DOCTOR PHOTO
+========================================================= */
+
+.doctor-page-photo {
+  width: 100%;
+
+  aspect-ratio: 1.55 / 1;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  background: var(--card-lavender);
+}
+
+.doctor-page-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   DOCTOR NAME
+========================================================= */
+
+.doctor-page-card h4 {
+  margin: 8px 10px 0;
+
+  color: var(--ink);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   SPECIALIST LIST
+========================================================= */
+
+.doc-specialties {
+  margin: 2px 15px 4px;
+
+  padding-left: 14px;
+
+  text-align: left;
+}
+
+.doc-specialties li {
+  margin-bottom: 2px;
+
+  color: var(--grey);
+
+  font-size: 0.59rem;
+
+  line-height: 1.35;
+
+  list-style: disc;
+}
+
+
+/* =========================================================
+   GENERAL DENTIST BIO
+========================================================= */
+
+.doc-bio {
+  min-height: 48px;
+
+  margin: 3px 15px 4px;
+
+  color: var(--grey);
+
+  font-size: 0.6rem;
+
+  line-height: 1.45;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   BUTTON ALIGNMENT
+========================================================= */
+
+.doctor-page-card .doc-book-btn {
+  margin-top: auto;
+
+  align-self: center;
+}
+
+
+/* =========================================================
+   SECTION SPACING
+========================================================= */
+
+.doctors-page > section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.doctors-page .wrap {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+/* Medical Director heading */
+
+.director-card {
+  margin-bottom: 20px;
+}
+
+
+/* Specialist heading */
+
+.director-card + * .doc-section-title {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   SPECIALIST SECTION
+========================================================= */
+
+.doctors-specialist-section {
+  background: #faf9fd;
+}
+
+
+/* =========================================================
+   GENERAL DENTISTS
+========================================================= */
+
+.general-doctors-section {
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 900px) {
-  .director-card { flex-direction: column; text-align: center; }
-  .director-photo { width: 100%; max-width: 260px; }
-  .doctors-grid { grid-template-columns: 1fr 1fr; }
+
+  .doctors-page-hero {
+    height: 195px !important;
+    min-height: 195px !important;
+  }
+
+  .doctors-page-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .director-card {
+    gap: 18px;
+  }
+
+  .director-photo {
+    flex: 0 0 160px;
+
+    width: 160px;
+    height: 145px;
+  }
+
+  .director-body {
+    padding-right: 18px;
+  }
+
+  .doctors-grid {
+    gap: 15px;
+  }
+
+  .doctor-page-card h4 {
+    font-size: 0.7rem;
+  }
 }
-@media (max-width: 560px) {
-  .doctors-grid { grid-template-columns: 1fr; }
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .doctors-page-hero {
+    height: 200px !important;
+    min-height: 200px !important;
+  }
+
+  .doctors-page-hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .doctors-page-hero p {
+    font-size: 0.68rem;
+  }
+
+  .director-card {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    text-align: center;
+  }
+
+  .director-photo {
+    flex: none;
+
+    width: 100%;
+    height: 220px;
+  }
+
+  .director-body {
+    padding: 15px 18px 20px;
+  }
+
+  .director-body p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+  }
+
+  .doctor-page-photo {
+    aspect-ratio: 1.2 / 1;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .doctors-page-hero {
+    height: 190px !important;
+    min-height: 190px !important;
+  }
+
+  .doctors-page-hero h1 {
+    font-size: 1.45rem;
+  }
+
+  .doc-section-title {
+    font-size: 1rem;
+
+    margin-bottom: 16px;
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .doctor-page-photo {
+    aspect-ratio: 1.45 / 1;
+  }
+
+  .doctor-page-card h4 {
+    font-size: 0.85rem;
+  }
+
+  .doc-specialties li {
+    font-size: 0.7rem;
+  }
+
+  .doc-bio {
+    font-size: 0.68rem;
+  }
+
+  .doc-book-btn {
+    font-size: 0.68rem;
+
+    padding: 9px 18px;
+  }
+}
+
+
+/* Reduce space between hero and doctors content */
+
+.doctors-page-hero + section {
+  padding-top: 10px !important;
+  margin-top: 0 !important;
+}
+
+.doctors-page-hero + section .wrap {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+.doc-section-title {
+  margin: 0 0 14px;
+
+  color: var(--purple);
+
+  font-family: "Exotic Bold", "Poppins", sans-serif;
+
+  font-size: 1.18rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.hero-booking {
+  padding: 9px 16px !important;
+  font-size: 0.7rem !important;
+  gap: 6px !important;
+}
+
+.hero-booking svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* =========================================================
+   DOCTOR CARDS — CENTER EVERYTHING
+========================================================= */
+
+.doctors-grid,
+.specialist-doctors-grid,
+.general-doctors-grid {
+  align-items: stretch;
+}
+
+/* Card */
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Doctor image */
+.doctor-card-image,
+.doctor-card > img,
+.doctor-image {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* Card content */
+.doctor-card-content,
+.doctor-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Doctor name */
+.doctor-card h3,
+.doctor-card h4,
+.doctor-info h3,
+.doctor-info h4 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Specialty badge */
+.doctor-card .specialty,
+.doctor-card .doctor-specialty,
+.doctor-card .specialty-badge,
+.doctor-info .specialty,
+.doctor-info .doctor-specialty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Description */
+.doctor-card p,
+.doctor-info p {
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bullet points */
+.doctor-card ul,
+.doctor-info ul {
+  width: 100%;
+  margin: 8px auto 12px;
+  padding-left: 0;
+  list-style-position: inside;
+  text-align: center;
+}
+
+.doctor-card li,
+.doctor-info li {
+  text-align: center;
+  margin-left: 0;
+}
+
+/* Consultation button */
+.doctor-card .btn,
+.doctor-card button,
+.doctor-card .consultation-btn,
+.doctor-info .btn,
+.doctor-info button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.specialist-doctors-grid,
+.general-doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.specialist-doctors-grid .doctor-card,
+.general-doctors-grid .doctor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.specialist-doctors-grid .doctor-card-content,
+.general-doctors-grid .doctor-card-content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.specialist-doctors-grid .doctor-card .btn,
+.general-doctors-grid .doctor-card .btn {
+  margin-top: auto;
+  align-self: center;
+}
+/* =========================================================
+   CENTER BOOK CONSULTATION BUTTONS
+========================================================= */
+
+.specialist-doctors-grid .doctor-card,
+.general-doctors-grid .doctor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Card content */
+.specialist-doctors-grid .doctor-card-content,
+.general-doctors-grid .doctor-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Center consultation button */
+.specialist-doctors-grid .doctor-card .btn,
+.general-doctors-grid .doctor-card .btn,
+.specialist-doctors-grid .doctor-card button,
+.general-doctors-grid .doctor-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+.specialist-doctors-grid .doctor-book-btn,
+.general-doctors-grid .doctor-book-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: center !important;
+  width: 140px;
+  margin: auto auto 0 !important;
+  text-align: center !important;
+}
+.specialist-doctors-grid .doctor-card-content,
+.general-doctors-grid .doctor-card-content {
+  min-height: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.specialist-doctors-grid .doctor-card .btn,
+.general-doctors-grid .doctor-card .btn {
+  margin-top: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* =========================================================
+   DOCTOR CARDS — CENTER CONTENT & BUTTON
+========================================================= */
+
+.doctor-page-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Doctor name */
+.doctor-page-card h4 {
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Qualification badge */
+.doctor-page-card .doc-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+
+/* Specialist bullet list */
+.doctor-page-card .doc-specialties {
+  width: 100%;
+  margin: 4px auto 8px;
+  padding: 0;
+  text-align: center;
+  list-style-position: inside;
+}
+
+.doctor-page-card .doc-specialties li {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+/* General dentist description */
+.doctor-page-card .doc-bio {
+  width: calc(100% - 30px);
+  margin: 5px auto 8px;
+  text-align: center;
+}
+
+/* =========================================================
+   BOOK APPOINTMENT BUTTON
+========================================================= */
+
+.doctor-page-card .hero-booking {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  align-self: center !important;
+
+  width: 140px !important;
+  min-width: 140px !important;
+  max-width: 140px !important;
+
+  height: 34px !important;
+  min-height: 34px !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  margin-top: auto !important;
+
+  padding: 0 10px !important;
+
+  gap: 5px !important;
+
+  border-radius: 6px !important;
+
+  font-size: 0.60rem !important;
+  font-weight: 600 !important;
+
+  text-align: center !important;
+  white-space: nowrap !important;
+
+  box-sizing: border-box !important;
+}
+
+/* Phone icon */
+.doctor-page-card .hero-booking svg {
+  width: 12px !important;
+  height: 12px !important;
+  min-width: 12px !important;
+  min-height: 12px !important;
+
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+
+/* Button text */
+.doctor-page-card .hero-booking span {
+  display: inline-block;
+  text-align: center;
+}
+/* =========================================================
+   SPECIALIST — SPECIALTIES UNORDERED LIST
+========================================================= */
+
+.doctor-page-card .doc-specialties {
+  display: block;
+  width: auto;
+  margin: 5px auto 10px;
+  padding-left: 20px;
+
+  list-style-type: disc;
+  list-style-position: outside;
+
+  text-align: left;
+}
+
+.doctor-page-card .doc-specialties li {
+  display: list-item;
+
+  margin: 0 0 3px;
+  padding: 0;
+
+  color: var(--grey);
+
+  font-family: "Nunito", sans-serif;
+  font-size: 0.59rem;
+  line-height: 1.35;
+
+  text-align: left;
+  list-style-type: disc;
+}
+
+/* =========================================================
+   MEDICAL DIRECTOR IMAGE
+   SHOW FULL IMAGE WITHOUT CROPPING
+========================================================= */
+
+.director-photo {
+  flex: 0 0 255px;
+  width: 255px;
+  height: 220px;
+  overflow: hidden;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.director-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* =========================================================
+   FINAL MEDICAL DIRECTOR IMAGE FIX
+========================================================= */
+
+.director-photo {
+  flex: 0 0 255px !important;
+  width: 255px !important;
+  height: 220px !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+.director-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+@media (max-width: 900px) {
+  .director-photo {
+    flex: 0 0 210px !important;
+    width: 210px !important;
+    height: 190px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .director-photo {
+    flex: none !important;
+    width: 100% !important;
+    height: 280px !important;
+  }
+
+  .director-photo img {
+    object-fit: contain !important;
+  }
+}
+/* =========================================================
+   FINAL DOCTOR IMAGE FIX
+   SHOW FULL SPECIALIST + GENERAL DENTIST IMAGES
+   WITHOUT CROPPING
+========================================================= */
+
+.doctor-page-photo {
+  width: 100% !important;
+  height: 220px !important;
+  aspect-ratio: auto !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+.doctor-page-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .doctor-page-photo {
+    height: 200px !important;
+  }
+
+  .doctor-page-photo img {
+    object-fit: contain !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .doctor-page-photo {
+    height: 220px !important;
+    aspect-ratio: auto !important;
+  }
+
+  .doctor-page-photo img {
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .doctor-page-photo {
+    height: 230px !important;
+  }
+
+  .doctor-page-photo img {
+    object-fit: contain !important;
+  }
 }
