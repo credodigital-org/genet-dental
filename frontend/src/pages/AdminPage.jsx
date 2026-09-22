@@ -15,43 +15,76 @@ import "../styles/AdminPage.css";
    ========================================================= */
 
 const resources = {
+  // doctors: {
+  //   label: "Doctors",
+  //   singular: "Doctor",
+  //   columns: [
+  //     "name",
+  //     "category",
+  //     "qualification",
+  //     "order",
+  //     "is_active",
+  //   ],
+  //   fields: [
+  //     ["name", "Name"],
+  //     ["specialty", "Specialty"],
+  //     ["qualification", "Qualification"],
+
+  //     [
+  //       "category",
+  //       "Category",
+  //       "select",
+  //       [
+  //         ["medical_director", "Medical Director"],
+  //         ["specialist", "Specialist Doctor"],
+  //         ["general", "General Dentist"],
+  //       ],
+  //     ],
+
+  //     ["bio", "Bio", "textarea"],
+  //     [
+  //       "specialties",
+  //       "Specialist treatments (one per line)",
+  //       "textarea",
+  //     ],
+  //     ["order", "Display order", "number"],
+  //     ["is_active", "Active", "checkbox"],
+  //     ["photo", "Photo", "file", "image"],
+  //   ],
+  // },
+
   doctors: {
-    label: "Doctors",
-    singular: "Doctor",
-    columns: [
-      "name",
+  label: "Doctors",
+  singular: "Doctor",
+
+  columns: [
+    "name",
+    "category",
+    "qualification",
+    "order",
+    "is_active",
+  ],
+
+  fields: [
+    ["name", "Name"],
+    ["qualification", "Qualification"],
+
+    [
       "category",
-      "qualification",
-      "order",
-      "is_active",
-    ],
-    fields: [
-      ["name", "Name"],
-      ["specialty", "Specialty"],
-      ["qualification", "Qualification"],
-
+      "Category",
+      "select",
       [
-        "category",
-        "Category",
-        "select",
-        [
-          ["medical_director", "Medical Director"],
-          ["specialist", "Specialist Doctor"],
-          ["general", "General Dentist"],
-        ],
+        ["medical_director", "Medical Director"],
+        ["specialist", "Specialist Doctor"],
+        ["general", "General Dentist"],
       ],
-
-      ["bio", "Bio", "textarea"],
-      [
-        "specialties",
-        "Specialist treatments (one per line)",
-        "textarea",
-      ],
-      ["order", "Display order", "number"],
-      ["is_active", "Active", "checkbox"],
-      ["photo", "Photo", "file", "image"],
     ],
-  },
+
+    ["order", "Display order", "number"],
+    ["is_active", "Active", "checkbox"],
+    ["photo", "Photo", "file", "image"],
+  ],
+},
 
   // treatments: {
   //   label: "Treatments",
@@ -88,19 +121,66 @@ treatments: {
   ],
 },
 
-  services: {
-    label: "Services",
-    singular: "Service",
-    columns: ["name", "slug", "order"],
-    fields: [
-      ["name", "Name"],
-      ["slug", "Slug"],
-      ["description", "Description", "textarea"],
-      ["order", "Display order", "number"],
-      ["icon", "Icon", "file", "image"],
-      ["photo", "Photo", "file", "image"],
-    ],
-  },
+  // services: {
+  //   label: "Services",
+  //   singular: "Service",
+  //   columns: ["name", "slug", "order"],
+  //   fields: [
+  //     ["name", "Name"],
+  //     ["slug", "Slug"],
+  //     ["description", "Description", "textarea"],
+  //     ["order", "Display order", "number"],
+  //     ["icon", "Icon", "file", "image"],
+  //     ["photo", "Photo", "file", "image"],
+  //   ],
+  // },
+
+//   services: {
+//   label: "Services",
+//   singular: "Service",
+//   columns: ["name", "order"],
+//   fields: [
+//     ["name", "Name"],
+//     ["order", "Display order", "number"],
+//     ["photo", "Image", "file", "image"],
+//   ],
+// },
+
+// services: {
+//   label: "Services",
+//   singular: "Service",
+//   columns: ["name", "order"],
+//   fields: [
+//     ["name", "Name"],
+//     ["order", "Display order", "number"],
+//     ["image", "Image", "file", "image"],
+//   ],
+// },
+
+// services: {
+//   label: "Services",
+//   singular: "Service",
+//   columns: ["name", "order"],
+//   fields: [
+//     ["name", "Name"],
+//     ["order", "Display order", "number"],
+//     ["image", "Image", "file", "image"],
+//     ["icon", "Service Icon", "file", "image"],
+//   ],
+// },
+
+services: {
+  label: "Services",
+  singular: "Service",
+  columns: ["name", "description", "order"],
+  fields: [
+    ["name", "Name"],
+    ["description", "Description", "textarea"],
+    ["order", "Display order", "number"],
+    ["image", "Image", "file", "image"],
+    ["icon", "Service Icon", "file", "image"],
+  ],
+},
 
   facilities: {
     label: "Facilities",
@@ -191,7 +271,7 @@ function Login() {
   return (
     <div className="admin-login">
       <div className="login-card">
-        <div className="admin-mark">G</div>
+        {/* <div className="admin-mark">G</div> */}
 
         <p className="admin-eyebrow">
           GENET DENTAL
@@ -302,56 +382,162 @@ function CrudPage({ resource }) {
      SAVE
      ======================================================= */
 
-  async function save(values) {
-    const fd = new FormData();
+  // async function save(values) {
+  //   const fd = new FormData();
+async function save(values) {
+  const fd = new FormData();
 
-    const fileFields = new Set(
-      cfg.fields
-        .filter(([, , type]) => type === "file")
-        .map(([name]) => name)
-    );
+  const preparedValues = {
+    ...values,
+  };
 
-    Object.entries(values).forEach(
-      ([key, value]) => {
-        if (fileFields.has(key)) {
-          if (value instanceof File) {
-            fd.append(key, value);
-          }
+  // if (resource === "doctors") {
+  //   const categoryLabels = {
+  //     medical_director: "Medical Director",
+  //     specialist: "Specialist Doctor",
+  //     general: "General Dentist",
+  //   };
 
-          return;
-        }
+  //   preparedValues.specialty =
+  //     categoryLabels[values.category] || "General Dentist";
 
-        if (
-          value !== undefined &&
-          value !== null
-        ) {
-          fd.append(
-            key,
-            String(value)
-          );
-        }
-      }
-    );
+  //   if (Array.isArray(values.specialties)) {
+  //     preparedValues.specialties = values.specialties
+  //       .map((item) => String(item || "").trim())
+  //       .filter(Boolean)
+  //       .join("\n");
+  //   }
+  // }
 
-    const path = values.id
-      ? `${resource}/${values.id}/`
-      : `${resource}/`;
+  if (resource === "doctors") {
+  const categoryLabels = {
+    medical_director: "Medical Director",
+    specialist: "Specialist Doctor",
+    general: "General Dentist",
+  };
 
-    await adminRequest(path, {
-      method: values.id
-        ? "PATCH"
-        : "POST",
-      body: fd,
-    });
+  preparedValues.specialty =
+    categoryLabels[values.category] ||
+    "General Dentist";
 
-    setEditing(null);
+  if (values.category === "specialist") {
+    if (Array.isArray(values.specialties)) {
+      preparedValues.specialties =
+        values.specialties
+          .map((item) =>
+            String(item || "").trim()
+          )
+          .filter(Boolean)
+          .join("\n");
+    }
+  } else {
+    // Non-specialists should not have
+    // specialist areas.
+    preparedValues.specialties = "";
 
-    setNotice(
-      `${cfg.singular} saved successfully.`
-    );
-
-    await load();
+    // Bio is used for Medical Director
+    // and General Dentist.
+    preparedValues.bio =
+      String(values.bio || "").trim();
   }
+}
+
+  const fileFields = new Set(
+    cfg.fields
+      .filter(([, , type]) => type === "file")
+      .map(([name]) => name)
+  );
+
+  Object.entries(preparedValues).forEach(
+    ([key, value]) => {
+      if (fileFields.has(key)) {
+        if (value instanceof File) {
+          fd.append(key, value);
+        }
+
+        return;
+      }
+
+      if (
+        value !== undefined &&
+        value !== null
+      ) {
+        fd.append(
+          key,
+          String(value)
+        );
+      }
+    }
+  );
+
+  const path = values.id
+    ? `${resource}/${values.id}/`
+    : `${resource}/`;
+
+  await adminRequest(path, {
+    method: values.id
+      ? "PATCH"
+      : "POST",
+    body: fd,
+  });
+
+  setEditing(null);
+
+  setNotice(
+    `${cfg.singular} saved successfully.`
+  );
+
+  await load();
+}
+  
+
+  //   const fileFields = new Set(
+  //     cfg.fields
+  //       .filter(([, , type]) => type === "file")
+  //       .map(([name]) => name)
+  //   );
+
+  //   Object.entries(values).forEach(
+  //     ([key, value]) => {
+  //       if (fileFields.has(key)) {
+  //         if (value instanceof File) {
+  //           fd.append(key, value);
+  //         }
+
+  //         return;
+  //       }
+
+  //       if (
+  //         value !== undefined &&
+  //         value !== null
+  //       ) {
+  //         fd.append(
+  //           key,
+  //           String(value)
+  //         );
+  //       }
+  //     }
+  //   );
+
+  //   const path = values.id
+  //     ? `${resource}/${values.id}/`
+  //     : `${resource}/`;
+
+  //   await adminRequest(path, {
+  //     method: values.id
+  //       ? "PATCH"
+  //       : "POST",
+  //     body: fd,
+  //   });
+
+  //   setEditing(null);
+
+  //   setNotice(
+  //     `${cfg.singular} saved successfully.`
+  //   );
+
+  //   await load();
+  // }
 
   /* =======================================================
      DELETE
@@ -624,6 +810,398 @@ function GalleryGrid({
   );
 }
 
+
+// function DoctorFields({ values, setValues }) {
+//   const category = values.category || "general";
+
+//   const update = (name, value) => {
+//     setValues((state) => ({
+//       ...state,
+//       [name]: value,
+//     }));
+//   };
+
+//   // const specialties = Array.isArray(values.specialties)
+//   //   ? values.specialties
+//   //   : [""];
+
+//   const specialties = Array.isArray(values.specialties)
+//   ? values.specialties
+//   : typeof values.specialties === "string" &&
+//     values.specialties.trim()
+//     ? values.specialties
+//         .split("\n")
+//         .map((item) => item.trim())
+//         .filter(Boolean)
+//     : [""];
+
+//   function updateSpecialty(index, value) {
+//     const next = [...specialties];
+//     next[index] = value;
+
+//     update("specialties", next);
+//   }
+
+//   function addSpecialty() {
+//     update("specialties", [
+//       ...specialties,
+//       "",
+//     ]);
+//   }
+
+//   function removeSpecialty(index) {
+//     const next = specialties.filter(
+//       (_, itemIndex) => itemIndex !== index
+//     );
+
+//     update(
+//       "specialties",
+//       next.length ? next : [""]
+//     );
+//   }
+
+//   return (
+//     <>
+//       <Field
+//         name="name"
+//         label="Name"
+//         type="text"
+//         value={values.name}
+//         setValue={(value) =>
+//           update("name", value)
+//         }
+//       />
+
+//       <Field
+//         name="qualification"
+//         label="Qualification"
+//         type="text"
+//         value={values.qualification}
+//         setValue={(value) =>
+//           update("qualification", value)
+//         }
+//       />
+
+//       <Field
+//         name="category"
+//         label="Category"
+//         type="select"
+//         options={[
+//           ["medical_director", "Medical Director"],
+//           ["specialist", "Specialist Doctor"],
+//           ["general", "General Dentist"],
+//         ]}
+//         value={category}
+//         setValue={(value) =>
+//           update("category", value)
+//         }
+//       />
+
+//       <Field
+//         name="photo"
+//         label="Doctor Image"
+//         type="file"
+//         accept="image"
+//         value={values.photo}
+//         setValue={(value) =>
+//           update("photo", value)
+//         }
+//       />
+
+//       {category === "specialist" ? (
+//         <div className="specialty-editor full">
+//           <div className="specialty-editor-head">
+//             <div>
+//               <strong>Specialist Areas</strong>
+//               <p>
+//                 Add as many specialist areas as needed.
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="specialty-list">
+//             {specialties.map(
+//               (specialty, index) => (
+//                 <div
+//                   className="specialty-row"
+//                   key={index}
+//                 >
+//                   <input
+//                     type="text"
+//                     value={specialty}
+//                     placeholder="e.g. Dental Implants"
+//                     onChange={(event) =>
+//                       updateSpecialty(
+//                         index,
+//                         event.target.value
+//                       )
+//                     }
+//                   />
+
+//                   <button
+//                     type="button"
+//                     className="specialty-remove"
+//                     onClick={() =>
+//                       removeSpecialty(index)
+//                     }
+//                     aria-label="Remove specialty"
+//                   >
+//                     −
+//                   </button>
+//                 </div>
+//               )
+//             )}
+//           </div>
+
+//           <button
+//             type="button"
+//             className="specialty-add"
+//             onClick={addSpecialty}
+//           >
+//             + Add Specialty Area
+//           </button>
+//         </div>
+//       ) : (
+//         <div className="full">
+//           <Field
+//             name="bio"
+//             label="Bio"
+//             type="textarea"
+//             value={values.bio}
+//             setValue={(value) =>
+//               update("bio", value)
+//             }
+//           />
+//         </div>
+//       )}
+
+//       <Field
+//         name="order"
+//         label="Display order"
+//         type="number"
+//         value={values.order ?? 0}
+//         setValue={(value) =>
+//           update("order", value)
+//         }
+//       />
+
+//       <Field
+//         name="is_active"
+//         label="Active"
+//         type="checkbox"
+//         value={values.is_active ?? true}
+//         setValue={(value) =>
+//           update("is_active", value)
+//         }
+//       />
+//     </>
+//   );
+// }
+
+
+function DoctorFields({ values, setValues }) {
+  const category = values.category || "general";
+
+  const update = (name, value) => {
+    setValues((state) => ({
+      ...state,
+      [name]: value,
+    }));
+  };
+
+  const specialties = Array.isArray(values.specialties)
+    ? values.specialties
+    : typeof values.specialties === "string" &&
+      values.specialties.trim()
+    ? values.specialties
+        .split("\n")
+        .map((item) => item.trim())
+        .filter(Boolean)
+    : [""];
+
+  function updateSpecialty(index, value) {
+    const next = [...specialties];
+    next[index] = value;
+
+    update("specialties", next);
+  }
+
+  function addSpecialty() {
+    update("specialties", [
+      ...specialties,
+      "",
+    ]);
+  }
+
+  function removeSpecialty(index) {
+    const next = specialties.filter(
+      (_, itemIndex) => itemIndex !== index
+    );
+
+    update(
+      "specialties",
+      next.length ? next : [""]
+    );
+  }
+
+  function changeCategory(value) {
+    update("category", value);
+
+    // Specialist → keep specialist areas
+    if (value === "specialist") {
+      return;
+    }
+
+    // Medical Director / General Dentist → use Bio
+    update("specialties", "");
+  }
+
+  return (
+    <>
+      {/* NAME */}
+      <Field
+        name="name"
+        label="Name"
+        type="text"
+        value={values.name}
+        setValue={(value) =>
+          update("name", value)
+        }
+      />
+
+      {/* QUALIFICATION */}
+      <Field
+        name="qualification"
+        label="Qualification"
+        type="text"
+        value={values.qualification}
+        setValue={(value) =>
+          update("qualification", value)
+        }
+      />
+
+      {/* CATEGORY */}
+      <Field
+        name="category"
+        label="Category"
+        type="select"
+        options={[
+          ["medical_director", "Medical Director"],
+          ["specialist", "Specialist Doctor"],
+          ["general", "General Dentist"],
+        ]}
+        value={category}
+        setValue={changeCategory}
+      />
+
+      {/* IMAGE */}
+      <Field
+        name="photo"
+        label="Doctor Image"
+        type="file"
+        accept="image"
+        value={values.photo}
+        setValue={(value) =>
+          update("photo", value)
+        }
+      />
+
+      {/* SPECIALIST */}
+      {category === "specialist" ? (
+        <div className="specialty-editor full">
+          <div className="specialty-editor-head">
+            <div>
+              <strong>Specialist Areas</strong>
+
+              <p>
+                Add all specialist treatment areas.
+                You can add as many as needed.
+              </p>
+            </div>
+          </div>
+
+          <div className="specialty-list">
+            {specialties.map(
+              (specialty, index) => (
+                <div
+                  className="specialty-row"
+                  key={index}
+                >
+                  <input
+                    type="text"
+                    value={specialty}
+                    placeholder="e.g. Dental Implants"
+                    onChange={(event) =>
+                      updateSpecialty(
+                        index,
+                        event.target.value
+                      )
+                    }
+                  />
+
+                  <button
+                    type="button"
+                    className="specialty-remove"
+                    onClick={() =>
+                      removeSpecialty(index)
+                    }
+                    aria-label="Remove specialty"
+                  >
+                    −
+                  </button>
+                </div>
+              )
+            )}
+          </div>
+
+          <button
+            type="button"
+            className="specialty-add"
+            onClick={addSpecialty}
+          >
+            + Add Specialty Area
+          </button>
+        </div>
+      ) : (
+        /* MEDICAL DIRECTOR / GENERAL DENTIST */
+        <div className="full">
+          <Field
+            name="bio"
+            label="Bio"
+            type="textarea"
+            value={values.bio}
+            setValue={(value) =>
+              update("bio", value)
+            }
+          />
+        </div>
+      )}
+
+      {/* ORDER */}
+      <Field
+        name="order"
+        label="Display order"
+        type="number"
+        value={values.order ?? 0}
+        setValue={(value) =>
+          update("order", value)
+        }
+      />
+
+      {/* ACTIVE */}
+      <Field
+        name="is_active"
+        label="Active"
+        type="checkbox"
+        value={values.is_active ?? true}
+        setValue={(value) =>
+          update("is_active", value)
+        }
+      />
+    </>
+  );
+}
+
 /* =========================================================
    EDITOR
    ========================================================= */
@@ -690,52 +1268,48 @@ function Editor({
         className="admin-form editor-grid"
         onSubmit={submit}
       >
-        {cfg.fields.map(
-          ([
-            name,
-            label,
-            type,
-            accept,
-            options,
-          ]) => (
-            <Field
-              key={name}
-              name={name}
-              label={label}
-              type={type}
-
-              /*
-               * File fields:
-               * 4th value = accept
-               *
-               * Select fields:
-               * 4th value = options
-               */
-              accept={
-                type === "file"
-                  ? accept
-                  : undefined
-              }
-
-              options={
-                type === "select"
-                  ? accept
-                  : options
-              }
-
-              value={values[name]}
-
-              setValue={(value) =>
-                setValues(
-                  (state) => ({
-                    ...state,
-                    [name]: value,
-                  })
-                )
-              }
-            />
+{cfg === resources.doctors ? (
+  <DoctorFields
+    values={values}
+    setValues={setValues}
+  />
+) : (
+  cfg.fields.map(
+    ([
+      name,
+      label,
+      type,
+      accept,
+      options,
+    ]) => (
+      <Field
+        key={name}
+        name={name}
+        label={label}
+        type={type}
+        accept={
+          type === "file"
+            ? accept
+            : undefined
+        }
+        options={
+          type === "select"
+            ? accept
+            : options
+        }
+        value={values[name]}
+        setValue={(value) =>
+          setValues(
+            (state) => ({
+              ...state,
+              [name]: value,
+            })
           )
-        )}
+        }
+      />
+    )
+  )
+)}
 
         {error && (
           <div className="alert error full">
@@ -1293,9 +1867,9 @@ export default function AdminPage() {
         }`}
       >
         <div className="brand">
-          <div className="admin-mark">
+          {/* <div className="admin-mark">
             G
-          </div>
+          </div> */}
 
           <div>
             <strong>

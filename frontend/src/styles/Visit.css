@@ -1,17 +1,434 @@
-.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.visit-item { display: flex; gap: 16px; margin-bottom: 24px; }
-.visit-icon {
-  width: 44px; height: 44px; border-radius: 12px; background: var(--card-lavender);
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--purple);
+/* =========================================================
+   VISIT SECTION
+========================================================= */
+
+.visit-section {
+  background: #faf9fd;
 }
-.visit-icon svg { width: 20px; height: 20px; }
-.visit-item h4 { font-size: .95rem; margin-bottom: 3px; font-family: 'Poppins'; font-weight: 600; }
-.visit-item p { color: var(--grey); font-size: .9rem; }
-.map-frame { border-radius: 20px; overflow: hidden; box-shadow: 0 24px 50px -20px rgba(43,36,64,.3); }
-.map-frame img { width: 100%; display: block; }
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+
+/* =========================================================
+   VISIT ITEMS
+========================================================= */
+
+.visit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.visit-icon-link {
+  display: block;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.visit-icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 12px;
+
+  background: var(--card-lavender);
+  color: var(--purple);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.visit-icon svg {
+  width: 19px;
+  height: 19px;
+  display: block;
+}
+
+.visit-icon-link:hover .visit-icon {
+  background: #e6d8f7;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.visit-item h4 {
+  margin: 0 0 3px;
+
+  color: var(--ink);
+
+  font-size: .95rem;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.visit-item p {
+  margin: 0;
+
+  color: var(--grey);
+
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CLICKABLE TEXT
+========================================================= */
+
+.visit-link {
+  display: block;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+.visit-link:hover p {
+  color: var(--purple);
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-frame {
+  display: block;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 24px 50px -20px rgba(43, 36, 64, .3);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.map-frame img {
+  width: 100%;
+  display: block;
+}
+
+.map-frame:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 28px 55px -20px rgba(43, 36, 64, .38);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 980px) {
-  .visit-grid { grid-template-columns: 1fr; gap: 30px; }
+
+  .visit-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
 }
-.visit-icon{font-size:20px;font-weight:600}.visit-item p{overflow-wrap:anywhere}
-@media(max-width:560px){.visit-grid{gap:24px}.visit-item{gap:12px}.visit-item p{font-size:.82rem}.map-frame{border-radius:14px}}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .visit-grid {
+    gap: 24px;
+  }
+
+  .visit-item {
+    gap: 12px;
+  }
+
+  .visit-item p {
+    font-size: .82rem;
+  }
+
+  .visit-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+
+  .visit-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .map-frame {
+    border-radius: 14px;
+  }
+
+}
+
+/* =========================================================
+   VISIT SECTION
+========================================================= */
+
+.visit-section {
+  width: 100%;
+  background: #faf9fd;
+  box-sizing: border-box;
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+
+/* =========================================================
+   VISIT ITEM
+========================================================= */
+
+.visit-item {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   FULL CLICKABLE BLOCK
+========================================================= */
+
+.visit-full-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  width: fit-content;
+  max-width: 100%;
+
+  color: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.visit-full-link:hover {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.visit-icon {
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  border-radius: 12px;
+
+  background: var(--card-lavender);
+  color: var(--purple);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.visit-icon svg {
+  width: 19px;
+  height: 19px;
+
+  display: block;
+}
+
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.visit-full-link:hover .visit-icon {
+  background: #e6d8f7;
+  transform: translateY(-2px);
+}
+
+.visit-full-link:hover h4 {
+  color: var(--purple);
+}
+
+.visit-full-link:hover p {
+  color: var(--purple);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.visit-content {
+  min-width: 0;
+}
+
+.visit-content h4 {
+  margin: 0 0 3px;
+
+  color: var(--ink);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  transition: color 0.2s ease;
+}
+
+.visit-content p {
+  margin: 0;
+
+  color: var(--grey);
+
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+
+  transition: color 0.2s ease;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-frame {
+  display: block;
+
+  width: 100%;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 24px 50px -20px rgba(43, 36, 64, 0.3);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.map-frame img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+.map-frame:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 28px 55px -20px rgba(43, 36, 64, 0.38);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+
+  .visit-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .visit-grid {
+    gap: 24px;
+  }
+
+  .visit-item {
+    margin-bottom: 20px;
+  }
+
+  .visit-full-link {
+    gap: 12px;
+  }
+
+  .visit-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    border-radius: 11px;
+  }
+
+  .visit-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .visit-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .visit-content p {
+    font-size: 0.82rem;
+  }
+
+  .map-frame {
+    border-radius: 14px;
+  }
+
+}

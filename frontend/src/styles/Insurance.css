@@ -93,7 +93,7 @@
    the animation can loop continuously.
    ========================================================= */
 
-.insurance-strip-item {
+/* .insurance-strip-item {
   display: block;
 
   width: 900px;
@@ -102,6 +102,28 @@
   height: auto;
 
   flex: 0 0 900px;
+
+  object-fit: contain;
+  object-position: left center;
+
+  user-select: none;
+  -webkit-user-drag: none;
+} */
+
+/* =========================================================
+   INSURANCE STRIP
+   SMALLER LOGOS
+========================================================= */
+
+.insurance-strip-item {
+  display: block;
+
+  width: 650px;
+  max-width: none;
+
+  height: auto;
+
+  flex: 0 0 650px;
 
   object-fit: contain;
   object-position: left center;
@@ -130,8 +152,8 @@
   }
 
   .insurance-strip-item {
-    width: 820px;
-    flex-basis: 820px;
+    width: 600px;
+    flex-basis: 600px;
   }
 }
 
@@ -164,8 +186,8 @@
   }
 
   .insurance-strip-item {
-    width: 720px;
-    flex-basis: 720px;
+    width: 520px;
+    flex-basis: 520px;
 
     height: auto;
   }
@@ -189,7 +211,7 @@
   }
 
   .insurance-strip-item {
-    width: 680px;
-    flex-basis: 680px;
+    width: 480px;
+    flex-basis: 480px;
   }
 }

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+
+
 import heroPhoto from "../assets/images/hero-photo.jpg";
 import smilesWordmark from "../assets/images/smiles-wordmark.png";
 
