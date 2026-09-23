@@ -659,3 +659,25 @@
     transform: translateY(18px);
   }
 }
+@media (max-width: 640px) {
+  .flower-row-3 {
+    width: calc(100% - 16px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 380px) {
+  .flower-row-3 .doctor-card {
+    width: 82px;
+    max-width: 82px;
+  }
+}
+@media (max-width: 640px) {
+  .flower-row-3 .doctor-card {
+    width: 82px;
+    max-width: 82px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

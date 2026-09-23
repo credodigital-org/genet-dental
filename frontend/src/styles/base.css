@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap');
 
 @font-face {
   font-family: 'Exotic Bold';
   src: url('../assets/fonts/exotic-bold.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap');
+
+/* =========================================================
+   ADMIN PANEL FONT
+========================================================= */
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -37,7 +47,7 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 .wrap { max-width: 1220px; margin: 0 auto; padding: 0 32px; }
 section { padding: 80px 0; }
-h1, h2, h3 { font-family: 'Exotic Bold', 'Poppins', sans-serif; font-weight: 700; color: var(--purple); }
+h1, h2, h3 { font-family:'Poppins', sans-serif; font-weight: 700; color: var(--purple); }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 9px;

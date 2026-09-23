@@ -753,3 +753,110 @@ body {
   height: 16px;
   flex: 0 0 16px;
 }
+
+/* =========================================================
+   HEADER RESPONSIVE FIX
+   Desktop = booking button
+   Mobile = hamburger button
+========================================================= */
+
+/* DESKTOP */
+.menu-toggle {
+  display: none;
+}
+
+/* MOBILE / TABLET */
+@media (max-width: 768px) {
+
+  /* Hide desktop navigation */
+  #siteHeader .nav-links {
+    display: none;
+  }
+
+  /* IMPORTANT: hide Book Appointment button */
+  #siteHeader .nav-actions a.navbar-booking {
+    display: none !important;
+  }
+
+  /* Show hamburger */
+  #siteHeader .menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+
+    color: var(--purple);
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  #siteHeader .nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /* Show navigation when hamburger is clicked */
+  #siteHeader.nav-open .nav-links {
+    display: flex;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 12px 20px 18px;
+
+    background: #ffffff;
+
+    border-top: 1px solid var(--line);
+    box-shadow: 0 8px 20px rgba(43, 36, 64, 0.12);
+
+    box-sizing: border-box;
+    z-index: 5001;
+  }
+
+  #siteHeader.nav-open .nav-links a {
+    display: block;
+
+    width: 100%;
+
+    padding: 11px 4px;
+
+    color: var(--ink);
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    text-align: left;
+    text-decoration: none;
+
+    border-bottom: 1px solid #eeeeee;
+
+    box-sizing: border-box;
+  }
+
+  #siteHeader.nav-open .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  #siteHeader.nav-open .nav-links a.active {
+    color: var(--purple);
+  }
+}
