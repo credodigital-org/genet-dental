@@ -41,9 +41,16 @@ export default function Header() {
   return (
     <header id="siteHeader" className={open ? "nav-open" : ""}>
       <div className="nav">
-        <Link to="/" className="logo" onClick={() => setOpen(false)}>
+        {/* <Link to="/" className="logo" onClick={() => setOpen(false)}>
           <img src={logo} alt="Genet Dental Specialized Center" />
-        </Link>
+        </Link> */}
+
+  <Link to="/" className="logo" onClick={() => setOpen(false)}>
+  <div className="logo-wrapper">
+    <img src={logo} alt="Genet Dental Specialized Center" />
+    <span className="logo-estd">Estd 2014</span>
+  </div>
+</Link>
 
         <nav className="nav-links" aria-label="Primary navigation">
           {NAV_LINKS.map((link) => (
