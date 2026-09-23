@@ -1,17 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap');
 
 
 /* =========================================================
    CUSTOM FONT
    ========================================================= */
 
-@font-face {
+/* @font-face {
   font-family: 'Exotic Bold';
   src: url('../assets/fonts/exotic-bold.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
 }
+ */ 
 
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap');
+
+/* =========================================================
+   FONT
+========================================================= */
+
+/* Poppins is used throughout the admin panel */
 
 /* =========================================================
    ROOT
@@ -93,7 +101,7 @@ section {
 h1,
 h2,
 h3 {
-  font-family: 'Exotic Bold', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: var(--purple);
 }
@@ -816,13 +824,21 @@ header {
   padding-top: 26px;
 }
 
-.stat .num {
+/* .stat .num {
   font-family: 'Exotic Bold';
 
   font-size: 2rem;
 
   color: var(--orange);
 
+  display: block;
+} */
+
+.stat .num {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--orange);
   display: block;
 }
 
@@ -3141,7 +3157,7 @@ footer {
 .specialists .section-head h2,
 .excellence-copy h2,
 .cta-banner h2 {
-  font-family: 'Exotic Bold', 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: 0;
 }
@@ -3316,19 +3332,19 @@ textarea,
 
   .section-head h2,
   .specialists .section-head h2 {
-    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-size: 1.65rem;
     line-height: 1.15;
   }
 
   .excellence-copy h2 {
-    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-size: 1.7rem;
     line-height: 1.18;
   }
 
   .cta-banner h2 {
-    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-size: 1.6rem;
     line-height: 1.18;
   }
@@ -3362,7 +3378,7 @@ h3,
 .specialists .section-head h2,
 .excellence-copy h2,
 .cta-banner h2 {
-  font-family: 'Exotic Bold', 'Poppins', sans-serif;
+  font-family:'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: 0;
 }
@@ -3473,19 +3489,19 @@ textarea,
   /* Keep the PDF heading face on mobile */
   .section-head h2,
   .specialists .section-head h2 {
-    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-size: 1.65rem;
     line-height: 1.15;
   }
 
   .excellence-copy h2 {
-    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-size: 1.7rem;
     line-height: 1.18;
   }
 
   .cta-banner h2 {
-    font-family: 'Exotic Bold', 'Poppins', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-size: 1.6rem;
     line-height: 1.18;
   }
