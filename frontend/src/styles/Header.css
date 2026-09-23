@@ -860,3 +860,28 @@ body {
     color: var(--purple);
   }
 }
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.logo-wrapper img {
+  display: block;
+}
+
+.logo-estd {
+  position: absolute;
+
+  left: 1px;
+  bottom: -7px;
+
+  color: #6a4aa0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.42rem;
+  font-weight: 500;
+  line-height: 1;
+
+  white-space: nowrap;
+}
