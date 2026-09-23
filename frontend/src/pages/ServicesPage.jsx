@@ -154,7 +154,7 @@ export default function ServicesPage() {
 
                       {/* SERVICE ICON */}
 
-                      <span className="service-card-badge">
+                      {/* <span className="service-card-badge">
 
                         {service.icon ? (
                           <img
@@ -168,7 +168,17 @@ export default function ServicesPage() {
                           </span>
                         )}
 
-                      </span>
+                      </span> */}
+
+                      {service.icon && (
+  <span className="service-card-badge">
+    <img
+      src={mediaUrl(service.icon)}
+      alt=""
+      className="service-card-icon"
+    />
+  </span>
+)}
 
                     </div>
 
