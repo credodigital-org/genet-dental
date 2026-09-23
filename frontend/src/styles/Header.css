@@ -885,3 +885,62 @@ body {
 
   white-space: nowrap;
 }
+
+/* .logo-estd {
+  position: absolute;
+
+  left: 17.5px;
+  bottom: -7px;
+
+  transform: translateX(-50%);
+
+  color: #6a4aa0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.42rem;
+  font-weight: 500;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .logo-estd {
+    left: 35px;
+    bottom: -6px;
+    font-size: 0.36rem;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 390px) {
+  .logo-estd {
+    left: 32px;
+  }
+} */
+
+.logo-estd {
+  position: absolute;
+  left: 17.5px;
+  bottom: -7px;
+  transform: translateX(-50%);
+  color: #6a4aa0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.42rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .logo-estd {
+    left: 15.5px;
+    bottom: -6px;
+    font-size: 0.36rem;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 390px) {
+  .logo-estd {
+    left: 15px;
+  }
+}
