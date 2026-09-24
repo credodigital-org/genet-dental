@@ -1128,3 +1128,1748 @@
   z-index: 5 !important;
 }
 
+/* =========================================================
+   HERO + SERVICE STRIP
+   FINAL VERSION
+========================================================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0 !important;
+  overflow: hidden;
+  background: #fff;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-main {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  min-height: 560px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.hero-photo-bleed {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-copy {
+  position: absolute;
+  z-index: 3;
+
+  left: 0;
+  top: 0;
+
+  width: 55%;
+  max-width: 680px;
+
+  padding: 100px 0 30px 6%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SERVICE SCROLLING STRIP
+========================================================= */
+
+.service-row {
+  position: relative;
+
+  width: 100%;
+  height: 92px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  z-index: 5;
+}
+
+
+/* Moving track */
+
+.service-row-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+  min-width: max-content;
+
+  gap: 55px;
+
+  padding: 0;
+
+  animation: heroServiceScroll 28s linear infinite;
+
+  will-change: transform;
+}
+
+
+/* Individual service */
+
+.service-item {
+  flex: 0 0 105px;
+
+  width: 105px;
+  min-width: 105px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* Icon */
+
+.service-icon-box {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.service-icon {
+  width: 42px;
+  height: 42px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* Text */
+
+.service-item span {
+  display: block;
+
+  margin: 0;
+
+  color: #292331;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CONTINUOUS SCROLL
+========================================================= */
+
+@keyframes heroServiceScroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1201px) {
+
+  .hero-main {
+    height: 560px;
+    min-height: 560px;
+  }
+
+  .service-row {
+    height: 92px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 641px) and (max-width: 1200px) {
+
+  .hero-main {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .hero-copy {
+    width: 57%;
+    padding-left: 5%;
+  }
+
+  .service-row {
+    height: 88px;
+  }
+
+  .service-row-track {
+    gap: 40px;
+  }
+
+  .service-item {
+    flex-basis: 95px;
+    width: 95px;
+    min-width: 95px;
+  }
+
+  .service-icon-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .service-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .service-item span {
+    font-size: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .hero-main {
+    height: 385px;
+    min-height: 385px;
+
+    padding: 0;
+  }
+
+  .hero-photo-bleed {
+    background-size: cover;
+    background-position: 72% center;
+  }
+
+  .hero-copy {
+    left: 0;
+    top: 0;
+
+    width: 59%;
+    height: 100%;
+
+    padding: 43px 0 0 15px;
+  }
+
+
+  /* SERVICE STRIP */
+
+  .service-row {
+    height: 82px;
+  }
+
+  .service-row-track {
+    gap: 28px;
+  }
+
+  .service-item {
+    flex-basis: 80px;
+    width: 80px;
+    min-width: 80px;
+
+    gap: 5px;
+  }
+
+  .service-icon-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .service-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .service-item span {
+    font-size: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .hero-main {
+    height: 375px;
+    min-height: 375px;
+  }
+
+  .hero-photo-bleed {
+    background-position: 74% center;
+  }
+
+  .service-row {
+    height: 78px;
+  }
+
+  .service-row-track {
+    gap: 24px;
+  }
+
+  .service-item {
+    flex-basis: 75px;
+    width: 75px;
+    min-width: 75px;
+  }
+
+  .service-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-item span {
+    font-size: 7.5px;
+  }
+}
+/* =========================================================
+   HOMEPAGE HERO + SERVICE STRIP
+   FIT BOTH INSIDE FIRST VIEWPORT
+========================================================= */
+
+.hero {
+  width: 100%;
+  margin: 0;
+  padding: 0 !important;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Main hero image */
+.hero-main {
+  position: relative;
+  width: 100%;
+  height: 465px;
+  min-height: 465px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Keep the existing image positioning */
+.hero-photo-bleed {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+
+  z-index: 0;
+}
+
+/* Hero text */
+.hero-copy {
+  position: absolute;
+  z-index: 3;
+
+  left: 0;
+  top: 0;
+
+  width: 55%;
+  max-width: 680px;
+
+  padding: 72px 0 25px 5.2%;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SERVICE ICON STRIP
+========================================================= */
+
+.service-row {
+  position: relative;
+
+  width: 100%;
+  height: 76px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  z-index: 5;
+}
+
+.service-row-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+  min-width: max-content;
+
+  gap: 48px;
+
+  padding: 0;
+
+  animation: heroServiceScroll 26s linear infinite;
+
+  will-change: transform;
+}
+
+.service-item {
+  flex: 0 0 95px;
+  width: 95px;
+  min-width: 95px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.service-icon-box {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.service-icon {
+  width: 38px;
+  height: 38px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.service-item span {
+  display: block;
+
+  margin: 0;
+
+  color: #292331;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+/* Continuous scrolling */
+@keyframes heroServiceScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 641px) and (max-width: 1200px) {
+
+  .hero-main {
+    height: 420px;
+    min-height: 420px;
+  }
+
+  .hero-copy {
+    width: 57%;
+    padding-top: 65px;
+    padding-left: 5%;
+  }
+
+  .service-row {
+    height: 72px;
+  }
+
+  .service-row-track {
+    gap: 38px;
+  }
+
+  .service-item {
+    flex-basis: 88px;
+    width: 88px;
+    min-width: 88px;
+  }
+
+  .service-icon-box {
+    width: 38px;
+    height: 38px;
+  }
+
+  .service-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .service-item span {
+    font-size: 8.5px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .hero-main {
+    height: 365px;
+    min-height: 365px;
+  }
+
+  .hero-photo-bleed {
+    background-size: cover !important;
+    background-position: 72% center !important;
+  }
+
+  .hero-copy {
+    left: 0;
+    top: 0;
+
+    width: 59%;
+    height: 100%;
+
+    padding: 38px 0 0 15px;
+  }
+
+  .service-row {
+    height: 70px;
+  }
+
+  .service-row-track {
+    gap: 25px;
+  }
+
+  .service-item {
+    flex-basis: 75px;
+    width: 75px;
+    min-width: 75px;
+
+    gap: 4px;
+  }
+
+  .service-icon-box {
+    width: 34px;
+    height: 34px;
+  }
+
+  .service-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-item span {
+    font-size: 7.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .hero-main {
+    height: 350px;
+    min-height: 350px;
+  }
+
+  .hero-photo-bleed {
+    background-position: 73% center !important;
+  }
+
+  .service-row {
+    height: 66px;
+  }
+
+  .service-row-track {
+    gap: 22px;
+  }
+
+  .service-item {
+    flex-basis: 70px;
+    width: 70px;
+    min-width: 70px;
+  }
+
+  .service-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .service-item span {
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   FINAL HOMEPAGE HERO
+   FIT HERO + ONE SERVICE STRIP IN VIEWPORT
+========================================================= */
+
+.hero {
+  width: 100%;
+  margin: 0;
+  padding: 0 !important;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Hero automatically adapts to screen height */
+.hero-main {
+  position: relative;
+  width: 100%;
+
+  height: clamp(
+    360px,
+    calc(100vh - 165px),
+    480px
+  );
+
+  min-height: 360px;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Hero image */
+.hero-photo-bleed {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+
+  z-index: 0;
+}
+
+/* Existing text */
+.hero-copy {
+  position: absolute;
+  z-index: 3;
+
+  left: 0;
+  top: 0;
+
+  width: 55%;
+  max-width: 680px;
+
+  padding: 65px 0 25px 5.2%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ONLY ONE SERVICE STRIP
+========================================================= */
+
+.service-row {
+  position: relative;
+
+  width: 100%;
+  height: 70px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  z-index: 5;
+}
+
+/* Hide any old service-row-inner */
+.service-row-inner {
+  display: none !important;
+}
+
+/* Moving icon track */
+.service-row-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+  min-width: max-content;
+
+  gap: 48px;
+
+  padding: 0;
+
+  animation: heroServiceScroll 26s linear infinite;
+
+  will-change: transform;
+}
+
+/* Individual service */
+.service-item {
+  flex: 0 0 90px;
+  width: 90px;
+  min-width: 90px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+/* Icon */
+.service-icon-box {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.service-icon {
+  width: 36px;
+  height: 36px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* Text */
+.service-item span {
+  display: block;
+
+  margin: 0;
+
+  color: #292331;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8.5px;
+  font-weight: 600;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CONTINUOUS SCROLL
+========================================================= */
+
+@keyframes heroServiceScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 641px) and (max-width: 1200px) {
+
+  .hero-main {
+    height: clamp(
+      360px,
+      calc(100vh - 155px),
+      430px
+    );
+  }
+
+  .hero-copy {
+    width: 57%;
+    padding-top: 58px;
+    padding-left: 5%;
+  }
+
+  .service-row {
+    height: 68px;
+  }
+
+  .service-row-track {
+    gap: 38px;
+  }
+
+  .service-item {
+    flex-basis: 84px;
+    width: 84px;
+    min-width: 84px;
+  }
+
+  .service-icon-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .service-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .service-item span {
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .hero-main {
+    height: clamp(
+      320px,
+      calc(100vh - 130px),
+      390px
+    );
+
+    min-height: 320px;
+  }
+
+  .hero-photo-bleed {
+    background-size: cover !important;
+    background-position: 72% center !important;
+  }
+
+  .hero-copy {
+    left: 0;
+    top: 0;
+
+    width: 59%;
+    height: 100%;
+
+    padding: 36px 0 0 15px;
+  }
+
+  .service-row {
+    height: 64px;
+  }
+
+  .service-row-track {
+    gap: 24px;
+  }
+
+  .service-item {
+    flex-basis: 72px;
+    width: 72px;
+    min-width: 72px;
+
+    gap: 3px;
+  }
+
+  .service-icon-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .service-item span {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .hero-main {
+    height: clamp(
+      310px,
+      calc(100vh - 120px),
+      360px
+    );
+  }
+
+  .hero-photo-bleed {
+    background-position: 73% center !important;
+  }
+
+  .service-row {
+    height: 60px;
+  }
+
+  .service-row-track {
+    gap: 21px;
+  }
+
+  .service-item {
+    flex-basis: 68px;
+    width: 68px;
+    min-width: 68px;
+  }
+
+  .service-icon-box {
+    width: 30px;
+    height: 30px;
+  }
+
+  .service-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .service-item span {
+    font-size: 6.8px;
+  }
+}
+
+/* =========================================================
+   HERO → NEXT SECTION : NO EMPTY GAP
+========================================================= */
+
+.hero {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.service-row {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Next section starts immediately */
+.hero + section {
+  margin-top: 0 !important;
+}
+
+/* Only remove excessive top spacing */
+.hero + section {
+  padding-top: 25px !important;
+}
+
+.hero + section > .wrap {
+  margin-top: 0 !important;
+}
+/* =========================================================
+   REMOVE EMPTY SPACE BELOW HERO SERVICE STRIP
+========================================================= */
+
+.hero + section {
+  margin-top: 0 !important;
+}
+
+/* Remove any unwanted top spacing from the next section */
+.hero + section > .wrap {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* =========================================================
+   SERVICE ICON TICKER - NO CUTTING
+========================================================= */
+
+.service-row {
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.service-row-track {
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+
+  animation: serviceTicker 28s linear infinite;
+
+  will-change: transform;
+}
+
+.service-row-group {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  gap: 48px;
+
+  padding-right: 48px;
+
+  box-sizing: border-box;
+}
+
+.service-item {
+  flex: 0 0 90px;
+
+  width: 90px;
+  min-width: 90px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.service-icon-box {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.service-icon {
+  width: 36px;
+  height: 36px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.service-item span {
+  display: block;
+
+  margin: 0;
+
+  color: #292331;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8.5px;
+  font-weight: 600;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+
+/* Move exactly one complete group */
+@keyframes serviceTicker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 641px) and (max-width: 1200px) {
+
+  .service-row {
+    height: 68px;
+  }
+
+  .service-row-group {
+    gap: 38px;
+    padding-right: 38px;
+  }
+
+  .service-item {
+    flex-basis: 84px;
+    width: 84px;
+    min-width: 84px;
+  }
+
+  .service-icon-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .service-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .service-item span {
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .service-row {
+    height: 64px;
+  }
+
+  .service-row-group {
+    gap: 24px;
+    padding-right: 24px;
+  }
+
+  .service-item {
+    flex-basis: 72px;
+    width: 72px;
+    min-width: 72px;
+
+    gap: 3px;
+  }
+
+  .service-icon-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .service-item span {
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   SERVICE ICON STRIP
+   6 EQUAL POSITIONS - NO CUTTING
+========================================================= */
+
+.service-row {
+  position: relative;
+  width: 100%;
+  height: 70px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  border: none;
+
+  box-sizing: border-box;
+}
+
+/* Moving container */
+.service-row-track {
+  display: flex;
+
+  width: 200%;
+  height: 100%;
+
+  flex-shrink: 0;
+
+  animation: serviceTicker 24s linear infinite;
+
+  will-change: transform;
+}
+
+/* Each complete group occupies exactly one screen */
+.service-row-group {
+  width: 50%;
+  height: 100%;
+
+  flex: 0 0 50%;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-around;
+
+  box-sizing: border-box;
+}
+
+/* Each icon gets exactly equal space */
+.service-item {
+  width: 16.666666%;
+  min-width: 16.666666%;
+  height: 100%;
+
+  flex: 0 0 16.666666%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+/* Icon container */
+.service-icon-box {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* Actual icon */
+.service-icon {
+  width: 34px;
+  height: 34px;
+
+  display: block;
+
+  object-fit: contain;
+
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Label */
+.service-item span {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+
+  color: #292331;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PERFECT LOOP
+========================================================= */
+
+@keyframes serviceTicker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 641px) and (max-width: 1200px) {
+
+  .service-row {
+    height: 68px;
+  }
+
+  .service-icon-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .service-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-item span {
+    font-size: 7.5px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .service-row {
+    height: 64px;
+  }
+
+  .service-icon-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .service-item span {
+    font-size: 6.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .service-row {
+    height: 60px;
+  }
+
+  .service-icon-box {
+    width: 29px;
+    height: 29px;
+  }
+
+  .service-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .service-item span {
+    font-size: 6px;
+  }
+}
+
+/* =========================================================
+   FINAL SERVICE ICON TICKER
+   6 EQUAL COLUMNS - NO OVERLAP / NO CUTTING
+========================================================= */
+
+.service-row {
+  position: relative;
+  width: 100%;
+  height: 70px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* Moving track */
+/* .service-row-track {
+  display: flex;
+
+  width: 200%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  flex-shrink: 0;
+
+  animation: serviceTicker 28s linear infinite;
+
+  will-change: transform;
+} */
+
+
+/* Each duplicate group = exactly one screen */
+/* .service-row-group {
+  width: 50% !important;
+  min-width: 50% !important;
+
+  flex: 0 0 50% !important;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0 !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  align-items: center;
+
+  box-sizing: border-box;
+} */
+
+.service-row-track {
+  display: flex;
+  width: 160%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+
+  animation: serviceTicker 24s linear infinite;
+  will-change: transform;
+}
+
+.service-row-group {
+  width: 62.5% !important;
+  min-width: 62.5% !important;
+  flex: 0 0 62.5% !important;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0 !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* Each icon gets exactly 1/6 */
+.service-row-group .service-item {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  flex: none !important;
+
+  height: 100%;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  flex-direction: column;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 2px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* Icon holder */
+.service-row-group .service-icon-box {
+  width: 36px !important;
+  height: 36px !important;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* Actual icon */
+.service-row-group .service-icon {
+  width: 32px !important;
+  height: 32px !important;
+
+  max-width: 32px !important;
+  max-height: 32px !important;
+
+  margin: 0;
+  padding: 0;
+
+  display: block;
+
+  object-fit: contain;
+
+  box-sizing: border-box;
+}
+
+
+/* Text */
+.service-row-group .service-item span {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0 2px;
+
+  color: #292331;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 7.5px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTINUOUS LOOP
+========================================================= */
+
+@keyframes serviceTicker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 641px) and (max-width: 1200px) {
+
+  .service-row {
+    height: 68px;
+  }
+
+  .service-row-group .service-icon-box {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .service-row-group .service-icon {
+    width: 30px !important;
+    height: 30px !important;
+
+    max-width: 30px !important;
+    max-height: 30px !important;
+  }
+
+  .service-row-group .service-item span {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .service-row {
+    height: 64px;
+  }
+
+  .service-row-group .service-icon-box {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .service-row-group .service-icon {
+    width: 28px !important;
+    height: 28px !important;
+
+    max-width: 28px !important;
+    max-height: 28px !important;
+  }
+
+  .service-row-group .service-item span {
+    font-size: 6.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .service-row {
+    height: 60px;
+  }
+
+  .service-row-group .service-icon-box {
+    width: 29px !important;
+    height: 29px !important;
+  }
+
+  .service-row-group .service-icon {
+    width: 26px !important;
+    height: 26px !important;
+
+    max-width: 26px !important;
+    max-height: 26px !important;
+  }
+
+  .service-row-group .service-item span {
+    font-size: 6px;
+  }
+}

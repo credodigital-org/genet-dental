@@ -196,7 +196,7 @@
   } */
 
   .footer-logo {
-  width: 150px;
+  width: 100px;
 }
 
   .footer-logo img {
@@ -340,7 +340,7 @@
 /* Smaller footer logo */
 .footer-logo img {
   display: block;
-  width: 145px;
+  width: 100px;
   height: auto;
   max-width: 100%;
   object-fit: contain;
@@ -405,7 +405,7 @@
 @media (max-width: 640px) {
 
   .footer-logo img {
-    width: 125px;
+    width: 80px;
   }
 
   .footer-description {
@@ -427,4 +427,19 @@
   .footer-bottom {
     font-size: 0.6rem;
   }
+}
+
+/* =========================================================
+   REMOVE SOCIAL MEDIA ICON BACKGROUND
+========================================================= */
+
+.footer-social-link {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.footer-social-link:hover {
+  background: transparent !important;
+  box-shadow: none !important;
 }

@@ -697,3 +697,621 @@
   background: #ffffff;
   border-radius: 5px 5px 0 0;
 }
+
+
+/* =========================================================
+   SERVICES PAGE — FINAL RESPONSIVE FIX
+========================================================= */
+
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.services-grid {
+  width: 100%;
+  max-width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+
+  background: #ffffff;
+
+  border: 1px solid #d9d9df;
+  border-radius: 8px;
+
+  /*
+     IMPORTANT:
+     Must be visible because the icon badge
+     sits outside the image.
+  */
+  overflow: visible;
+
+  box-sizing: border-box;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   SERVICE IMAGE
+========================================================= */
+
+.service-card-thumb {
+  position: relative;
+
+  width: 100%;
+  height: 200px;
+
+  margin: 0;
+  padding: 0;
+
+  /*
+     Keep the image itself clipped,
+     but allow the badge to escape the thumb.
+  */
+  overflow: visible;
+
+  display: block;
+
+  background: #f5f3f8;
+
+  border-radius: 8px 8px 0 0;
+
+  box-sizing: border-box;
+}
+
+
+/*
+   Image itself
+*/
+.service-card-thumb > img,
+.service-card-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+  object-position: center center;
+
+  border-radius: 8px 8px 0 0;
+}
+
+
+/* =========================================================
+   SERVICE ICON BADGE
+========================================================= */
+
+.service-card-badge {
+  position: absolute;
+
+  left: 50%;
+  bottom: -15px;
+
+  transform: translateX(-50%);
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+  margin: 0;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 3px 10px rgba(43, 36, 64, 0.18);
+
+  z-index: 20;
+
+  box-sizing: border-box;
+}
+
+
+.service-card-badge img,
+.service-card-icon {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  max-width: 20px;
+  max-height: 20px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   SERVICE CONTENT
+========================================================= */
+
+.service-card-content {
+  position: relative;
+
+  width: 100%;
+  min-height: 125px;
+
+  padding: 24px 14px 15px;
+
+  background: #ffffff;
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  border-radius: 0 0 8px 8px;
+}
+
+
+.service-card-content h4 {
+  margin: 0 0 8px;
+
+  color: var(--purple);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  text-align: left;
+}
+
+
+.service-card-content p {
+  margin: 0;
+
+  max-width: none;
+
+  color: #55515e;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: 0.68rem;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   SERVICES HERO — DESKTOP
+========================================================= */
+
+.services-page-hero {
+  height: 300px;
+}
+
+
+.services-page-hero .page-hero-content {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0;
+
+  padding-left: 7%;
+  padding-right: 20px;
+
+  box-sizing: border-box;
+}
+
+
+.services-page-hero h1 {
+  max-width: 560px;
+
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .service-card-thumb {
+    height: 185px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .service-card-thumb {
+    height: 190px;
+  }
+
+  .services-page-hero {
+    height: 280px;
+  }
+
+  .services-page-hero .page-hero-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .services-page-hero h1 {
+    font-size: 2rem;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .services-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    width: 100%;
+  }
+
+
+  .service-card {
+    width: 100%;
+    max-width: 100%;
+
+    border-radius: 7px;
+  }
+
+
+  .service-card-thumb {
+    width: 100%;
+
+    height: 190px;
+
+    border-radius: 7px 7px 0 0;
+  }
+
+
+  .service-card-thumb > img,
+  .service-card-image {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 7px 7px 0 0;
+  }
+
+
+  .service-card-content {
+    min-height: auto;
+
+    padding: 25px 14px 17px;
+
+    border-radius: 0 0 7px 7px;
+  }
+
+
+  .service-card-content h4 {
+    font-size: 0.88rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 7px;
+  }
+
+
+  .service-card-content p {
+    font-size: 0.72rem;
+
+    line-height: 1.5;
+  }
+
+
+  /*
+     Keep badge completely visible.
+  */
+  .service-card-badge {
+    width: 34px;
+    height: 34px;
+
+    bottom: -17px;
+
+    z-index: 30;
+  }
+
+
+  .service-card-badge img,
+  .service-card-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  /* Hero */
+
+  .services-page-hero {
+    height: 260px;
+
+    align-items: center;
+  }
+
+
+  .services-page-hero .page-hero-content {
+    max-width: 100%;
+
+    padding: 20px;
+
+    text-align: left;
+  }
+
+
+  .services-page-hero .eyebrow {
+    font-size: 0.58rem;
+
+    margin-bottom: 7px;
+  }
+
+
+  .services-page-hero h1 {
+    max-width: 100%;
+
+    font-size: 1.75rem;
+
+    line-height: 1.15;
+
+    margin-bottom: 9px;
+  }
+
+
+  .services-page-hero p {
+    max-width: 95%;
+
+    font-size: 0.68rem;
+
+    line-height: 1.45;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .services-section .wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .services-grid {
+    gap: 18px;
+  }
+
+
+  .service-card-thumb {
+    height: 165px;
+  }
+
+
+  .service-card-content {
+    padding: 24px 12px 15px;
+  }
+
+
+  .service-card-content h4 {
+    font-size: 0.84rem;
+  }
+
+
+  .service-card-content p {
+    font-size: 0.69rem;
+    line-height: 1.45;
+  }
+
+
+  .service-card-badge {
+    width: 32px;
+    height: 32px;
+
+    bottom: -16px;
+  }
+
+
+  .service-card-badge img,
+  .service-card-icon {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  .services-page-hero {
+    height: 245px;
+  }
+
+
+  .services-page-hero .page-hero-content {
+    padding: 18px 16px;
+  }
+
+
+  .services-page-hero h1 {
+    font-size: 1.55rem;
+  }
+
+
+  .services-page-hero p {
+    font-size: 0.65rem;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .services-page-hero {
+    height: 230px;
+  }
+
+
+  .services-page-hero h1 {
+    font-size: 1.4rem;
+  }
+
+
+  .services-page-hero p {
+    font-size: 0.62rem;
+  }
+
+
+  .service-card-thumb {
+    height: 150px;
+  }
+
+}
+
+/* =========================================================
+   SERVICE IMAGE — FULL IMAGE, RESPONSIVE
+========================================================= */
+
+.service-card-thumb {
+  width: 100% !important;
+  height: auto !important;
+
+  aspect-ratio: 4 / 3 !important;
+
+  overflow: visible !important;
+
+  position: relative;
+
+  background: #f5f3f8;
+
+  box-sizing: border-box;
+}
+
+
+/* Uploaded service image */
+.service-card-thumb > img,
+.service-card-image {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  /*
+     SHOW THE COMPLETE IMAGE.
+     Nothing gets cropped.
+  */
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  border-radius: 8px 8px 0 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .service-card-thumb {
+    width: 100% !important;
+
+    height: auto !important;
+
+    aspect-ratio: 4 / 3 !important;
+  }
+
+  .service-card-thumb > img,
+  .service-card-image {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .service-card-thumb {
+    aspect-ratio: 4 / 3 !important;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .service-card-thumb {
+    aspect-ratio: 4 / 3 !important;
+  }
+
+}
