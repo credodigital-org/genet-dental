@@ -129,8 +129,11 @@ export default function DoctorsPage() {
               MEDICAL DIRECTOR
           ================================================= */}
 
-          {director && (
-            <section>
+          {/* {director && (
+            <section> */}
+
+            {director && ( 
+  <section className="medical-director-section">
               <div className="wrap">
 
                 <h2 className="doc-section-title">
@@ -179,12 +182,14 @@ export default function DoctorsPage() {
               SPECIALIST DOCTORS
           ================================================= */}
 
-          <section
+          {/* <section
             style={{
               background: "#FAF9FD",
               paddingTop: 0,
             }}
-          >
+          > */}
+
+          <section className="specialist-doctors-section">
             <div className="wrap">
 
               <h2 className="doc-section-title">
@@ -249,7 +254,8 @@ export default function DoctorsPage() {
               GENERAL DENTISTS
           ================================================= */}
 
-          <section>
+          {/* <section> */}
+          <section className="general-doctors-section">
             <div className="wrap">
 
               <h2 className="doc-section-title">
