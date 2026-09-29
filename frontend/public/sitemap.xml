@@ -1,9 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://genetdentalclinic.ae/</loc></url>
-  <url><loc>https://genetdentalclinic.ae/services</loc></url>
-  <url><loc>https://genetdentalclinic.ae/facilities</loc></url>
-  <url><loc>https://genetdentalclinic.ae/doctors</loc></url>
-  <url><loc>https://genetdentalclinic.ae/about</loc></url>
-  <url><loc>https://genetdentalclinic.ae/contact</loc></url>
+  <url>
+    <loc>https://www.genetdental.ae/</loc>
+  </url>
+  <url>
+    <loc>https://www.genetdental.ae/services</loc>
+  </url>
+  <url>
+    <loc>https://www.genetdental.ae/facilities</loc>
+  </url>
+  <url>
+    <loc>https://www.genetdental.ae/doctors</loc>
+  </url>
+  <url>
+    <loc>https://www.genetdental.ae/about</loc>
+  </url>
+  <url>
+    <loc>https://www.genetdental.ae/contact</loc>
+  </url>
 </urlset>
