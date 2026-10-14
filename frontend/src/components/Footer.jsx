@@ -294,12 +294,30 @@ export default function Footer({
             FOOTER BOTTOM
         =================================================== */}
 
-        <div className="footer-bottom">
+        {/* <div className="footer-bottom">
 
           © {new Date().getFullYear()} Genet Dental Center.
           Smiles always...
 
-        </div>
+        </div> */}
+
+        <div className="footer-bottom">
+  <p className="footer-copyright">
+    © {new Date().getFullYear()} Genet Dental Center. Smiles always...
+  </p>
+
+  <p className="footer-credit">
+    Designed &amp; Developed by{" "}
+    <a
+      href="https://wa.me/971509132555"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contact Credo Digital Designs on WhatsApp"
+    >
+      Credo Digital Designs LLC
+    </a>
+  </p>
+</div>
 
       </div>
 
